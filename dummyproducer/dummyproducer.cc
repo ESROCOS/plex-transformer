@@ -10,6 +10,11 @@ void dummyproducer_startup()
 
 void dummyproducer_PI_clock()
 {
-    /* Write your code here! */
+  asn1SccBase_samples_RigidBodyState bs;
+
+
+
+ 
+  dummyproducer_RI_relativeMarkerPose(&bs);  
 }
 

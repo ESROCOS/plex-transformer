@@ -78,6 +78,10 @@ PROPERTIES
 END Transformer;
 
 SYSTEM IMPLEMENTATION Transformer.others
+SUBCOMPONENTS
+  compilerOption : DATA DataView::Taste_directive {
+    Taste::FS_Default_Value => "compiler-option:""-DOROCOS_TARGET=gnulinux""";
+  };
 END Transformer.others;
 
 END interfaceview::IV::Transformer;
