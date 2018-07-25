@@ -1,0 +1,3 @@
+ESROCOS-plex-transformer DEFINITIONS ::= BEGIN
+    MyDummyInteger[]
+END
