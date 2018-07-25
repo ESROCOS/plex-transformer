@@ -1,0 +1,236 @@
+---------------------------------------------------
+-- AADL2.1
+-- TASTE type interfaceview
+-- 
+-- generated code: do not edit
+---------------------------------------------------
+
+PACKAGE interfaceview::IV::Transformer
+PUBLIC
+
+WITH interfaceview::IV::dummyconsumer;
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+SUBPROGRAM PI_robotPose
+FEATURES
+  pose : IN PARAMETER DataView::Base_samples_RigidBodyState {
+    Taste::encoding => NATIVE;
+  };
+PROPERTIES
+  Taste::Associated_Queue_Size => 1;
+END PI_robotPose;
+
+SUBPROGRAM IMPLEMENTATION PI_robotPose.others
+PROPERTIES
+  Compute_Execution_Time => 0 ms .. 100 ms;
+END PI_robotPose.others;
+
+SUBPROGRAM PI_relativeMarkerPose
+FEATURES
+  pose : IN PARAMETER DataView::Base_samples_RigidBodyState {
+    Taste::encoding => NATIVE;
+  };
+PROPERTIES
+  Taste::Associated_Queue_Size => 1;
+END PI_relativeMarkerPose;
+
+SUBPROGRAM IMPLEMENTATION PI_relativeMarkerPose.others
+PROPERTIES
+  Compute_Execution_Time => 0 ms .. 100 ms;
+END PI_relativeMarkerPose.others;
+
+SUBPROGRAM RI_absoluteMarkerPose
+FEATURES
+  pose : IN PARAMETER DataView::Base_samples_RigidBodyState {
+    Taste::encoding => NATIVE;
+  };
+END RI_absoluteMarkerPose;
+
+SUBPROGRAM IMPLEMENTATION RI_absoluteMarkerPose.others
+END RI_absoluteMarkerPose.others;
+
+SYSTEM Transformer
+FEATURES
+  PI_robotPose : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::Transformer::PI_robotPose.others {
+    Taste::coordinates => "118894 64192";
+    Taste::RCMoperationKind => sporadic;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 1000 ms;
+    Taste::InterfaceName => "robotPose";
+  };
+  PI_relativeMarkerPose : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::Transformer::PI_relativeMarkerPose.others {
+    Taste::coordinates => "118894 69452";
+    Taste::RCMoperationKind => sporadic;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 1000 ms;
+    Taste::InterfaceName => "relativeMarkerPose";
+  };
+  RI_absoluteMarkerPose : REQUIRES SUBPROGRAM ACCESS interfaceview::IV::dummyconsumer::PI_consumeDummy.others {
+    Taste::coordinates => "161885 93074";
+    Taste::RCMoperationKind => any;
+    Taste::InterfaceName => "absoluteMarkerPose";
+    Taste::labelInheritance => "false";
+  };
+PROPERTIES
+  Source_Language => (CPP);
+  Taste::Active_Interfaces => any;
+END Transformer;
+
+SYSTEM IMPLEMENTATION Transformer.others
+END Transformer.others;
+
+END interfaceview::IV::Transformer;
+
+PACKAGE interfaceview::IV::dummyconsumer
+PUBLIC
+
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+SUBPROGRAM PI_consumeDummy
+FEATURES
+  pose : IN PARAMETER DataView::Base_samples_RigidBodyState {
+    Taste::encoding => NATIVE;
+  };
+PROPERTIES
+  Taste::Associated_Queue_Size => 1;
+END PI_consumeDummy;
+
+SUBPROGRAM IMPLEMENTATION PI_consumeDummy.others
+PROPERTIES
+  Compute_Execution_Time => 0 ms .. 0 ms;
+END PI_consumeDummy.others;
+
+SYSTEM dummyconsumer
+FEATURES
+  PI_consumeDummy : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::dummyconsumer::PI_consumeDummy.others {
+    Taste::coordinates => "188927 93398";
+    Taste::RCMoperationKind => unprotected;
+    Taste::RCMperiod => 0 ms;
+    Taste::Deadline => 0 ms;
+    Taste::InterfaceName => "consumeDummy";
+  };
+PROPERTIES
+  Source_Language => (CPP);
+  Taste::Active_Interfaces => any;
+END dummyconsumer;
+
+SYSTEM IMPLEMENTATION dummyconsumer.others
+END dummyconsumer.others;
+
+END interfaceview::IV::dummyconsumer;
+
+PACKAGE interfaceview::IV::dummyproducer
+PUBLIC
+
+WITH interfaceview::IV::Transformer;
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+SUBPROGRAM PI_clock
+PROPERTIES
+  Taste::Associated_Queue_Size => 1;
+END PI_clock;
+
+SUBPROGRAM IMPLEMENTATION PI_clock.others
+PROPERTIES
+  Compute_Execution_Time => 0 ms .. 100 ms;
+END PI_clock.others;
+
+SUBPROGRAM RI_robotPose
+FEATURES
+  pose : IN PARAMETER DataView::Base_samples_RigidBodyState {
+    Taste::encoding => NATIVE;
+  };
+END RI_robotPose;
+
+SUBPROGRAM IMPLEMENTATION RI_robotPose.others
+END RI_robotPose.others;
+
+SUBPROGRAM RI_relativeMarkerPose
+FEATURES
+  pose : IN PARAMETER DataView::Base_samples_RigidBodyState {
+    Taste::encoding => NATIVE;
+  };
+END RI_relativeMarkerPose;
+
+SUBPROGRAM IMPLEMENTATION RI_relativeMarkerPose.others
+END RI_relativeMarkerPose.others;
+
+SYSTEM dummyproducer
+FEATURES
+  PI_clock : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::dummyproducer::PI_clock.others {
+    Taste::coordinates => "45798 64499";
+    Taste::RCMoperationKind => cyclic;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 100 ms;
+    Taste::InterfaceName => "clock";
+  };
+  RI_robotPose : REQUIRES SUBPROGRAM ACCESS interfaceview::IV::Transformer::PI_robotPose.others {
+    Taste::coordinates => "89357 64091";
+    Taste::RCMoperationKind => any;
+    Taste::InterfaceName => "robotPose";
+    Taste::labelInheritance => "true";
+  };
+  RI_relativeMarkerPose : REQUIRES SUBPROGRAM ACCESS interfaceview::IV::Transformer::PI_relativeMarkerPose.others {
+    Taste::coordinates => "89357 69480";
+    Taste::RCMoperationKind => any;
+    Taste::InterfaceName => "relativeMarkerPose";
+    Taste::labelInheritance => "true";
+  };
+PROPERTIES
+  Source_Language => (CPP);
+  Taste::Active_Interfaces => any;
+END dummyproducer;
+
+SYSTEM IMPLEMENTATION dummyproducer.others
+END dummyproducer.others;
+
+END interfaceview::IV::dummyproducer;
+
+PACKAGE interfaceview::IV
+PUBLIC
+
+WITH interfaceview::IV::Transformer;
+WITH interfaceview::IV::dummyconsumer;
+WITH interfaceview::IV::dummyproducer;
+WITH Taste;
+WITH DataView;
+WITH TASTE_IV_Properties;
+SYSTEM interfaceview
+PROPERTIES
+  Taste::dataView => ("DataView");
+  Taste::dataViewPath => ("plex-transformer_dv.aadl");
+END interfaceview;
+
+SYSTEM IMPLEMENTATION interfaceview.others
+SUBCOMPONENTS
+  Transformer : SYSTEM interfaceview::IV::Transformer::Transformer.others {
+    Taste::coordinates => "118894 57636 161885 105666";
+  };
+  dummyconsumer : SYSTEM interfaceview::IV::dummyconsumer::dummyconsumer.others {
+    Taste::coordinates => "188927 58736 229227 107432";
+  };
+  dummyproducer : SYSTEM interfaceview::IV::dummyproducer::dummyproducer.others {
+    Taste::coordinates => "45798 57387 89357 106576";
+  };
+CONNECTIONS
+  Transformer_PI_robotPose_dummyproducer_RI_robotPose : SUBPROGRAM ACCESS Transformer.PI_robotPose -> dummyproducer.RI_robotPose {
+    Taste::coordinates => "89357 64091 104047 64091 104047 64192 118894 64192";
+  };
+  Transformer_PI_relativeMarkerPose_dummyproducer_RI_relativeMarkerPose : SUBPROGRAM ACCESS Transformer.PI_relativeMarkerPose -> dummyproducer.RI_relativeMarkerPose {
+    Taste::coordinates => "89357 69480 104047 69480 104047 69452 118894 69452";
+  };
+  dummyconsumer_PI_consumeDummy_Transformer_RI_absoluteMarkerPose : SUBPROGRAM ACCESS dummyconsumer.PI_consumeDummy -> Transformer.RI_absoluteMarkerPose {
+    Taste::coordinates => "161885 93074 183028 93074 183028 93398 188927 93398";
+  };
+END interfaceview.others;
+
+PROPERTIES
+  Taste::dataView => ("DataView");
+  Taste::dataViewPath => ("plex-transformer_dv.aadl");
+  Taste::coordinates => "0 0 297000 210000";
+  Taste::version => "2.0";
+END interfaceview::IV;
+

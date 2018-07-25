@@ -31,19 +31,19 @@ esrocos_init()
 ########### FOR INTEGRATION PROJECTS ##############
 
 #uncomment if you want to add dependencies for the build process (only required in integration projects)
-#esrocos_add_dependency(PARTITION <Name Of Partition>
-#                       MODULES   <PKG-Config findable module>[,secondmodule,thirdmodule...])
+esrocos_add_dependency(PARTITION x86_partition
+                       MODULES   plex-transformer)
 
 ########### FOR COMPONENT PROJECTS ################
 
 #uncomment if you want to export a function
-#esrocos_export_function("example" "tutorial/example_dir")
+esrocos_export_function("transformer" "share/taste_components/plex-transformer")
 
 #uncomment to export PKG-CONFIG-file
-#esrocos_export_pkgconfig( VERSION 1.0
-#                          DESCRIPTION "none"
-#                          REQUIRES ""
-#                          LIBS ""
-#                          STATIC_LIBS "" 
-#                          C_FLAGS ""
-#                        ) 
+esrocos_export_pkgconfig( VERSION 1.0
+                          DESCRIPTION "none"
+                          REQUIRES tools-transformer base-types base_support 
+                          LIBS ""
+                          STATIC_LIBS "" 
+                          C_FLAGS ""
+                        ) 
