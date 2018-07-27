@@ -53,7 +53,7 @@ void split4d(Eigen::Matrix4d h, Eigen::Matrix3d & r, Eigen::Vector3d & t){
 void transformer_startup()
 {
   atf::Transformation odom, camera_fixture;
-  atf::Frame world, robot_base, camera_1;
+  atf::Frame world("world"),robot_base("robot_base"), camera_1("camera_1");
   Eigen::Matrix4d identity, fixture_init;
 
   // Matrices
@@ -68,21 +68,16 @@ void transformer_startup()
 		  0, 0, 0, 1;
 
   // TRANSFORMATIONS
-  odom = atf::Transformation(world,robot_base,"odom");
+  odom = atf::Transformation(robot_base,world,"odom");
     odom.atob(identity);
 
-  camera_fixture = atf::Transformation(robot_base,camera_1,"camera_fixture");
+  camera_fixture = atf::Transformation(camera_1,robot_base,"camera_fixture");
     camera_fixture.atob(fixture_init);
 
-
   // FRAMES
-  world = atf::Frame("world");
-  
-  robot_base = atf::Frame("robot_base");
-    robot_base.transformToParent = odom;
+  robot_base.transformToParent = odom;
  
-  camera_1 = atf::Frame("camera_1"); 
-    camera_1.transformToParent = camera_fixture;
+  camera_1.transformToParent = camera_fixture;
 
   // TRANSFORM TREE
 
@@ -91,20 +86,9 @@ void transformer_startup()
     TF.addFrame(robot_base);
     TF.addFrame(camera_1);
     
-    std::cout << "setup success" << std::endl;
-/*
-    atf::Transformation t0, t1;
-    atf::Frame f0,f1;
+  //TF.printAdresses();
 
-    std::cout << "got base " << TF.getFrame("robot_base", f0) << std::endl;   
-    std::cout << "got camera " << TF.getFrame("camera_1", f1) << std::endl;   
-
-    t0 = f0.transformToParent;
-    t1 = f1.transformToParent;
-
-    std::cout << "base to world\n" << t0.atob() << std::endl;    
-    std::cout << "camera to base\n" << t1.atob() << std::endl;    
-*/
+    std::cout << "tf tree setup success" << std::endl;
 }
 
 void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
@@ -122,9 +106,7 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
   // convert quaternion to rotation mat
   Eigen::Matrix3d r = q.normalized().toRotationMatrix();
 
-
   to4d(r,t,pose);
-
   TF.updateTransform("odom",pose);
 }
 
@@ -141,18 +123,14 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   Eigen::Matrix3d r = q.normalized().toRotationMatrix();
   
   to4d(r,t,inPose);
-  
+
   // get current transform t1 from camera to world
   Eigen::Matrix4d toWorld;
   bool gotTransform = TF.getTransform("camera_1","world",toWorld);
 
-  //std::cout << "toWorld:\n" << toWorld << std::endl;
-
   // multiply t1 * t0 to get pose in world frame
 
   Eigen::Matrix4d globalPose = toWorld * inPose;
-
-  //std::cout << "t2:\n" << t2 << std::endl;
   
   Eigen::Vector3d _t;
   Eigen::Matrix3d _r;
@@ -160,16 +138,10 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   split4d(globalPose,_r,_t);
 
   q = base::Quaterniond(r);
-  
-  /*
-  std::cout << "\n" << _r << "\n" << std::endl;
-  std::cout << "\n" << _t << "\n" << std::endl;
-  */
  
   // write out pose in world frame
   asn1Scc_Vector3d_toAsn1(OUT_pose.position, _t);
   asn1Scc_Quaterniond_toAsn1(OUT_pose.orientation, q);
-  std::cout << "call marker pose:" << std::endl;
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 }
 

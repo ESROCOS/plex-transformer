@@ -26,18 +26,16 @@ void dummyproducer_PI_clock()
   base::Quaterniond q(r);
 
   base::Vector3d t;
-  t << 0,0,i;
+  t << i,0,0;
 
   asn1SccBase_samples_RigidBodyState robotPose;
 
   asn1Scc_Vector3d_toAsn1(robotPose.position, t);
   asn1Scc_Quaterniond_toAsn1(robotPose.orientation, q);
 
-  std::cout << "robot pose:\n" << t << std::endl;
-
   dummyproducer_RI_robotPose(&robotPose);
 
-  if (i % 4 == 0) {
+  if (i % 5 == 0) {
     asn1SccBase_samples_RigidBodyState markerPose;
 
     Eigen::Matrix3d r1;

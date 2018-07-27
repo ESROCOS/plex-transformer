@@ -110,8 +110,8 @@ SYSTEM dummyconsumer
 FEATURES
   PI_consumeDummy : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::dummyconsumer::PI_consumeDummy.others {
     Taste::coordinates => "200618 93082";
-    Taste::RCMoperationKind => unprotected;
-    Taste::RCMperiod => 0 ms;
+    Taste::RCMoperationKind => sporadic;
+    Taste::RCMperiod => 1000 ms;
     Taste::Deadline => 0 ms;
     Taste::InterfaceName => "consumeDummy";
   };
