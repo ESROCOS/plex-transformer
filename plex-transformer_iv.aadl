@@ -109,7 +109,7 @@ END PI_consumeDummy.others;
 SYSTEM dummyconsumer
 FEATURES
   PI_consumeDummy : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::dummyconsumer::PI_consumeDummy.others {
-    Taste::coordinates => "188927 93398";
+    Taste::coordinates => "200618 93082";
     Taste::RCMoperationKind => unprotected;
     Taste::RCMperiod => 0 ms;
     Taste::Deadline => 0 ms;
@@ -214,7 +214,7 @@ SUBCOMPONENTS
     Taste::coordinates => "118894 57636 161885 105666";
   };
   dummyconsumer : SYSTEM interfaceview::IV::dummyconsumer::dummyconsumer.others {
-    Taste::coordinates => "188927 58736 229227 107432";
+    Taste::coordinates => "200618 58420 240918 107116";
   };
   dummyproducer : SYSTEM interfaceview::IV::dummyproducer::dummyproducer.others {
     Taste::coordinates => "45798 57387 89357 106576";
@@ -227,7 +227,7 @@ CONNECTIONS
     Taste::coordinates => "89357 69480 104047 69480 104047 69452 118894 69452";
   };
   dummyconsumer_PI_consumeDummy_Transformer_RI_absoluteMarkerPose : SUBPROGRAM ACCESS dummyconsumer.PI_consumeDummy -> Transformer.RI_absoluteMarkerPose {
-    Taste::coordinates => "161885 93074 183028 93074 183028 93398 188927 93398";
+    Taste::coordinates => "161885 93074 183028 93074 183028 93082 200618 93082";
   };
 END interfaceview.others;
 
