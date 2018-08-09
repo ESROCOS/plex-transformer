@@ -38,6 +38,7 @@ esrocos_add_dependency(PARTITION x86_partition
 
 #uncomment if you want to export a function
 esrocos_export_function("transformer" "share/taste_components/plex-transformer")
+esrocos_export_function("dummyProducer" "share/taste_components/plex-transformer")
 
 #uncomment to export PKG-CONFIG-file
 esrocos_export_pkgconfig( VERSION 1.0
