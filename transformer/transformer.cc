@@ -88,11 +88,12 @@ void transformer_startup()
     
   //TF.printAdresses();
 
-    std::cout << "tf tree setup success" << std::endl;
+    std::cout << "transformer: tf tree setup success" << std::endl;
 }
 
 void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 {
+//  std::cout << "transformer: got robot pose" << std::endl;
   // extract orientation / translation
   // write to matrix4f
   // update robot pose with matrix4f
@@ -108,10 +109,14 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 
   to4d(r,t,pose);
   TF.updateTransform("odom",pose);
+
+  std::cout << "transformer: updated robot pose" << std::endl;
+  std::cout << pose << std::endl;
 }
 
 void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 {
+//  std::cout << "transformer: got marker pose" << std::endl;
   base::Vector3d t;
   base::Quaterniond q;
   Eigen::Matrix4d inPose;
@@ -143,5 +148,8 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   asn1Scc_Vector3d_toAsn1(OUT_pose.position, _t);
   asn1Scc_Quaterniond_toAsn1(OUT_pose.orientation, q);
   transformer_RI_absoluteMarkerPose(&OUT_pose);
+
+  std::cout << "transformer: calculated marker pose" << std::endl;
+  std::cout << globalPose << std::endl;
 }
 
