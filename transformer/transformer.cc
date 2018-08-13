@@ -5,7 +5,7 @@
 #include "base_support/Base-samples-RigidBodyStateConvert.hpp"
 #include "base_support/OpaqueConversion.hpp"
 #include <Eigen/Core>
-#include <iostream>
+//#include <iostream>
 
 typedef esrocos::transformer::AcyclicTransformer<3> atf;
 
@@ -88,7 +88,7 @@ void transformer_startup()
     
   //TF.printAdresses();
 
-    std::cout << "transformer: tf tree setup success" << std::endl;
+//    std::cout << "transformer: tf tree setup success" << std::endl;
 }
 
 void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
@@ -110,8 +110,8 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
   to4d(r,t,pose);
   TF.updateTransform("odom",pose);
 
-  std::cout << "transformer: updated robot pose" << std::endl;
-  std::cout << pose << std::endl;
+//  std::cout << "transformer: updated robot pose" << std::endl;
+//  std::cout << pose << std::endl;
 }
 
 void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
@@ -149,7 +149,7 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   asn1Scc_Quaterniond_toAsn1(OUT_pose.orientation, q);
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 
-  std::cout << "transformer: calculated marker pose" << std::endl;
-  std::cout << globalPose << std::endl;
+//  std::cout << "transformer: calculated marker pose" << std::endl;
+//  std::cout << globalPose << std::endl;
 }
 
