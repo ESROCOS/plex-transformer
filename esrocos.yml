@@ -2,5 +2,4 @@ ASNACN_DIR: dataview/
 PROJECT_NAME: plex-transformer
 deps:
 - types/base: ''
-- types/base_support: ''
 - tools/transformer: ''

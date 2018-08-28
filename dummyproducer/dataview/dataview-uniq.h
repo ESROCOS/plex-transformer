@@ -10,7 +10,3139 @@ extern "C" {
 #endif
 
 
+typedef asn1Real asn1SccT_Double;
 
+
+flag asn1SccT_Double_Equal(const asn1SccT_Double* pVal1, const asn1SccT_Double* pVal2);
+
+void asn1SccT_Double_Initialize(asn1SccT_Double* pVal);
+
+#define ERR_T_DOUBLE		1  /**/
+flag asn1SccT_Double_IsConstraintValid(const asn1SccT_Double* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_DOUBLE		2  /**/
+#define asn1SccT_Double_REQUIRED_BYTES_FOR_ENCODING       13 
+#define asn1SccT_Double_REQUIRED_BITS_FOR_ENCODING        104
+
+flag asn1SccT_Double_Encode(const asn1SccT_Double* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_DOUBLE		3  /**/
+flag asn1SccT_Double_Decode(asn1SccT_Double* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Angle --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double rad;
+
+} asn1SccBase_Angle;
+
+flag asn1SccBase_Angle_Equal(const asn1SccBase_Angle* pVal1, const asn1SccBase_Angle* pVal2);
+
+void asn1SccBase_Angle_Initialize(asn1SccBase_Angle* pVal);
+
+#define ERR_BASE_ANGLE_RAD		932  /**/
+flag asn1SccBase_Angle_IsConstraintValid(const asn1SccBase_Angle* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_ANGLE		943  /**/
+#define ERR_UPER_ENCODE_BASE_ANGLE_RAD_2		939  /**/
+#define asn1SccBase_Angle_REQUIRED_BYTES_FOR_ENCODING       13 
+#define asn1SccBase_Angle_REQUIRED_BITS_FOR_ENCODING        104
+
+flag asn1SccBase_Angle_Encode(const asn1SccBase_Angle* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_ANGLE		944  /**/
+#define ERR_UPER_DECODE_BASE_ANGLE_RAD_2		940  /**/
+flag asn1SccBase_Angle_Decode(asn1SccBase_Angle* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_commands_Motion2D --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double translation;
+    asn1SccT_Double rotation;
+    asn1SccBase_Angle heading;
+
+} asn1SccBase_commands_Motion2D;
+
+flag asn1SccBase_commands_Motion2D_Equal(const asn1SccBase_commands_Motion2D* pVal1, const asn1SccBase_commands_Motion2D* pVal2);
+
+void asn1SccBase_commands_Motion2D_Initialize(asn1SccBase_commands_Motion2D* pVal);
+
+#define ERR_BASE_COMMANDS_MOTION2D_TRANSLATION		1597  /**/
+#define ERR_BASE_COMMANDS_MOTION2D_ROTATION		1608  /**/
+#define ERR_BASE_COMMANDS_MOTION2D_HEADING_RAD		1619  /**/
+flag asn1SccBase_commands_Motion2D_IsConstraintValid(const asn1SccBase_commands_Motion2D* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D		1640  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1604  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_ROTATION_2		1615  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_HEADING_2		1636  /**/
+#define asn1SccBase_commands_Motion2D_REQUIRED_BYTES_FOR_ENCODING       39 
+#define asn1SccBase_commands_Motion2D_REQUIRED_BITS_FOR_ENCODING        312
+
+flag asn1SccBase_commands_Motion2D_Encode(const asn1SccBase_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D		1641  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1605  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_ROTATION_2		1616  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_HEADING_2		1637  /**/
+flag asn1SccBase_commands_Motion2D_Decode(asn1SccBase_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_PoseUpdateThreshold --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double distance;
+    asn1SccT_Double angle;
+
+} asn1SccBase_PoseUpdateThreshold;
+
+flag asn1SccBase_PoseUpdateThreshold_Equal(const asn1SccBase_PoseUpdateThreshold* pVal1, const asn1SccBase_PoseUpdateThreshold* pVal2);
+
+void asn1SccBase_PoseUpdateThreshold_Initialize(asn1SccBase_PoseUpdateThreshold* pVal);
+
+#define ERR_BASE_POSEUPDATETHRESHOLD_DISTANCE		1055  /**/
+#define ERR_BASE_POSEUPDATETHRESHOLD_ANGLE		1066  /**/
+flag asn1SccBase_PoseUpdateThreshold_IsConstraintValid(const asn1SccBase_PoseUpdateThreshold* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD		1077  /**/
+#define ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		1062  /**/
+#define ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		1073  /**/
+#define asn1SccBase_PoseUpdateThreshold_REQUIRED_BYTES_FOR_ENCODING       26 
+#define asn1SccBase_PoseUpdateThreshold_REQUIRED_BITS_FOR_ENCODING        208
+
+flag asn1SccBase_PoseUpdateThreshold_Encode(const asn1SccBase_PoseUpdateThreshold* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD		1078  /**/
+#define ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		1063  /**/
+#define ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		1074  /**/
+flag asn1SccBase_PoseUpdateThreshold_Decode(asn1SccBase_PoseUpdateThreshold* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Temperature --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double kelvin;
+
+} asn1SccBase_Temperature;
+
+flag asn1SccBase_Temperature_Equal(const asn1SccBase_Temperature* pVal1, const asn1SccBase_Temperature* pVal2);
+
+void asn1SccBase_Temperature_Initialize(asn1SccBase_Temperature* pVal);
+
+#define ERR_BASE_TEMPERATURE_KELVIN		1100  /**/
+flag asn1SccBase_Temperature_IsConstraintValid(const asn1SccBase_Temperature* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TEMPERATURE		1111  /**/
+#define ERR_UPER_ENCODE_BASE_TEMPERATURE_KELVIN_2		1107  /**/
+#define asn1SccBase_Temperature_REQUIRED_BYTES_FOR_ENCODING       13 
+#define asn1SccBase_Temperature_REQUIRED_BITS_FOR_ENCODING        104
+
+flag asn1SccBase_Temperature_Encode(const asn1SccBase_Temperature* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TEMPERATURE		1112  /**/
+#define ERR_UPER_DECODE_BASE_TEMPERATURE_KELVIN_2		1108  /**/
+flag asn1SccBase_Temperature_Decode(asn1SccBase_Temperature* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_commands_Speed6D --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double surge;
+    asn1SccT_Double sway;
+    asn1SccT_Double heave;
+    asn1SccT_Double roll;
+    asn1SccT_Double pitch;
+    asn1SccT_Double yaw;
+
+} asn1SccBase_commands_Speed6D;
+
+flag asn1SccBase_commands_Speed6D_Equal(const asn1SccBase_commands_Speed6D* pVal1, const asn1SccBase_commands_Speed6D* pVal2);
+
+void asn1SccBase_commands_Speed6D_Initialize(asn1SccBase_commands_Speed6D* pVal);
+
+#define ERR_BASE_COMMANDS_SPEED6D_SURGE		1646  /**/
+#define ERR_BASE_COMMANDS_SPEED6D_SWAY		1657  /**/
+#define ERR_BASE_COMMANDS_SPEED6D_HEAVE		1668  /**/
+#define ERR_BASE_COMMANDS_SPEED6D_ROLL		1679  /**/
+#define ERR_BASE_COMMANDS_SPEED6D_PITCH		1690  /**/
+#define ERR_BASE_COMMANDS_SPEED6D_YAW		1701  /**/
+flag asn1SccBase_commands_Speed6D_IsConstraintValid(const asn1SccBase_commands_Speed6D* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D		1712  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SURGE_2		1653  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SWAY_2		1664  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_HEAVE_2		1675  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_ROLL_2		1686  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_PITCH_2		1697  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_YAW_2		1708  /**/
+#define asn1SccBase_commands_Speed6D_REQUIRED_BYTES_FOR_ENCODING       78 
+#define asn1SccBase_commands_Speed6D_REQUIRED_BITS_FOR_ENCODING        624
+
+flag asn1SccBase_commands_Speed6D_Encode(const asn1SccBase_commands_Speed6D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D		1713  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SURGE_2		1654  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SWAY_2		1665  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_HEAVE_2		1676  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_ROLL_2		1687  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_PITCH_2		1698  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_YAW_2		1709  /**/
+flag asn1SccBase_commands_Speed6D_Decode(asn1SccBase_commands_Speed6D* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_AngleAxisd --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[3];
+} asn1SccWrappers_AngleAxisd_axis;
+
+typedef struct {
+    asn1SccT_Double angle;
+    asn1SccWrappers_AngleAxisd_axis axis;
+
+} asn1SccWrappers_AngleAxisd;
+
+flag asn1SccWrappers_AngleAxisd_axis_Equal(const asn1SccWrappers_AngleAxisd_axis* pVal1, const asn1SccWrappers_AngleAxisd_axis* pVal2);
+
+flag asn1SccWrappers_AngleAxisd_Equal(const asn1SccWrappers_AngleAxisd* pVal1, const asn1SccWrappers_AngleAxisd* pVal2);
+
+void asn1SccWrappers_AngleAxisd_axis_Initialize(asn1SccWrappers_AngleAxisd_axis* pVal);
+void asn1SccWrappers_AngleAxisd_Initialize(asn1SccWrappers_AngleAxisd* pVal);
+
+#define ERR_WRAPPERS_ANGLEAXISD_ANGLE		5577  /**/
+#define ERR_WRAPPERS_ANGLEAXISD_AXIS_ELM		5588  /**/
+#define ERR_WRAPPERS_ANGLEAXISD_AXIS		5599  /**/
+flag asn1SccWrappers_AngleAxisd_IsConstraintValid(const asn1SccWrappers_AngleAxisd* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD		5606  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_ANGLE_2		5584  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS		5600  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		5595  /**/
+#define asn1SccWrappers_AngleAxisd_REQUIRED_BYTES_FOR_ENCODING       53 
+#define asn1SccWrappers_AngleAxisd_REQUIRED_BITS_FOR_ENCODING        418
+
+flag asn1SccWrappers_AngleAxisd_Encode(const asn1SccWrappers_AngleAxisd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD		5607  /**/
+#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_ANGLE_2		5585  /**/
+#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS		5601  /**/
+#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		5596  /**/
+flag asn1SccWrappers_AngleAxisd_Decode(asn1SccWrappers_AngleAxisd* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Vector2d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[2];
+} asn1SccWrappers_Vector2d_data;
+
+typedef struct {
+    asn1SccWrappers_Vector2d_data data;
+
+} asn1SccWrappers_Vector2d;
+
+flag asn1SccWrappers_Vector2d_data_Equal(const asn1SccWrappers_Vector2d_data* pVal1, const asn1SccWrappers_Vector2d_data* pVal2);
+
+flag asn1SccWrappers_Vector2d_Equal(const asn1SccWrappers_Vector2d* pVal1, const asn1SccWrappers_Vector2d* pVal2);
+
+void asn1SccWrappers_Vector2d_data_Initialize(asn1SccWrappers_Vector2d_data* pVal);
+void asn1SccWrappers_Vector2d_Initialize(asn1SccWrappers_Vector2d* pVal);
+
+#define ERR_WRAPPERS_VECTOR2D_DATA_ELM		5612  /**/
+#define ERR_WRAPPERS_VECTOR2D_DATA		5623  /**/
+flag asn1SccWrappers_Vector2d_IsConstraintValid(const asn1SccWrappers_Vector2d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR2D		5630  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA		5624  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA_ELM_2		5619  /**/
+#define asn1SccWrappers_Vector2d_REQUIRED_BYTES_FOR_ENCODING       27 
+#define asn1SccWrappers_Vector2d_REQUIRED_BITS_FOR_ENCODING        209
+
+flag asn1SccWrappers_Vector2d_Encode(const asn1SccWrappers_Vector2d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR2D		5631  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA		5625  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA_ELM_2		5620  /**/
+flag asn1SccWrappers_Vector2d_Decode(asn1SccWrappers_Vector2d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Pose2D --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector2d position;
+    asn1SccT_Double orientation;
+
+} asn1SccBase_Pose2D;
+
+flag asn1SccBase_Pose2D_Equal(const asn1SccBase_Pose2D* pVal1, const asn1SccBase_Pose2D* pVal2);
+
+void asn1SccBase_Pose2D_Initialize(asn1SccBase_Pose2D* pVal);
+
+#define ERR_BASE_POSE2D_POSITION_DATA_ELM		1010  /**/
+#define ERR_BASE_POSE2D_POSITION_DATA		1021  /**/
+#define ERR_BASE_POSE2D_ORIENTATION		1038  /**/
+flag asn1SccBase_Pose2D_IsConstraintValid(const asn1SccBase_Pose2D* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_POSE2D		1049  /**/
+#define ERR_UPER_ENCODE_BASE_POSE2D_POSITION_2		1034  /**/
+#define ERR_UPER_ENCODE_BASE_POSE2D_ORIENTATION_2		1045  /**/
+#define asn1SccBase_Pose2D_REQUIRED_BYTES_FOR_ENCODING       40 
+#define asn1SccBase_Pose2D_REQUIRED_BITS_FOR_ENCODING        313
+
+flag asn1SccBase_Pose2D_Encode(const asn1SccBase_Pose2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_POSE2D		1050  /**/
+#define ERR_UPER_DECODE_BASE_POSE2D_POSITION_2		1035  /**/
+#define ERR_UPER_DECODE_BASE_POSE2D_ORIENTATION_2		1046  /**/
+flag asn1SccBase_Pose2D_Decode(asn1SccBase_Pose2D* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Pose2D_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector2d position;
+    asn1SccT_Double orientation;
+
+} asn1SccBase_Pose2D_m;
+
+flag asn1SccBase_Pose2D_m_Equal(const asn1SccBase_Pose2D_m* pVal1, const asn1SccBase_Pose2D_m* pVal2);
+
+void asn1SccBase_Pose2D_m_Initialize(asn1SccBase_Pose2D_m* pVal);
+
+#define ERR_BASE_POSE2D_M_POSITION_DATA_ELM		5965  /**/
+#define ERR_BASE_POSE2D_M_POSITION_DATA		5976  /**/
+#define ERR_BASE_POSE2D_M_ORIENTATION		5993  /**/
+flag asn1SccBase_Pose2D_m_IsConstraintValid(const asn1SccBase_Pose2D_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_POSE2D_M		6004  /**/
+#define ERR_UPER_ENCODE_BASE_POSE2D_M_POSITION_2		5989  /**/
+#define ERR_UPER_ENCODE_BASE_POSE2D_M_ORIENTATION_2		6000  /**/
+#define asn1SccBase_Pose2D_m_REQUIRED_BYTES_FOR_ENCODING       40 
+#define asn1SccBase_Pose2D_m_REQUIRED_BITS_FOR_ENCODING        313
+
+flag asn1SccBase_Pose2D_m_Encode(const asn1SccBase_Pose2D_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_POSE2D_M		6005  /**/
+#define ERR_UPER_DECODE_BASE_POSE2D_M_POSITION_2		5990  /**/
+#define ERR_UPER_DECODE_BASE_POSE2D_M_ORIENTATION_2		6001  /**/
+flag asn1SccBase_Pose2D_m_Decode(asn1SccBase_Pose2D_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Matrix2d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[4];
+} asn1SccWrappers_Matrix2d_data;
+
+typedef struct {
+    asn1SccWrappers_Matrix2d_data data;
+
+} asn1SccWrappers_Matrix2d;
+
+flag asn1SccWrappers_Matrix2d_data_Equal(const asn1SccWrappers_Matrix2d_data* pVal1, const asn1SccWrappers_Matrix2d_data* pVal2);
+
+flag asn1SccWrappers_Matrix2d_Equal(const asn1SccWrappers_Matrix2d* pVal1, const asn1SccWrappers_Matrix2d* pVal2);
+
+void asn1SccWrappers_Matrix2d_data_Initialize(asn1SccWrappers_Matrix2d_data* pVal);
+void asn1SccWrappers_Matrix2d_Initialize(asn1SccWrappers_Matrix2d* pVal);
+
+#define ERR_WRAPPERS_MATRIX2D_DATA_ELM		5636  /**/
+#define ERR_WRAPPERS_MATRIX2D_DATA		5647  /**/
+flag asn1SccWrappers_Matrix2d_IsConstraintValid(const asn1SccWrappers_Matrix2d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX2D		5654  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA		5648  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA_ELM_2		5643  /**/
+#define asn1SccWrappers_Matrix2d_REQUIRED_BYTES_FOR_ENCODING       53 
+#define asn1SccWrappers_Matrix2d_REQUIRED_BITS_FOR_ENCODING        418
+
+flag asn1SccWrappers_Matrix2d_Encode(const asn1SccWrappers_Matrix2d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX2D		5655  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA		5649  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA_ELM_2		5644  /**/
+flag asn1SccWrappers_Matrix2d_Decode(asn1SccWrappers_Matrix2d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Vector3d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[3];
+} asn1SccWrappers_Vector3d_data;
+
+typedef struct {
+    asn1SccWrappers_Vector3d_data data;
+
+} asn1SccWrappers_Vector3d;
+
+flag asn1SccWrappers_Vector3d_data_Equal(const asn1SccWrappers_Vector3d_data* pVal1, const asn1SccWrappers_Vector3d_data* pVal2);
+
+flag asn1SccWrappers_Vector3d_Equal(const asn1SccWrappers_Vector3d* pVal1, const asn1SccWrappers_Vector3d* pVal2);
+
+void asn1SccWrappers_Vector3d_data_Initialize(asn1SccWrappers_Vector3d_data* pVal);
+void asn1SccWrappers_Vector3d_Initialize(asn1SccWrappers_Vector3d* pVal);
+
+#define ERR_WRAPPERS_VECTOR3D_DATA_ELM		5660  /**/
+#define ERR_WRAPPERS_VECTOR3D_DATA		5671  /**/
+flag asn1SccWrappers_Vector3d_IsConstraintValid(const asn1SccWrappers_Vector3d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR3D		5678  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA		5672  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA_ELM_2		5667  /**/
+#define asn1SccWrappers_Vector3d_REQUIRED_BYTES_FOR_ENCODING       40 
+#define asn1SccWrappers_Vector3d_REQUIRED_BITS_FOR_ENCODING        314
+
+flag asn1SccWrappers_Vector3d_Encode(const asn1SccWrappers_Vector3d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR3D		5679  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA		5673  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA_ELM_2		5668  /**/
+flag asn1SccWrappers_Vector3d_Decode(asn1SccWrappers_Vector3d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Wrench --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d force;
+    asn1SccWrappers_Vector3d torque;
+
+} asn1SccBase_Wrench;
+
+flag asn1SccBase_Wrench_Equal(const asn1SccBase_Wrench* pVal1, const asn1SccBase_Wrench* pVal2);
+
+void asn1SccBase_Wrench_Initialize(asn1SccBase_Wrench* pVal);
+
+#define ERR_BASE_WRENCH_FORCE_DATA_ELM		870  /**/
+#define ERR_BASE_WRENCH_FORCE_DATA		881  /**/
+#define ERR_BASE_WRENCH_TORQUE_DATA_ELM		898  /**/
+#define ERR_BASE_WRENCH_TORQUE_DATA		909  /**/
+flag asn1SccBase_Wrench_IsConstraintValid(const asn1SccBase_Wrench* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_WRENCH		926  /**/
+#define ERR_UPER_ENCODE_BASE_WRENCH_FORCE_2		894  /**/
+#define ERR_UPER_ENCODE_BASE_WRENCH_TORQUE_2		922  /**/
+#define asn1SccBase_Wrench_REQUIRED_BYTES_FOR_ENCODING       79 
+#define asn1SccBase_Wrench_REQUIRED_BITS_FOR_ENCODING        628
+
+flag asn1SccBase_Wrench_Encode(const asn1SccBase_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_WRENCH		927  /**/
+#define ERR_UPER_DECODE_BASE_WRENCH_FORCE_2		895  /**/
+#define ERR_UPER_DECODE_BASE_WRENCH_TORQUE_2		923  /**/
+flag asn1SccBase_Wrench_Decode(asn1SccBase_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Waypoint --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d position;
+    asn1SccT_Double heading;
+    asn1SccT_Double tol_position;
+    asn1SccT_Double tol_heading;
+
+} asn1SccBase_Waypoint;
+
+flag asn1SccBase_Waypoint_Equal(const asn1SccBase_Waypoint* pVal1, const asn1SccBase_Waypoint* pVal2);
+
+void asn1SccBase_Waypoint_Initialize(asn1SccBase_Waypoint* pVal);
+
+#define ERR_BASE_WAYPOINT_POSITION_DATA_ELM		1241  /**/
+#define ERR_BASE_WAYPOINT_POSITION_DATA		1252  /**/
+#define ERR_BASE_WAYPOINT_HEADING		1269  /**/
+#define ERR_BASE_WAYPOINT_TOL_POSITION		1280  /**/
+#define ERR_BASE_WAYPOINT_TOL_HEADING		1291  /**/
+flag asn1SccBase_Waypoint_IsConstraintValid(const asn1SccBase_Waypoint* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_WAYPOINT		1302  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_POSITION_2		1265  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_HEADING_2		1276  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_POSITION_2		1287  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_HEADING_2		1298  /**/
+#define asn1SccBase_Waypoint_REQUIRED_BYTES_FOR_ENCODING       79 
+#define asn1SccBase_Waypoint_REQUIRED_BITS_FOR_ENCODING        626
+
+flag asn1SccBase_Waypoint_Encode(const asn1SccBase_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_WAYPOINT		1303  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_POSITION_2		1266  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_HEADING_2		1277  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_TOL_POSITION_2		1288  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_TOL_HEADING_2		1299  /**/
+flag asn1SccBase_Waypoint_Decode(asn1SccBase_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Waypoint_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d position;
+    asn1SccT_Double heading;
+    asn1SccT_Double tol_position;
+    asn1SccT_Double tol_heading;
+
+} asn1SccBase_Waypoint_m;
+
+flag asn1SccBase_Waypoint_m_Equal(const asn1SccBase_Waypoint_m* pVal1, const asn1SccBase_Waypoint_m* pVal2);
+
+void asn1SccBase_Waypoint_m_Initialize(asn1SccBase_Waypoint_m* pVal);
+
+#define ERR_BASE_WAYPOINT_M_POSITION_DATA_ELM		6274  /**/
+#define ERR_BASE_WAYPOINT_M_POSITION_DATA		6285  /**/
+#define ERR_BASE_WAYPOINT_M_HEADING		6302  /**/
+#define ERR_BASE_WAYPOINT_M_TOL_POSITION		6313  /**/
+#define ERR_BASE_WAYPOINT_M_TOL_HEADING		6324  /**/
+flag asn1SccBase_Waypoint_m_IsConstraintValid(const asn1SccBase_Waypoint_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_M		6335  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_POSITION_2		6298  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_HEADING_2		6309  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_POSITION_2		6320  /**/
+#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_HEADING_2		6331  /**/
+#define asn1SccBase_Waypoint_m_REQUIRED_BYTES_FOR_ENCODING       79 
+#define asn1SccBase_Waypoint_m_REQUIRED_BITS_FOR_ENCODING        626
+
+flag asn1SccBase_Waypoint_m_Encode(const asn1SccBase_Waypoint_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_WAYPOINT_M		6336  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_M_POSITION_2		6299  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_M_HEADING_2		6310  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_POSITION_2		6321  /**/
+#define ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_HEADING_2		6332  /**/
+flag asn1SccBase_Waypoint_m_Decode(asn1SccBase_Waypoint_m* pVal, BitStream* pBitStrm, int* pErrCode);
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_Waypoint_m arr[200];
+} asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint;
+
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Equal(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal1, const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal2);
+
+void asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal);
+
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_POSITION_DATA_ELM		302  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_POSITION_DATA		313  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_HEADING		330  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_TOL_POSITION		341  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_TOL_HEADING		352  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		373  /**/
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		374  /**/
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		369  /**/
+#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_REQUIRED_BYTES_FOR_ENCODING       15651 
+#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_REQUIRED_BITS_FOR_ENCODING        125208
+
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		375  /**/
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		370  /**/
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Wrench_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d force;
+    asn1SccWrappers_Vector3d torque;
+
+} asn1SccBase_Wrench_m;
+
+flag asn1SccBase_Wrench_m_Equal(const asn1SccBase_Wrench_m* pVal1, const asn1SccBase_Wrench_m* pVal2);
+
+void asn1SccBase_Wrench_m_Initialize(asn1SccBase_Wrench_m* pVal);
+
+#define ERR_BASE_WRENCH_M_FORCE_DATA_ELM		6341  /**/
+#define ERR_BASE_WRENCH_M_FORCE_DATA		6352  /**/
+#define ERR_BASE_WRENCH_M_TORQUE_DATA_ELM		6369  /**/
+#define ERR_BASE_WRENCH_M_TORQUE_DATA		6380  /**/
+flag asn1SccBase_Wrench_m_IsConstraintValid(const asn1SccBase_Wrench_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_WRENCH_M		6397  /**/
+#define ERR_UPER_ENCODE_BASE_WRENCH_M_FORCE_2		6365  /**/
+#define ERR_UPER_ENCODE_BASE_WRENCH_M_TORQUE_2		6393  /**/
+#define asn1SccBase_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       79 
+#define asn1SccBase_Wrench_m_REQUIRED_BITS_FOR_ENCODING        628
+
+flag asn1SccBase_Wrench_m_Encode(const asn1SccBase_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_WRENCH_M		6398  /**/
+#define ERR_UPER_DECODE_BASE_WRENCH_M_FORCE_2		6366  /**/
+#define ERR_UPER_DECODE_BASE_WRENCH_M_TORQUE_2		6394  /**/
+flag asn1SccBase_Wrench_m_Decode(asn1SccBase_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_Wrench_m arr[200];
+} asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench;
+
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Equal(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal1, const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal2);
+
+void asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal);
+
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_FORCE_DATA_ELM		380  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_FORCE_DATA		391  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_TORQUE_DATA_ELM		408  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_TORQUE_DATA		419  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		446  /**/
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		447  /**/
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		442  /**/
+#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_REQUIRED_BYTES_FOR_ENCODING       15701 
+#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_REQUIRED_BITS_FOR_ENCODING        125608
+
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		448  /**/
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		443  /**/
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Matrix3d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[9];
+} asn1SccWrappers_Matrix3d_data;
+
+typedef struct {
+    asn1SccWrappers_Matrix3d_data data;
+
+} asn1SccWrappers_Matrix3d;
+
+flag asn1SccWrappers_Matrix3d_data_Equal(const asn1SccWrappers_Matrix3d_data* pVal1, const asn1SccWrappers_Matrix3d_data* pVal2);
+
+flag asn1SccWrappers_Matrix3d_Equal(const asn1SccWrappers_Matrix3d* pVal1, const asn1SccWrappers_Matrix3d* pVal2);
+
+void asn1SccWrappers_Matrix3d_data_Initialize(asn1SccWrappers_Matrix3d_data* pVal);
+void asn1SccWrappers_Matrix3d_Initialize(asn1SccWrappers_Matrix3d* pVal);
+
+#define ERR_WRAPPERS_MATRIX3D_DATA_ELM		5684  /**/
+#define ERR_WRAPPERS_MATRIX3D_DATA		5695  /**/
+flag asn1SccWrappers_Matrix3d_IsConstraintValid(const asn1SccWrappers_Matrix3d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX3D		5702  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA		5696  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA_ELM_2		5691  /**/
+#define asn1SccWrappers_Matrix3d_REQUIRED_BYTES_FOR_ENCODING       118 
+#define asn1SccWrappers_Matrix3d_REQUIRED_BITS_FOR_ENCODING        940
+
+flag asn1SccWrappers_Matrix3d_Encode(const asn1SccWrappers_Matrix3d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX3D		5703  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA		5697  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA_ELM_2		5692  /**/
+flag asn1SccWrappers_Matrix3d_Decode(asn1SccWrappers_Matrix3d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Vector4d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[4];
+} asn1SccWrappers_Vector4d_data;
+
+typedef struct {
+    asn1SccWrappers_Vector4d_data data;
+
+} asn1SccWrappers_Vector4d;
+
+flag asn1SccWrappers_Vector4d_data_Equal(const asn1SccWrappers_Vector4d_data* pVal1, const asn1SccWrappers_Vector4d_data* pVal2);
+
+flag asn1SccWrappers_Vector4d_Equal(const asn1SccWrappers_Vector4d* pVal1, const asn1SccWrappers_Vector4d* pVal2);
+
+void asn1SccWrappers_Vector4d_data_Initialize(asn1SccWrappers_Vector4d_data* pVal);
+void asn1SccWrappers_Vector4d_Initialize(asn1SccWrappers_Vector4d* pVal);
+
+#define ERR_WRAPPERS_VECTOR4D_DATA_ELM		5708  /**/
+#define ERR_WRAPPERS_VECTOR4D_DATA		5719  /**/
+flag asn1SccWrappers_Vector4d_IsConstraintValid(const asn1SccWrappers_Vector4d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR4D		5726  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA		5720  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA_ELM_2		5715  /**/
+#define asn1SccWrappers_Vector4d_REQUIRED_BYTES_FOR_ENCODING       53 
+#define asn1SccWrappers_Vector4d_REQUIRED_BITS_FOR_ENCODING        418
+
+flag asn1SccWrappers_Vector4d_Encode(const asn1SccWrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR4D		5727  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA		5721  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA_ELM_2		5716  /**/
+flag asn1SccWrappers_Vector4d_Decode(asn1SccWrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode);
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccWrappers_Vector4d arr[200];
+} asn1SccStd_vector_Wrappers_Vector4d;
+
+flag asn1SccStd_vector_Wrappers_Vector4d_Equal(const asn1SccStd_vector_Wrappers_Vector4d* pVal1, const asn1SccStd_vector_Wrappers_Vector4d* pVal2);
+
+void asn1SccStd_vector_Wrappers_Vector4d_Initialize(asn1SccStd_vector_Wrappers_Vector4d* pVal);
+
+#define ERR_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_DATA_ELM		453  /**/
+#define ERR_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_DATA		464  /**/
+#define ERR_STD_VECTOR_WRAPPERS_VECTOR4D		481  /**/
+flag asn1SccStd_vector_Wrappers_Vector4d_IsConstraintValid(const asn1SccStd_vector_Wrappers_Vector4d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D		482  /**/
+#define ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		477  /**/
+#define asn1SccStd_vector_Wrappers_Vector4d_REQUIRED_BYTES_FOR_ENCODING       10451 
+#define asn1SccStd_vector_Wrappers_Vector4d_REQUIRED_BITS_FOR_ENCODING        83608
+
+flag asn1SccStd_vector_Wrappers_Vector4d_Encode(const asn1SccStd_vector_Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D		483  /**/
+#define ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		478  /**/
+flag asn1SccStd_vector_Wrappers_Vector4d_Decode(asn1SccStd_vector_Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Matrix4d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[16];
+} asn1SccWrappers_Matrix4d_data;
+
+typedef struct {
+    asn1SccWrappers_Matrix4d_data data;
+
+} asn1SccWrappers_Matrix4d;
+
+flag asn1SccWrappers_Matrix4d_data_Equal(const asn1SccWrappers_Matrix4d_data* pVal1, const asn1SccWrappers_Matrix4d_data* pVal2);
+
+flag asn1SccWrappers_Matrix4d_Equal(const asn1SccWrappers_Matrix4d* pVal1, const asn1SccWrappers_Matrix4d* pVal2);
+
+void asn1SccWrappers_Matrix4d_data_Initialize(asn1SccWrappers_Matrix4d_data* pVal);
+void asn1SccWrappers_Matrix4d_Initialize(asn1SccWrappers_Matrix4d* pVal);
+
+#define ERR_WRAPPERS_MATRIX4D_DATA_ELM		5732  /**/
+#define ERR_WRAPPERS_MATRIX4D_DATA		5743  /**/
+flag asn1SccWrappers_Matrix4d_IsConstraintValid(const asn1SccWrappers_Matrix4d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX4D		5750  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA		5744  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA_ELM_2		5739  /**/
+#define asn1SccWrappers_Matrix4d_REQUIRED_BYTES_FOR_ENCODING       209 
+#define asn1SccWrappers_Matrix4d_REQUIRED_BITS_FOR_ENCODING        1668
+
+flag asn1SccWrappers_Matrix4d_Encode(const asn1SccWrappers_Matrix4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX4D		5751  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA		5745  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA_ELM_2		5740  /**/
+flag asn1SccWrappers_Matrix4d_Decode(asn1SccWrappers_Matrix4d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Vector6d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[6];
+} asn1SccWrappers_Vector6d_data;
+
+typedef struct {
+    asn1SccWrappers_Vector6d_data data;
+
+} asn1SccWrappers_Vector6d;
+
+flag asn1SccWrappers_Vector6d_data_Equal(const asn1SccWrappers_Vector6d_data* pVal1, const asn1SccWrappers_Vector6d_data* pVal2);
+
+flag asn1SccWrappers_Vector6d_Equal(const asn1SccWrappers_Vector6d* pVal1, const asn1SccWrappers_Vector6d* pVal2);
+
+void asn1SccWrappers_Vector6d_data_Initialize(asn1SccWrappers_Vector6d_data* pVal);
+void asn1SccWrappers_Vector6d_Initialize(asn1SccWrappers_Vector6d* pVal);
+
+#define ERR_WRAPPERS_VECTOR6D_DATA_ELM		5756  /**/
+#define ERR_WRAPPERS_VECTOR6D_DATA		5767  /**/
+flag asn1SccWrappers_Vector6d_IsConstraintValid(const asn1SccWrappers_Vector6d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR6D		5774  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA		5768  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA_ELM_2		5763  /**/
+#define asn1SccWrappers_Vector6d_REQUIRED_BYTES_FOR_ENCODING       79 
+#define asn1SccWrappers_Vector6d_REQUIRED_BITS_FOR_ENCODING        627
+
+flag asn1SccWrappers_Vector6d_Encode(const asn1SccWrappers_Vector6d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR6D		5775  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA		5769  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA_ELM_2		5764  /**/
+flag asn1SccWrappers_Vector6d_Decode(asn1SccWrappers_Vector6d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Matrix6d --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[36];
+} asn1SccWrappers_Matrix6d_data;
+
+typedef struct {
+    asn1SccWrappers_Matrix6d_data data;
+
+} asn1SccWrappers_Matrix6d;
+
+flag asn1SccWrappers_Matrix6d_data_Equal(const asn1SccWrappers_Matrix6d_data* pVal1, const asn1SccWrappers_Matrix6d_data* pVal2);
+
+flag asn1SccWrappers_Matrix6d_Equal(const asn1SccWrappers_Matrix6d* pVal1, const asn1SccWrappers_Matrix6d* pVal2);
+
+void asn1SccWrappers_Matrix6d_data_Initialize(asn1SccWrappers_Matrix6d_data* pVal);
+void asn1SccWrappers_Matrix6d_Initialize(asn1SccWrappers_Matrix6d* pVal);
+
+#define ERR_WRAPPERS_MATRIX6D_DATA_ELM		5780  /**/
+#define ERR_WRAPPERS_MATRIX6D_DATA		5791  /**/
+flag asn1SccWrappers_Matrix6d_IsConstraintValid(const asn1SccWrappers_Matrix6d* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX6D		5798  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA		5792  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA_ELM_2		5787  /**/
+#define asn1SccWrappers_Matrix6d_REQUIRED_BYTES_FOR_ENCODING       469 
+#define asn1SccWrappers_Matrix6d_REQUIRED_BITS_FOR_ENCODING        3750
+
+flag asn1SccWrappers_Matrix6d_Encode(const asn1SccWrappers_Matrix6d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX6D		5799  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA		5793  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA_ELM_2		5788  /**/
+flag asn1SccWrappers_Matrix6d_Decode(asn1SccWrappers_Matrix6d* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_TwistWithCovariance --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d vel;
+    asn1SccWrappers_Vector3d rot;
+    asn1SccWrappers_Matrix6d cov;
+
+} asn1SccBase_TwistWithCovariance;
+
+flag asn1SccBase_TwistWithCovariance_Equal(const asn1SccBase_TwistWithCovariance* pVal1, const asn1SccBase_TwistWithCovariance* pVal2);
+
+void asn1SccBase_TwistWithCovariance_Initialize(asn1SccBase_TwistWithCovariance* pVal);
+
+#define ERR_BASE_TWISTWITHCOVARIANCE_VEL_DATA_ELM		780  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_VEL_DATA		791  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_ROT_DATA_ELM		808  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_ROT_DATA		819  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_COV_DATA_ELM		836  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_COV_DATA		847  /**/
+flag asn1SccBase_TwistWithCovariance_IsConstraintValid(const asn1SccBase_TwistWithCovariance* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE		864  /**/
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_VEL_2		804  /**/
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_ROT_2		832  /**/
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_COV_2		860  /**/
+#define asn1SccBase_TwistWithCovariance_REQUIRED_BYTES_FOR_ENCODING       548 
+#define asn1SccBase_TwistWithCovariance_REQUIRED_BITS_FOR_ENCODING        4378
+
+flag asn1SccBase_TwistWithCovariance_Encode(const asn1SccBase_TwistWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE		865  /**/
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_VEL_2		805  /**/
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_ROT_2		833  /**/
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_COV_2		861  /**/
+flag asn1SccBase_TwistWithCovariance_Decode(asn1SccBase_TwistWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_TwistWithCovariance_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d vel;
+    asn1SccWrappers_Vector3d rot;
+    asn1SccWrappers_Matrix6d cov;
+
+} asn1SccBase_TwistWithCovariance_m;
+
+flag asn1SccBase_TwistWithCovariance_m_Equal(const asn1SccBase_TwistWithCovariance_m* pVal1, const asn1SccBase_TwistWithCovariance_m* pVal2);
+
+void asn1SccBase_TwistWithCovariance_m_Initialize(asn1SccBase_TwistWithCovariance_m* pVal);
+
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA_ELM		6184  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA		6195  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA_ELM		6212  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA		6223  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA_ELM		6240  /**/
+#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA		6251  /**/
+flag asn1SccBase_TwistWithCovariance_m_IsConstraintValid(const asn1SccBase_TwistWithCovariance_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M		6268  /**/
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		6208  /**/
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		6236  /**/
+#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		6264  /**/
+#define asn1SccBase_TwistWithCovariance_m_REQUIRED_BYTES_FOR_ENCODING       548 
+#define asn1SccBase_TwistWithCovariance_m_REQUIRED_BITS_FOR_ENCODING        4378
+
+flag asn1SccBase_TwistWithCovariance_m_Encode(const asn1SccBase_TwistWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M		6269  /**/
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		6209  /**/
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		6237  /**/
+#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		6265  /**/
+flag asn1SccBase_TwistWithCovariance_m_Decode(asn1SccBase_TwistWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_Quaterniond --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[3];
+} asn1SccWrappers_Quaterniond_im;
+
+typedef struct {
+    asn1SccWrappers_Quaterniond_im im;
+    asn1SccT_Double re;
+
+} asn1SccWrappers_Quaterniond;
+
+flag asn1SccWrappers_Quaterniond_im_Equal(const asn1SccWrappers_Quaterniond_im* pVal1, const asn1SccWrappers_Quaterniond_im* pVal2);
+
+flag asn1SccWrappers_Quaterniond_Equal(const asn1SccWrappers_Quaterniond* pVal1, const asn1SccWrappers_Quaterniond* pVal2);
+
+void asn1SccWrappers_Quaterniond_im_Initialize(asn1SccWrappers_Quaterniond_im* pVal);
+void asn1SccWrappers_Quaterniond_Initialize(asn1SccWrappers_Quaterniond* pVal);
+
+#define ERR_WRAPPERS_QUATERNIOND_IM_ELM		5850  /**/
+#define ERR_WRAPPERS_QUATERNIOND_IM		5861  /**/
+#define ERR_WRAPPERS_QUATERNIOND_RE		5868  /**/
+flag asn1SccWrappers_Quaterniond_IsConstraintValid(const asn1SccWrappers_Quaterniond* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND		5879  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM		5862  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM_ELM_2		5857  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_RE_2		5875  /**/
+#define asn1SccWrappers_Quaterniond_REQUIRED_BYTES_FOR_ENCODING       53 
+#define asn1SccWrappers_Quaterniond_REQUIRED_BITS_FOR_ENCODING        418
+
+flag asn1SccWrappers_Quaterniond_Encode(const asn1SccWrappers_Quaterniond* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND		5880  /**/
+#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM		5863  /**/
+#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM_ELM_2		5858  /**/
+#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_RE_2		5876  /**/
+flag asn1SccWrappers_Quaterniond_Decode(asn1SccWrappers_Quaterniond* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Pose --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d position;
+    asn1SccWrappers_Quaterniond orientation;
+
+} asn1SccBase_Pose;
+
+flag asn1SccBase_Pose_Equal(const asn1SccBase_Pose* pVal1, const asn1SccBase_Pose* pVal2);
+
+void asn1SccBase_Pose_Initialize(asn1SccBase_Pose* pVal);
+
+#define ERR_BASE_POSE_POSITION_DATA_ELM		606  /**/
+#define ERR_BASE_POSE_POSITION_DATA		617  /**/
+#define ERR_BASE_POSE_ORIENTATION_IM_ELM		634  /**/
+#define ERR_BASE_POSE_ORIENTATION_IM		645  /**/
+#define ERR_BASE_POSE_ORIENTATION_RE		652  /**/
+flag asn1SccBase_Pose_IsConstraintValid(const asn1SccBase_Pose* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_POSE		673  /**/
+#define ERR_UPER_ENCODE_BASE_POSE_POSITION_2		630  /**/
+#define ERR_UPER_ENCODE_BASE_POSE_ORIENTATION_2		669  /**/
+#define asn1SccBase_Pose_REQUIRED_BYTES_FOR_ENCODING       92 
+#define asn1SccBase_Pose_REQUIRED_BITS_FOR_ENCODING        732
+
+flag asn1SccBase_Pose_Encode(const asn1SccBase_Pose* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_POSE		674  /**/
+#define ERR_UPER_DECODE_BASE_POSE_POSITION_2		631  /**/
+#define ERR_UPER_DECODE_BASE_POSE_ORIENTATION_2		670  /**/
+flag asn1SccBase_Pose_Decode(asn1SccBase_Pose* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_TransformWithCovariance --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d translation;
+    asn1SccWrappers_Quaterniond orientation;
+    asn1SccWrappers_Matrix6d cov;
+
+} asn1SccBase_TransformWithCovariance;
+
+flag asn1SccBase_TransformWithCovariance_Equal(const asn1SccBase_TransformWithCovariance* pVal1, const asn1SccBase_TransformWithCovariance* pVal2);
+
+void asn1SccBase_TransformWithCovariance_Initialize(asn1SccBase_TransformWithCovariance* pVal);
+
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_DATA_ELM		679  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_DATA		690  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_IM_ELM		707  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_IM		718  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_RE		725  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_COV_DATA_ELM		746  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_COV_DATA		757  /**/
+flag asn1SccBase_TransformWithCovariance_IsConstraintValid(const asn1SccBase_TransformWithCovariance* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE		774  /**/
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		703  /**/
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		742  /**/
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		770  /**/
+#define asn1SccBase_TransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING       561 
+#define asn1SccBase_TransformWithCovariance_REQUIRED_BITS_FOR_ENCODING        4482
+
+flag asn1SccBase_TransformWithCovariance_Encode(const asn1SccBase_TransformWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE		775  /**/
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		704  /**/
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		743  /**/
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		771  /**/
+flag asn1SccBase_TransformWithCovariance_Decode(asn1SccBase_TransformWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Pose_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d position;
+    asn1SccWrappers_Quaterniond orientation;
+
+} asn1SccBase_Pose_m;
+
+flag asn1SccBase_Pose_m_Equal(const asn1SccBase_Pose_m* pVal1, const asn1SccBase_Pose_m* pVal2);
+
+void asn1SccBase_Pose_m_Initialize(asn1SccBase_Pose_m* pVal);
+
+#define ERR_BASE_POSE_M_POSITION_DATA_ELM		6010  /**/
+#define ERR_BASE_POSE_M_POSITION_DATA		6021  /**/
+#define ERR_BASE_POSE_M_ORIENTATION_IM_ELM		6038  /**/
+#define ERR_BASE_POSE_M_ORIENTATION_IM		6049  /**/
+#define ERR_BASE_POSE_M_ORIENTATION_RE		6056  /**/
+flag asn1SccBase_Pose_m_IsConstraintValid(const asn1SccBase_Pose_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_POSE_M		6077  /**/
+#define ERR_UPER_ENCODE_BASE_POSE_M_POSITION_2		6034  /**/
+#define ERR_UPER_ENCODE_BASE_POSE_M_ORIENTATION_2		6073  /**/
+#define asn1SccBase_Pose_m_REQUIRED_BYTES_FOR_ENCODING       92 
+#define asn1SccBase_Pose_m_REQUIRED_BITS_FOR_ENCODING        732
+
+flag asn1SccBase_Pose_m_Encode(const asn1SccBase_Pose_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_POSE_M		6078  /**/
+#define ERR_UPER_DECODE_BASE_POSE_M_POSITION_2		6035  /**/
+#define ERR_UPER_DECODE_BASE_POSE_M_ORIENTATION_2		6074  /**/
+flag asn1SccBase_Pose_m_Decode(asn1SccBase_Pose_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_TransformWithCovariance_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d translation;
+    asn1SccWrappers_Quaterniond orientation;
+    asn1SccWrappers_Matrix6d cov;
+
+} asn1SccBase_TransformWithCovariance_m;
+
+flag asn1SccBase_TransformWithCovariance_m_Equal(const asn1SccBase_TransformWithCovariance_m* pVal1, const asn1SccBase_TransformWithCovariance_m* pVal2);
+
+void asn1SccBase_TransformWithCovariance_m_Initialize(asn1SccBase_TransformWithCovariance_m* pVal);
+
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA_ELM		6083  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA		6094  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM_ELM		6111  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM		6122  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_RE		6129  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA_ELM		6150  /**/
+#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA		6161  /**/
+flag asn1SccBase_TransformWithCovariance_m_IsConstraintValid(const asn1SccBase_TransformWithCovariance_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M		6178  /**/
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		6107  /**/
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		6146  /**/
+#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		6174  /**/
+#define asn1SccBase_TransformWithCovariance_m_REQUIRED_BYTES_FOR_ENCODING       561 
+#define asn1SccBase_TransformWithCovariance_m_REQUIRED_BITS_FOR_ENCODING        4482
+
+flag asn1SccBase_TransformWithCovariance_m_Encode(const asn1SccBase_TransformWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M		6179  /**/
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		6108  /**/
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		6147  /**/
+#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		6175  /**/
+flag asn1SccBase_TransformWithCovariance_m_Decode(asn1SccBase_TransformWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_VectorXd --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Double arr[200];
+} asn1SccWrappers_VectorXd_data;
+
+typedef struct {
+    asn1SccWrappers_VectorXd_data data;
+
+} asn1SccWrappers_VectorXd;
+
+flag asn1SccWrappers_VectorXd_data_Equal(const asn1SccWrappers_VectorXd_data* pVal1, const asn1SccWrappers_VectorXd_data* pVal2);
+
+flag asn1SccWrappers_VectorXd_Equal(const asn1SccWrappers_VectorXd* pVal1, const asn1SccWrappers_VectorXd* pVal2);
+
+void asn1SccWrappers_VectorXd_data_Initialize(asn1SccWrappers_VectorXd_data* pVal);
+void asn1SccWrappers_VectorXd_Initialize(asn1SccWrappers_VectorXd* pVal);
+
+#define ERR_WRAPPERS_VECTORXD_DATA_ELM		5885  /**/
+#define ERR_WRAPPERS_VECTORXD_DATA		5896  /**/
+flag asn1SccWrappers_VectorXd_IsConstraintValid(const asn1SccWrappers_VectorXd* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_WRAPPERS_VECTORXD		5903  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA		5897  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA_ELM_2		5892  /**/
+#define asn1SccWrappers_VectorXd_REQUIRED_BYTES_FOR_ENCODING       2601 
+#define asn1SccWrappers_VectorXd_REQUIRED_BITS_FOR_ENCODING        20808
+
+flag asn1SccWrappers_VectorXd_Encode(const asn1SccWrappers_VectorXd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_WRAPPERS_VECTORXD		5904  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA		5898  /**/
+#define ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA_ELM_2		5893  /**/
+flag asn1SccWrappers_VectorXd_Decode(asn1SccWrappers_VectorXd* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef asn1Real asn1SccT_Float;
+
+
+flag asn1SccT_Float_Equal(const asn1SccT_Float* pVal1, const asn1SccT_Float* pVal2);
+
+void asn1SccT_Float_Initialize(asn1SccT_Float* pVal);
+
+#define ERR_T_FLOAT		8  /**/
+flag asn1SccT_Float_IsConstraintValid(const asn1SccT_Float* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_FLOAT		9  /**/
+#define asn1SccT_Float_REQUIRED_BYTES_FOR_ENCODING       13 
+#define asn1SccT_Float_REQUIRED_BITS_FOR_ENCODING        104
+
+flag asn1SccT_Float_Encode(const asn1SccT_Float* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_FLOAT		10  /**/
+flag asn1SccT_Float_Decode(asn1SccT_Float* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointState --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double position;
+    asn1SccT_Float speed;
+    asn1SccT_Float effort;
+    asn1SccT_Float raw;
+    asn1SccT_Float acceleration;
+
+} asn1SccBase_JointState;
+
+flag asn1SccBase_JointState_Equal(const asn1SccBase_JointState* pVal1, const asn1SccBase_JointState* pVal2);
+
+void asn1SccBase_JointState_Initialize(asn1SccBase_JointState* pVal);
+
+#define ERR_BASE_JOINTSTATE_POSITION		949  /**/
+#define ERR_BASE_JOINTSTATE_SPEED		960  /**/
+#define ERR_BASE_JOINTSTATE_EFFORT		971  /**/
+#define ERR_BASE_JOINTSTATE_RAW		982  /**/
+#define ERR_BASE_JOINTSTATE_ACCELERATION		993  /**/
+flag asn1SccBase_JointState_IsConstraintValid(const asn1SccBase_JointState* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE		1004  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE_POSITION_2		956  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE_SPEED_2		967  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE_EFFORT_2		978  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE_RAW_2		989  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE_ACCELERATION_2		1000  /**/
+#define asn1SccBase_JointState_REQUIRED_BYTES_FOR_ENCODING       65 
+#define asn1SccBase_JointState_REQUIRED_BITS_FOR_ENCODING        520
+
+flag asn1SccBase_JointState_Encode(const asn1SccBase_JointState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTSTATE		1005  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTATE_POSITION_2		957  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTATE_SPEED_2		968  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTATE_EFFORT_2		979  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTATE_RAW_2		990  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTATE_ACCELERATION_2		1001  /**/
+flag asn1SccBase_JointState_Decode(asn1SccBase_JointState* pVal, BitStream* pBitStrm, int* pErrCode);
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointState arr[200];
+} asn1SccBase_JointTrajectory;
+
+flag asn1SccBase_JointTrajectory_Equal(const asn1SccBase_JointTrajectory* pVal1, const asn1SccBase_JointTrajectory* pVal2);
+
+void asn1SccBase_JointTrajectory_Initialize(asn1SccBase_JointTrajectory* pVal);
+
+#define ERR_BASE_JOINTTRAJECTORY_ELM_POSITION		163  /**/
+#define ERR_BASE_JOINTTRAJECTORY_ELM_SPEED		174  /**/
+#define ERR_BASE_JOINTTRAJECTORY_ELM_EFFORT		185  /**/
+#define ERR_BASE_JOINTTRAJECTORY_ELM_RAW		196  /**/
+#define ERR_BASE_JOINTTRAJECTORY_ELM_ACCELERATION		207  /**/
+#define ERR_BASE_JOINTTRAJECTORY		228  /**/
+flag asn1SccBase_JointTrajectory_IsConstraintValid(const asn1SccBase_JointTrajectory* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY		229  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY_ELM_2		224  /**/
+#define asn1SccBase_JointTrajectory_REQUIRED_BYTES_FOR_ENCODING       13001 
+#define asn1SccBase_JointTrajectory_REQUIRED_BITS_FOR_ENCODING        104008
+
+flag asn1SccBase_JointTrajectory_Encode(const asn1SccBase_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTTRAJECTORY		230  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRAJECTORY_ELM_2		225  /**/
+flag asn1SccBase_JointTrajectory_Decode(asn1SccBase_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointLimitRange --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_JointState min;
+    asn1SccBase_JointState max;
+
+} asn1SccBase_JointLimitRange;
+
+flag asn1SccBase_JointLimitRange_Equal(const asn1SccBase_JointLimitRange* pVal1, const asn1SccBase_JointLimitRange* pVal2);
+
+void asn1SccBase_JointLimitRange_Initialize(asn1SccBase_JointLimitRange* pVal);
+
+#define ERR_BASE_JOINTLIMITRANGE_MIN_POSITION		1308  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MIN_SPEED		1319  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MIN_EFFORT		1330  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MIN_RAW		1341  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MIN_ACCELERATION		1352  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MAX_POSITION		1373  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MAX_SPEED		1384  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MAX_EFFORT		1395  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MAX_RAW		1406  /**/
+#define ERR_BASE_JOINTLIMITRANGE_MAX_ACCELERATION		1417  /**/
+flag asn1SccBase_JointLimitRange_IsConstraintValid(const asn1SccBase_JointLimitRange* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE		1438  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MIN_2		1369  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MAX_2		1434  /**/
+#define asn1SccBase_JointLimitRange_REQUIRED_BYTES_FOR_ENCODING       130 
+#define asn1SccBase_JointLimitRange_REQUIRED_BITS_FOR_ENCODING        1040
+
+flag asn1SccBase_JointLimitRange_Encode(const asn1SccBase_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTLIMITRANGE		1439  /**/
+#define ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MIN_2		1370  /**/
+#define ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MAX_2		1435  /**/
+flag asn1SccBase_JointLimitRange_Decode(asn1SccBase_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Pressure --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Float pascal;
+
+} asn1SccBase_Pressure;
+
+flag asn1SccBase_Pressure_Equal(const asn1SccBase_Pressure* pVal1, const asn1SccBase_Pressure* pVal2);
+
+void asn1SccBase_Pressure_Initialize(asn1SccBase_Pressure* pVal);
+
+#define ERR_BASE_PRESSURE_PASCAL		1083  /**/
+flag asn1SccBase_Pressure_IsConstraintValid(const asn1SccBase_Pressure* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_PRESSURE		1094  /**/
+#define ERR_UPER_ENCODE_BASE_PRESSURE_PASCAL_2		1090  /**/
+#define asn1SccBase_Pressure_REQUIRED_BYTES_FOR_ENCODING       13 
+#define asn1SccBase_Pressure_REQUIRED_BITS_FOR_ENCODING        104
+
+flag asn1SccBase_Pressure_Encode(const asn1SccBase_Pressure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_PRESSURE		1095  /**/
+#define ERR_UPER_DECODE_BASE_PRESSURE_PASCAL_2		1091  /**/
+flag asn1SccBase_Pressure_Decode(asn1SccBase_Pressure* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef asn1SccSint asn1SccT_Int16;
+
+
+flag asn1SccT_Int16_Equal(const asn1SccT_Int16* pVal1, const asn1SccT_Int16* pVal2);
+
+void asn1SccT_Int16_Initialize(asn1SccT_Int16* pVal);
+
+#define ERR_T_INT16		15  /**/
+flag asn1SccT_Int16_IsConstraintValid(const asn1SccT_Int16* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_INT16		16  /**/
+#define asn1SccT_Int16_REQUIRED_BYTES_FOR_ENCODING       2 
+#define asn1SccT_Int16_REQUIRED_BITS_FOR_ENCODING        16
+
+flag asn1SccT_Int16_Encode(const asn1SccT_Int16* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_INT16		17  /**/
+flag asn1SccT_Int16_Decode(asn1SccT_Int16* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef asn1SccUint asn1SccT_UInt16;
+
+
+flag asn1SccT_UInt16_Equal(const asn1SccT_UInt16* pVal1, const asn1SccT_UInt16* pVal2);
+
+void asn1SccT_UInt16_Initialize(asn1SccT_UInt16* pVal);
+
+#define ERR_T_UINT16		22  /**/
+flag asn1SccT_UInt16_IsConstraintValid(const asn1SccT_UInt16* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_UINT16		23  /**/
+#define asn1SccT_UInt16_REQUIRED_BYTES_FOR_ENCODING       2 
+#define asn1SccT_UInt16_REQUIRED_BITS_FOR_ENCODING        16
+
+flag asn1SccT_UInt16_Encode(const asn1SccT_UInt16* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_UINT16		24  /**/
+flag asn1SccT_UInt16_Decode(asn1SccT_UInt16* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_frame_frame_size_t --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_UInt16 width;
+    asn1SccT_UInt16 height;
+
+} asn1SccBase_samples_frame_frame_size_t;
+
+flag asn1SccBase_samples_frame_frame_size_t_Equal(const asn1SccBase_samples_frame_frame_size_t* pVal1, const asn1SccBase_samples_frame_frame_size_t* pVal2);
+
+void asn1SccBase_samples_frame_frame_size_t_Initialize(asn1SccBase_samples_frame_frame_size_t* pVal);
+
+#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH		2385  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT		2396  /**/
+flag asn1SccBase_samples_frame_frame_size_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_size_t* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		2407  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		2392  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		2403  /**/
+#define asn1SccBase_samples_frame_frame_size_t_REQUIRED_BYTES_FOR_ENCODING       4 
+#define asn1SccBase_samples_frame_frame_size_t_REQUIRED_BITS_FOR_ENCODING        32
+
+flag asn1SccBase_samples_frame_frame_size_t_Encode(const asn1SccBase_samples_frame_frame_size_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		2408  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		2393  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		2404  /**/
+flag asn1SccBase_samples_frame_frame_size_t_Decode(asn1SccBase_samples_frame_frame_size_t* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef asn1SccUint asn1SccT_UInt64;
+
+
+flag asn1SccT_UInt64_Equal(const asn1SccT_UInt64* pVal1, const asn1SccT_UInt64* pVal2);
+
+void asn1SccT_UInt64_Initialize(asn1SccT_UInt64* pVal);
+
+#define ERR_T_UINT64		29  /**/
+flag asn1SccT_UInt64_IsConstraintValid(const asn1SccT_UInt64* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_UINT64		30  /**/
+#define asn1SccT_UInt64_REQUIRED_BYTES_FOR_ENCODING       8 
+#define asn1SccT_UInt64_REQUIRED_BITS_FOR_ENCODING        63
+
+flag asn1SccT_UInt64_Encode(const asn1SccT_UInt64* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_UINT64		31  /**/
+flag asn1SccT_UInt64_Decode(asn1SccT_UInt64* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef asn1SccSint asn1SccT_Int64;
+
+
+flag asn1SccT_Int64_Equal(const asn1SccT_Int64* pVal1, const asn1SccT_Int64* pVal2);
+
+void asn1SccT_Int64_Initialize(asn1SccT_Int64* pVal);
+
+#define ERR_T_INT64		36  /**/
+flag asn1SccT_Int64_IsConstraintValid(const asn1SccT_Int64* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_INT64		37  /**/
+#define asn1SccT_Int64_REQUIRED_BYTES_FOR_ENCODING       8 
+#define asn1SccT_Int64_REQUIRED_BITS_FOR_ENCODING        64
+
+flag asn1SccT_Int64_Encode(const asn1SccT_Int64* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_INT64		38  /**/
+flag asn1SccT_Int64_Decode(asn1SccT_Int64* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Time --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Int64 microseconds;
+
+} asn1SccBase_Time;
+
+flag asn1SccBase_Time_Equal(const asn1SccBase_Time* pVal1, const asn1SccBase_Time* pVal2);
+
+void asn1SccBase_Time_Initialize(asn1SccBase_Time* pVal);
+
+#define ERR_BASE_TIME_MICROSECONDS		1117  /**/
+flag asn1SccBase_Time_IsConstraintValid(const asn1SccBase_Time* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TIME		1128  /**/
+#define ERR_UPER_ENCODE_BASE_TIME_MICROSECONDS_2		1124  /**/
+#define asn1SccBase_Time_REQUIRED_BYTES_FOR_ENCODING       8 
+#define asn1SccBase_Time_REQUIRED_BITS_FOR_ENCODING        64
+
+flag asn1SccBase_Time_Encode(const asn1SccBase_Time* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TIME		1129  /**/
+#define ERR_UPER_DECODE_BASE_TIME_MICROSECONDS_2		1125  /**/
+flag asn1SccBase_Time_Decode(asn1SccBase_Time* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_TimeStamped_Base_commands_Motion2D --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double translation;
+    asn1SccT_Double rotation;
+    asn1SccBase_Angle heading;
+    asn1SccBase_Time time;
+
+} asn1SccBase_TimeStamped_Base_commands_Motion2D;
+
+flag asn1SccBase_TimeStamped_Base_commands_Motion2D_Equal(const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal1, const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal2);
+
+void asn1SccBase_TimeStamped_Base_commands_Motion2D_Initialize(asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal);
+
+#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION		1444  /**/
+#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION		1455  /**/
+#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_RAD		1466  /**/
+#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_MICROSECONDS		1487  /**/
+flag asn1SccBase_TimeStamped_Base_commands_Motion2D_IsConstraintValid(const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		1508  /**/
+#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1451  /**/
+#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		1462  /**/
+#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		1483  /**/
+#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		1504  /**/
+#define asn1SccBase_TimeStamped_Base_commands_Motion2D_REQUIRED_BYTES_FOR_ENCODING       47 
+#define asn1SccBase_TimeStamped_Base_commands_Motion2D_REQUIRED_BITS_FOR_ENCODING        376
+
+flag asn1SccBase_TimeStamped_Base_commands_Motion2D_Encode(const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		1509  /**/
+#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1452  /**/
+#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		1463  /**/
+#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		1484  /**/
+#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		1505  /**/
+flag asn1SccBase_TimeStamped_Base_commands_Motion2D_Decode(asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_LinearAngular6DCommand --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccWrappers_Vector3d linear;
+    asn1SccWrappers_Vector3d angular;
+
+} asn1SccBase_LinearAngular6DCommand;
+
+flag asn1SccBase_LinearAngular6DCommand_Equal(const asn1SccBase_LinearAngular6DCommand* pVal1, const asn1SccBase_LinearAngular6DCommand* pVal2);
+
+void asn1SccBase_LinearAngular6DCommand_Initialize(asn1SccBase_LinearAngular6DCommand* pVal);
+
+#define ERR_BASE_LINEARANGULAR6DCOMMAND_TIME_MICROSECONDS		1514  /**/
+#define ERR_BASE_LINEARANGULAR6DCOMMAND_LINEAR_DATA_ELM		1535  /**/
+#define ERR_BASE_LINEARANGULAR6DCOMMAND_LINEAR_DATA		1546  /**/
+#define ERR_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_DATA_ELM		1563  /**/
+#define ERR_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_DATA		1574  /**/
+flag asn1SccBase_LinearAngular6DCommand_IsConstraintValid(const asn1SccBase_LinearAngular6DCommand* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND		1591  /**/
+#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		1531  /**/
+#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		1559  /**/
+#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		1587  /**/
+#define asn1SccBase_LinearAngular6DCommand_REQUIRED_BYTES_FOR_ENCODING       87 
+#define asn1SccBase_LinearAngular6DCommand_REQUIRED_BITS_FOR_ENCODING        692
+
+flag asn1SccBase_LinearAngular6DCommand_Encode(const asn1SccBase_LinearAngular6DCommand* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND		1592  /**/
+#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		1532  /**/
+#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		1560  /**/
+#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		1588  /**/
+flag asn1SccBase_LinearAngular6DCommand_Decode(asn1SccBase_LinearAngular6DCommand* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_BodyState --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccBase_TransformWithCovariance pose;
+    asn1SccBase_TwistWithCovariance velocity;
+
+} asn1SccBase_samples_BodyState;
+
+flag asn1SccBase_samples_BodyState_Equal(const asn1SccBase_samples_BodyState* pVal1, const asn1SccBase_samples_BodyState* pVal2);
+
+void asn1SccBase_samples_BodyState_Initialize(asn1SccBase_samples_BodyState* pVal);
+
+#define ERR_BASE_SAMPLES_BODYSTATE_TIME_MICROSECONDS		1718  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_TRANSLATION_DATA_ELM		1739  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_TRANSLATION_DATA		1750  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_ORIENTATION_IM_ELM		1767  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_ORIENTATION_IM		1778  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_ORIENTATION_RE		1785  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_COV_DATA_ELM		1806  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_POSE_COV_DATA		1817  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_VEL_DATA_ELM		1844  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_VEL_DATA		1855  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_ROT_DATA_ELM		1872  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_ROT_DATA		1883  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_COV_DATA_ELM		1900  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_COV_DATA		1911  /**/
+flag asn1SccBase_samples_BodyState_IsConstraintValid(const asn1SccBase_samples_BodyState* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE		1938  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_TIME_2		1735  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_POSE_2		1840  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		1934  /**/
+#define asn1SccBase_samples_BodyState_REQUIRED_BYTES_FOR_ENCODING       1116 
+#define asn1SccBase_samples_BodyState_REQUIRED_BITS_FOR_ENCODING        8924
+
+flag asn1SccBase_samples_BodyState_Encode(const asn1SccBase_samples_BodyState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE		1939  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_TIME_2		1736  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_POSE_2		1841  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		1935  /**/
+flag asn1SccBase_samples_BodyState_Decode(asn1SccBase_samples_BodyState* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_IMUSensors --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccWrappers_Vector3d acc;
+    asn1SccWrappers_Vector3d gyro;
+    asn1SccWrappers_Vector3d mag;
+
+} asn1SccBase_samples_IMUSensors;
+
+flag asn1SccBase_samples_IMUSensors_Equal(const asn1SccBase_samples_IMUSensors* pVal1, const asn1SccBase_samples_IMUSensors* pVal2);
+
+void asn1SccBase_samples_IMUSensors_Initialize(asn1SccBase_samples_IMUSensors* pVal);
+
+#define ERR_BASE_SAMPLES_IMUSENSORS_TIME_MICROSECONDS		1944  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_ACC_DATA_ELM		1965  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_ACC_DATA		1976  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_GYRO_DATA_ELM		1993  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_GYRO_DATA		2004  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_MAG_DATA_ELM		2021  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_MAG_DATA		2032  /**/
+flag asn1SccBase_samples_IMUSensors_IsConstraintValid(const asn1SccBase_samples_IMUSensors* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS		2049  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_TIME_2		1961  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_ACC_2		1989  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		2017  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_MAG_2		2045  /**/
+#define asn1SccBase_samples_IMUSensors_REQUIRED_BYTES_FOR_ENCODING       126 
+#define asn1SccBase_samples_IMUSensors_REQUIRED_BITS_FOR_ENCODING        1006
+
+flag asn1SccBase_samples_IMUSensors_Encode(const asn1SccBase_samples_IMUSensors* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS		2050  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_TIME_2		1962  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_ACC_2		1990  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		2018  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_MAG_2		2046  /**/
+flag asn1SccBase_samples_IMUSensors_Decode(asn1SccBase_samples_IMUSensors* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Motion2D --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Double translation;
+    asn1SccT_Double rotation;
+    asn1SccBase_Angle heading;
+    asn1SccBase_Time time;
+
+} asn1SccBase_samples_Motion2D;
+
+flag asn1SccBase_samples_Motion2D_Equal(const asn1SccBase_samples_Motion2D* pVal1, const asn1SccBase_samples_Motion2D* pVal2);
+
+void asn1SccBase_samples_Motion2D_Initialize(asn1SccBase_samples_Motion2D* pVal);
+
+#define ERR_BASE_SAMPLES_MOTION2D_TRANSLATION		2055  /**/
+#define ERR_BASE_SAMPLES_MOTION2D_ROTATION		2066  /**/
+#define ERR_BASE_SAMPLES_MOTION2D_HEADING_RAD		2077  /**/
+#define ERR_BASE_SAMPLES_MOTION2D_TIME_MICROSECONDS		2098  /**/
+flag asn1SccBase_samples_Motion2D_IsConstraintValid(const asn1SccBase_samples_Motion2D* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D		2119  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		2062  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_ROTATION_2		2073  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_HEADING_2		2094  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TIME_2		2115  /**/
+#define asn1SccBase_samples_Motion2D_REQUIRED_BYTES_FOR_ENCODING       47 
+#define asn1SccBase_samples_Motion2D_REQUIRED_BITS_FOR_ENCODING        376
+
+flag asn1SccBase_samples_Motion2D_Encode(const asn1SccBase_samples_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D		2120  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		2063  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_ROTATION_2		2074  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_HEADING_2		2095  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TIME_2		2116  /**/
+flag asn1SccBase_samples_Motion2D_Decode(asn1SccBase_samples_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Pressure --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_Float pascal;
+    asn1SccBase_Time time;
+
+} asn1SccBase_samples_Pressure;
+
+flag asn1SccBase_samples_Pressure_Equal(const asn1SccBase_samples_Pressure* pVal1, const asn1SccBase_samples_Pressure* pVal2);
+
+void asn1SccBase_samples_Pressure_Initialize(asn1SccBase_samples_Pressure* pVal);
+
+#define ERR_BASE_SAMPLES_PRESSURE_PASCAL		2125  /**/
+#define ERR_BASE_SAMPLES_PRESSURE_TIME_MICROSECONDS		2136  /**/
+flag asn1SccBase_samples_Pressure_IsConstraintValid(const asn1SccBase_samples_Pressure* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE		2157  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_PASCAL_2		2132  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_TIME_2		2153  /**/
+#define asn1SccBase_samples_Pressure_REQUIRED_BYTES_FOR_ENCODING       21 
+#define asn1SccBase_samples_Pressure_REQUIRED_BITS_FOR_ENCODING        168
+
+flag asn1SccBase_samples_Pressure_Encode(const asn1SccBase_samples_Pressure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE		2158  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_PASCAL_2		2133  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_TIME_2		2154  /**/
+flag asn1SccBase_samples_Pressure_Decode(asn1SccBase_samples_Pressure* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_RigidBodyAcceleration --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccWrappers_Vector3d acceleration;
+    asn1SccWrappers_Matrix3d cov_acceleration;
+    asn1SccWrappers_Vector3d angular_acceleration;
+    asn1SccWrappers_Matrix3d cov_angular_acceleration;
+
+} asn1SccBase_samples_RigidBodyAcceleration;
+
+flag asn1SccBase_samples_RigidBodyAcceleration_Equal(const asn1SccBase_samples_RigidBodyAcceleration* pVal1, const asn1SccBase_samples_RigidBodyAcceleration* pVal2);
+
+void asn1SccBase_samples_RigidBodyAcceleration_Initialize(asn1SccBase_samples_RigidBodyAcceleration* pVal);
+
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_MICROSECONDS		2163  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_DATA_ELM		2184  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_DATA		2195  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_DATA_ELM		2212  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_DATA		2223  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_DATA_ELM		2240  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_DATA		2251  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_DATA_ELM		2268  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_DATA		2279  /**/
+flag asn1SccBase_samples_RigidBodyAcceleration_IsConstraintValid(const asn1SccBase_samples_RigidBodyAcceleration* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION		2296  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		2180  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		2208  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		2236  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		2264  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		2292  /**/
+#define asn1SccBase_samples_RigidBodyAcceleration_REQUIRED_BYTES_FOR_ENCODING       322 
+#define asn1SccBase_samples_RigidBodyAcceleration_REQUIRED_BITS_FOR_ENCODING        2572
+
+flag asn1SccBase_samples_RigidBodyAcceleration_Encode(const asn1SccBase_samples_RigidBodyAcceleration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION		2297  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		2181  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		2209  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		2237  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		2265  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		2293  /**/
+flag asn1SccBase_samples_RigidBodyAcceleration_Decode(asn1SccBase_samples_RigidBodyAcceleration* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Wrench --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d force;
+    asn1SccWrappers_Vector3d torque;
+    asn1SccBase_Time time;
+
+} asn1SccBase_samples_Wrench;
+
+flag asn1SccBase_samples_Wrench_Equal(const asn1SccBase_samples_Wrench* pVal1, const asn1SccBase_samples_Wrench* pVal2);
+
+void asn1SccBase_samples_Wrench_Initialize(asn1SccBase_samples_Wrench* pVal);
+
+#define ERR_BASE_SAMPLES_WRENCH_FORCE_DATA_ELM		2302  /**/
+#define ERR_BASE_SAMPLES_WRENCH_FORCE_DATA		2313  /**/
+#define ERR_BASE_SAMPLES_WRENCH_TORQUE_DATA_ELM		2330  /**/
+#define ERR_BASE_SAMPLES_WRENCH_TORQUE_DATA		2341  /**/
+#define ERR_BASE_SAMPLES_WRENCH_TIME_MICROSECONDS		2358  /**/
+flag asn1SccBase_samples_Wrench_IsConstraintValid(const asn1SccBase_samples_Wrench* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH		2379  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_FORCE_2		2326  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TORQUE_2		2354  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TIME_2		2375  /**/
+#define asn1SccBase_samples_Wrench_REQUIRED_BYTES_FOR_ENCODING       87 
+#define asn1SccBase_samples_Wrench_REQUIRED_BITS_FOR_ENCODING        692
+
+flag asn1SccBase_samples_Wrench_Encode(const asn1SccBase_samples_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH		2380  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_FORCE_2		2327  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TORQUE_2		2355  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TIME_2		2376  /**/
+flag asn1SccBase_samples_Wrench_Decode(asn1SccBase_samples_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_DistanceImage --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_Float arr[200];
+} asn1SccBase_samples_DistanceImage_data;
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccT_UInt16 width;
+    asn1SccT_UInt16 height;
+    asn1SccT_Float scale_x;
+    asn1SccT_Float scale_y;
+    asn1SccT_Float center_x;
+    asn1SccT_Float center_y;
+    asn1SccBase_samples_DistanceImage_data data;
+
+} asn1SccBase_samples_DistanceImage;
+
+flag asn1SccBase_samples_DistanceImage_data_Equal(const asn1SccBase_samples_DistanceImage_data* pVal1, const asn1SccBase_samples_DistanceImage_data* pVal2);
+
+flag asn1SccBase_samples_DistanceImage_Equal(const asn1SccBase_samples_DistanceImage* pVal1, const asn1SccBase_samples_DistanceImage* pVal2);
+
+void asn1SccBase_samples_DistanceImage_data_Initialize(asn1SccBase_samples_DistanceImage_data* pVal);
+void asn1SccBase_samples_DistanceImage_Initialize(asn1SccBase_samples_DistanceImage* pVal);
+
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_TIME_MICROSECONDS		3421  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_WIDTH		3442  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT		3453  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X		3464  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y		3475  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X		3486  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y		3497  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM		3508  /**/
+#define ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA		3519  /**/
+flag asn1SccBase_samples_DistanceImage_IsConstraintValid(const asn1SccBase_samples_DistanceImage* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE		3526  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		3438  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		3449  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		3460  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		3471  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		3482  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		3493  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		3504  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		3520  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		3515  /**/
+#define asn1SccBase_samples_DistanceImage_REQUIRED_BYTES_FOR_ENCODING       2665 
+#define asn1SccBase_samples_DistanceImage_REQUIRED_BITS_FOR_ENCODING        21320
+
+flag asn1SccBase_samples_DistanceImage_Encode(const asn1SccBase_samples_DistanceImage* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE		3527  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		3439  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		3450  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		3461  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		3472  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		3483  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		3494  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		3505  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		3521  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		3516  /**/
+flag asn1SccBase_samples_DistanceImage_Decode(asn1SccBase_samples_DistanceImage* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Pointcloud --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccWrappers_Vector3d arr[200];
+} asn1SccBase_samples_Pointcloud_points;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccWrappers_Vector4d arr[200];
+} asn1SccBase_samples_Pointcloud_colors;
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccBase_samples_Pointcloud_points points;
+    asn1SccBase_samples_Pointcloud_colors colors;
+
+} asn1SccBase_samples_Pointcloud;
+
+flag asn1SccBase_samples_Pointcloud_points_Equal(const asn1SccBase_samples_Pointcloud_points* pVal1, const asn1SccBase_samples_Pointcloud_points* pVal2);
+
+flag asn1SccBase_samples_Pointcloud_colors_Equal(const asn1SccBase_samples_Pointcloud_colors* pVal1, const asn1SccBase_samples_Pointcloud_colors* pVal2);
+
+flag asn1SccBase_samples_Pointcloud_Equal(const asn1SccBase_samples_Pointcloud* pVal1, const asn1SccBase_samples_Pointcloud* pVal2);
+
+void asn1SccBase_samples_Pointcloud_points_Initialize(asn1SccBase_samples_Pointcloud_points* pVal);
+void asn1SccBase_samples_Pointcloud_colors_Initialize(asn1SccBase_samples_Pointcloud_colors* pVal);
+void asn1SccBase_samples_Pointcloud_Initialize(asn1SccBase_samples_Pointcloud* pVal);
+
+#define ERR_BASE_SAMPLES_POINTCLOUD_TIME_MICROSECONDS		3771  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_DATA_ELM		3792  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_DATA		3803  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_POINTS		3820  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_DATA_ELM		3827  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_DATA		3838  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_COLORS		3855  /**/
+flag asn1SccBase_samples_Pointcloud_IsConstraintValid(const asn1SccBase_samples_Pointcloud* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD		3862  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_TIME_2		3788  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS		3821  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		3816  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS		3856  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		3851  /**/
+#define asn1SccBase_samples_Pointcloud_REQUIRED_BYTES_FOR_ENCODING       18310 
+#define asn1SccBase_samples_Pointcloud_REQUIRED_BITS_FOR_ENCODING        146480
+
+flag asn1SccBase_samples_Pointcloud_Encode(const asn1SccBase_samples_Pointcloud* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD		3863  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_TIME_2		3789  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS		3822  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		3817  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS		3857  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		3852  /**/
+flag asn1SccBase_samples_Pointcloud_Decode(asn1SccBase_samples_Pointcloud* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_SonarBeam --------------------------------------------*/
+typedef struct {
+    int nCount; 
+    
+    byte arr[200];
+} asn1SccBase_samples_SonarBeam_beam;
+
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccBase_Angle bearing;
+    asn1SccT_Double sampling_interval;
+    asn1SccT_Float speed_of_sound;
+    asn1SccT_Float beamwidth_horizontal;
+    asn1SccT_Float beamwidth_vertical;
+    asn1SccBase_samples_SonarBeam_beam beam;
+
+} asn1SccBase_samples_SonarBeam;
+
+flag asn1SccBase_samples_SonarBeam_beam_Equal(const asn1SccBase_samples_SonarBeam_beam* pVal1, const asn1SccBase_samples_SonarBeam_beam* pVal2);
+
+flag asn1SccBase_samples_SonarBeam_Equal(const asn1SccBase_samples_SonarBeam* pVal1, const asn1SccBase_samples_SonarBeam* pVal2);
+
+void asn1SccBase_samples_SonarBeam_beam_Initialize(asn1SccBase_samples_SonarBeam_beam* pVal);
+void asn1SccBase_samples_SonarBeam_Initialize(asn1SccBase_samples_SonarBeam* pVal);
+
+#define ERR_BASE_SAMPLES_SONARBEAM_TIME_MICROSECONDS		4349  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEARING_RAD		4370  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL		4391  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND		4402  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL		4413  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL		4424  /**/
+#define ERR_BASE_SAMPLES_SONARBEAM_BEAM		4435  /**/
+flag asn1SccBase_samples_SonarBeam_IsConstraintValid(const asn1SccBase_samples_SonarBeam* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM		4442  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_TIME_2		4366  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEARING_2		4387  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		4398  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		4409  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		4420  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		4431  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAM		4436  /**/
+#define asn1SccBase_samples_SonarBeam_REQUIRED_BYTES_FOR_ENCODING       274 
+#define asn1SccBase_samples_SonarBeam_REQUIRED_BITS_FOR_ENCODING        2192
+
+flag asn1SccBase_samples_SonarBeam_Encode(const asn1SccBase_samples_SonarBeam* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM		4443  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_TIME_2		4367  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEARING_2		4388  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		4399  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		4410  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		4421  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		4432  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAM		4437  /**/
+flag asn1SccBase_samples_SonarBeam_Decode(asn1SccBase_samples_SonarBeam* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_commands_LinearAngular6DCommand_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccWrappers_Vector3d linear;
+    asn1SccWrappers_Vector3d angular;
+
+} asn1SccBase_commands_LinearAngular6DCommand_m;
+
+flag asn1SccBase_commands_LinearAngular6DCommand_m_Equal(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal1, const asn1SccBase_commands_LinearAngular6DCommand_m* pVal2);
+
+void asn1SccBase_commands_LinearAngular6DCommand_m_Initialize(asn1SccBase_commands_LinearAngular6DCommand_m* pVal);
+
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_MICROSECONDS		6403  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA_ELM		6424  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA		6435  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA_ELM		6452  /**/
+#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA		6463  /**/
+flag asn1SccBase_commands_LinearAngular6DCommand_m_IsConstraintValid(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		6480  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		6420  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		6448  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		6476  /**/
+#define asn1SccBase_commands_LinearAngular6DCommand_m_REQUIRED_BYTES_FOR_ENCODING       87 
+#define asn1SccBase_commands_LinearAngular6DCommand_m_REQUIRED_BITS_FOR_ENCODING        692
+
+flag asn1SccBase_commands_LinearAngular6DCommand_m_Encode(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		6481  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		6421  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		6449  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		6477  /**/
+flag asn1SccBase_commands_LinearAngular6DCommand_m_Decode(asn1SccBase_commands_LinearAngular6DCommand_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_BodyState_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccBase_TransformWithCovariance_m pose;
+    asn1SccBase_TwistWithCovariance_m velocity;
+
+} asn1SccBase_samples_BodyState_m;
+
+flag asn1SccBase_samples_BodyState_m_Equal(const asn1SccBase_samples_BodyState_m* pVal1, const asn1SccBase_samples_BodyState_m* pVal2);
+
+void asn1SccBase_samples_BodyState_m_Initialize(asn1SccBase_samples_BodyState_m* pVal);
+
+#define ERR_BASE_SAMPLES_BODYSTATE_M_TIME_MICROSECONDS		6486  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA_ELM		6507  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA		6518  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM_ELM		6535  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM		6546  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_RE		6553  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA_ELM		6574  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA		6585  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA_ELM		6612  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA		6623  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA_ELM		6640  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA		6651  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA_ELM		6668  /**/
+#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA		6679  /**/
+flag asn1SccBase_samples_BodyState_m_IsConstraintValid(const asn1SccBase_samples_BodyState_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M		6706  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		6503  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		6608  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		6702  /**/
+#define asn1SccBase_samples_BodyState_m_REQUIRED_BYTES_FOR_ENCODING       1116 
+#define asn1SccBase_samples_BodyState_m_REQUIRED_BITS_FOR_ENCODING        8924
+
+flag asn1SccBase_samples_BodyState_m_Encode(const asn1SccBase_samples_BodyState_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M		6707  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		6504  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		6609  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		6703  /**/
+flag asn1SccBase_samples_BodyState_m_Decode(asn1SccBase_samples_BodyState_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_IMUSensors_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccWrappers_Vector3d acc;
+    asn1SccWrappers_Vector3d gyro;
+    asn1SccWrappers_Vector3d mag;
+
+} asn1SccBase_samples_IMUSensors_m;
+
+flag asn1SccBase_samples_IMUSensors_m_Equal(const asn1SccBase_samples_IMUSensors_m* pVal1, const asn1SccBase_samples_IMUSensors_m* pVal2);
+
+void asn1SccBase_samples_IMUSensors_m_Initialize(asn1SccBase_samples_IMUSensors_m* pVal);
+
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_TIME_MICROSECONDS		6712  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA_ELM		6733  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA		6744  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA_ELM		6761  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA		6772  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA_ELM		6789  /**/
+#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA		6800  /**/
+flag asn1SccBase_samples_IMUSensors_m_IsConstraintValid(const asn1SccBase_samples_IMUSensors_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M		6817  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		6729  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		6757  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		6785  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		6813  /**/
+#define asn1SccBase_samples_IMUSensors_m_REQUIRED_BYTES_FOR_ENCODING       126 
+#define asn1SccBase_samples_IMUSensors_m_REQUIRED_BITS_FOR_ENCODING        1006
+
+flag asn1SccBase_samples_IMUSensors_m_Encode(const asn1SccBase_samples_IMUSensors_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M		6818  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		6730  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		6758  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		6786  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		6814  /**/
+flag asn1SccBase_samples_IMUSensors_m_Decode(asn1SccBase_samples_IMUSensors_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_RigidBodyAcceleration_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccWrappers_Vector3d acceleration;
+    asn1SccWrappers_Matrix3d cov_acceleration;
+    asn1SccWrappers_Vector3d angular_acceleration;
+    asn1SccWrappers_Matrix3d cov_angular_acceleration;
+
+} asn1SccBase_samples_RigidBodyAcceleration_m;
+
+flag asn1SccBase_samples_RigidBodyAcceleration_m_Equal(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal1, const asn1SccBase_samples_RigidBodyAcceleration_m* pVal2);
+
+void asn1SccBase_samples_RigidBodyAcceleration_m_Initialize(asn1SccBase_samples_RigidBodyAcceleration_m* pVal);
+
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_MICROSECONDS		6823  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA_ELM		6844  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA		6855  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA_ELM		6872  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA		6883  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA_ELM		6900  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA		6911  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA_ELM		6928  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA		6939  /**/
+flag asn1SccBase_samples_RigidBodyAcceleration_m_IsConstraintValid(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		6956  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		6840  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		6868  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		6896  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		6924  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		6952  /**/
+#define asn1SccBase_samples_RigidBodyAcceleration_m_REQUIRED_BYTES_FOR_ENCODING       322 
+#define asn1SccBase_samples_RigidBodyAcceleration_m_REQUIRED_BITS_FOR_ENCODING        2572
+
+flag asn1SccBase_samples_RigidBodyAcceleration_m_Encode(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		6957  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		6841  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		6869  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		6897  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		6925  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		6953  /**/
+flag asn1SccBase_samples_RigidBodyAcceleration_m_Decode(asn1SccBase_samples_RigidBodyAcceleration_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Wrench_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccWrappers_Vector3d force;
+    asn1SccWrappers_Vector3d torque;
+    asn1SccBase_Time time;
+
+} asn1SccBase_samples_Wrench_m;
+
+flag asn1SccBase_samples_Wrench_m_Equal(const asn1SccBase_samples_Wrench_m* pVal1, const asn1SccBase_samples_Wrench_m* pVal2);
+
+void asn1SccBase_samples_Wrench_m_Initialize(asn1SccBase_samples_Wrench_m* pVal);
+
+#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA_ELM		7246  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA		7257  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA_ELM		7274  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA		7285  /**/
+#define ERR_BASE_SAMPLES_WRENCH_M_TIME_MICROSECONDS		7302  /**/
+flag asn1SccBase_samples_Wrench_m_IsConstraintValid(const asn1SccBase_samples_Wrench_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M		7323  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_FORCE_2		7270  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		7298  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TIME_2		7319  /**/
+#define asn1SccBase_samples_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       87 
+#define asn1SccBase_samples_Wrench_m_REQUIRED_BITS_FOR_ENCODING        692
+
+flag asn1SccBase_samples_Wrench_m_Encode(const asn1SccBase_samples_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M		7324  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_FORCE_2		7271  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		7299  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TIME_2		7320  /**/
+flag asn1SccBase_samples_Wrench_m_Decode(asn1SccBase_samples_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Pointcloud_m --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccWrappers_Vector3d arr[200];
+} asn1SccBase_samples_Pointcloud_m_points;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccWrappers_Vector4d arr[200];
+} asn1SccBase_samples_Pointcloud_m_colors;
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccBase_samples_Pointcloud_m_points points;
+    asn1SccBase_samples_Pointcloud_m_colors colors;
+
+} asn1SccBase_samples_Pointcloud_m;
+
+flag asn1SccBase_samples_Pointcloud_m_points_Equal(const asn1SccBase_samples_Pointcloud_m_points* pVal1, const asn1SccBase_samples_Pointcloud_m_points* pVal2);
+
+flag asn1SccBase_samples_Pointcloud_m_colors_Equal(const asn1SccBase_samples_Pointcloud_m_colors* pVal1, const asn1SccBase_samples_Pointcloud_m_colors* pVal2);
+
+flag asn1SccBase_samples_Pointcloud_m_Equal(const asn1SccBase_samples_Pointcloud_m* pVal1, const asn1SccBase_samples_Pointcloud_m* pVal2);
+
+void asn1SccBase_samples_Pointcloud_m_points_Initialize(asn1SccBase_samples_Pointcloud_m_points* pVal);
+void asn1SccBase_samples_Pointcloud_m_colors_Initialize(asn1SccBase_samples_Pointcloud_m_colors* pVal);
+void asn1SccBase_samples_Pointcloud_m_Initialize(asn1SccBase_samples_Pointcloud_m* pVal);
+
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_TIME_MICROSECONDS		7620  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA_ELM		7641  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA		7652  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS		7669  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA_ELM		7676  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA		7687  /**/
+#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS		7704  /**/
+flag asn1SccBase_samples_Pointcloud_m_IsConstraintValid(const asn1SccBase_samples_Pointcloud_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M		7711  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		7637  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		7670  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		7665  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		7705  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		7700  /**/
+#define asn1SccBase_samples_Pointcloud_m_REQUIRED_BYTES_FOR_ENCODING       18310 
+#define asn1SccBase_samples_Pointcloud_m_REQUIRED_BITS_FOR_ENCODING        146480
+
+flag asn1SccBase_samples_Pointcloud_m_Encode(const asn1SccBase_samples_Pointcloud_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M		7712  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		7638  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		7671  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		7666  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		7706  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		7701  /**/
+flag asn1SccBase_samples_Pointcloud_m_Decode(asn1SccBase_samples_Pointcloud_m* pVal, BitStream* pBitStrm, int* pErrCode);
+typedef struct {
+    int nCount; 
+    
+    byte arr[60];
+} asn1SccT_String;
+
+
+flag asn1SccT_String_Equal(const asn1SccT_String* pVal1, const asn1SccT_String* pVal2);
+
+void asn1SccT_String_Initialize(asn1SccT_String* pVal);
+
+#define ERR_T_STRING		43  /**/
+flag asn1SccT_String_IsConstraintValid(const asn1SccT_String* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_STRING		44  /**/
+#define asn1SccT_String_REQUIRED_BYTES_FOR_ENCODING       61 
+#define asn1SccT_String_REQUIRED_BITS_FOR_ENCODING        486
+
+flag asn1SccT_String_Encode(const asn1SccT_String* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_STRING		45  /**/
+flag asn1SccT_String_Decode(asn1SccT_String* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointLimits --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_JointLimits_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointLimitRange arr[200];
+} asn1SccBase_JointLimits_elements;
+
+typedef struct {
+    asn1SccBase_JointLimits_names names;
+    asn1SccBase_JointLimits_elements elements;
+
+} asn1SccBase_JointLimits;
+
+flag asn1SccBase_JointLimits_names_Equal(const asn1SccBase_JointLimits_names* pVal1, const asn1SccBase_JointLimits_names* pVal2);
+
+flag asn1SccBase_JointLimits_elements_Equal(const asn1SccBase_JointLimits_elements* pVal1, const asn1SccBase_JointLimits_elements* pVal2);
+
+flag asn1SccBase_JointLimits_Equal(const asn1SccBase_JointLimits* pVal1, const asn1SccBase_JointLimits* pVal2);
+
+void asn1SccBase_JointLimits_names_Initialize(asn1SccBase_JointLimits_names* pVal);
+void asn1SccBase_JointLimits_elements_Initialize(asn1SccBase_JointLimits_elements* pVal);
+void asn1SccBase_JointLimits_Initialize(asn1SccBase_JointLimits* pVal);
+
+#define ERR_BASE_JOINTLIMITS_NAMES_ELM		2413  /**/
+#define ERR_BASE_JOINTLIMITS_NAMES		2424  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_POSITION		2431  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_SPEED		2442  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_EFFORT		2453  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_RAW		2464  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_ACCELERATION		2475  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_POSITION		2496  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_SPEED		2507  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_EFFORT		2518  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_RAW		2529  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_ACCELERATION		2540  /**/
+#define ERR_BASE_JOINTLIMITS_ELEMENTS		2571  /**/
+flag asn1SccBase_JointLimits_IsConstraintValid(const asn1SccBase_JointLimits* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITS		2578  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES		2425  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES_ELM_2		2420  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS		2572  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		2567  /**/
+#define asn1SccBase_JointLimits_REQUIRED_BYTES_FOR_ENCODING       38152 
+#define asn1SccBase_JointLimits_REQUIRED_BITS_FOR_ENCODING        305216
+
+flag asn1SccBase_JointLimits_Encode(const asn1SccBase_JointLimits* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTLIMITS		2579  /**/
+#define ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES		2426  /**/
+#define ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES_ELM_2		2421  /**/
+#define ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS		2573  /**/
+#define ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		2568  /**/
+flag asn1SccBase_JointLimits_Decode(asn1SccBase_JointLimits* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointTransform --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_String sourceframe;
+    asn1SccT_String targetframe;
+    asn1SccWrappers_Vector3d rotationaxis;
+
+} asn1SccBase_JointTransform;
+
+flag asn1SccBase_JointTransform_Equal(const asn1SccBase_JointTransform* pVal1, const asn1SccBase_JointTransform* pVal2);
+
+void asn1SccBase_JointTransform_Initialize(asn1SccBase_JointTransform* pVal);
+
+#define ERR_BASE_JOINTTRANSFORM_SOURCEFRAME		2584  /**/
+#define ERR_BASE_JOINTTRANSFORM_TARGETFRAME		2595  /**/
+#define ERR_BASE_JOINTTRANSFORM_ROTATIONAXIS_DATA_ELM		2606  /**/
+#define ERR_BASE_JOINTTRANSFORM_ROTATIONAXIS_DATA		2617  /**/
+flag asn1SccBase_JointTransform_IsConstraintValid(const asn1SccBase_JointTransform* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM		2634  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		2591  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		2602  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		2630  /**/
+#define asn1SccBase_JointTransform_REQUIRED_BYTES_FOR_ENCODING       161 
+#define asn1SccBase_JointTransform_REQUIRED_BITS_FOR_ENCODING        1286
+
+flag asn1SccBase_JointTransform_Encode(const asn1SccBase_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM		2635  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		2592  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		2603  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		2631  /**/
+flag asn1SccBase_JointTransform_Decode(asn1SccBase_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointTransformVector --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_JointTransformVector_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointTransform arr[200];
+} asn1SccBase_JointTransformVector_elements;
+
+typedef struct {
+    asn1SccBase_JointTransformVector_names names;
+    asn1SccBase_JointTransformVector_elements elements;
+
+} asn1SccBase_JointTransformVector;
+
+flag asn1SccBase_JointTransformVector_names_Equal(const asn1SccBase_JointTransformVector_names* pVal1, const asn1SccBase_JointTransformVector_names* pVal2);
+
+flag asn1SccBase_JointTransformVector_elements_Equal(const asn1SccBase_JointTransformVector_elements* pVal1, const asn1SccBase_JointTransformVector_elements* pVal2);
+
+flag asn1SccBase_JointTransformVector_Equal(const asn1SccBase_JointTransformVector* pVal1, const asn1SccBase_JointTransformVector* pVal2);
+
+void asn1SccBase_JointTransformVector_names_Initialize(asn1SccBase_JointTransformVector_names* pVal);
+void asn1SccBase_JointTransformVector_elements_Initialize(asn1SccBase_JointTransformVector_elements* pVal);
+void asn1SccBase_JointTransformVector_Initialize(asn1SccBase_JointTransformVector* pVal);
+
+#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM		4806  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES		4817  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_SOURCEFRAME		4824  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_TARGETFRAME		4835  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4846  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA		4857  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4884  /**/
+flag asn1SccBase_JointTransformVector_IsConstraintValid(const asn1SccBase_JointTransformVector* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR		4891  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES		4818  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		4813  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4885  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		4880  /**/
+#define asn1SccBase_JointTransformVector_REQUIRED_BYTES_FOR_ENCODING       44302 
+#define asn1SccBase_JointTransformVector_REQUIRED_BITS_FOR_ENCODING        354416
+
+flag asn1SccBase_JointTransformVector_Encode(const asn1SccBase_JointTransformVector* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR		4892  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES		4819  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		4814  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4886  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		4881  /**/
+flag asn1SccBase_JointTransformVector_Decode(asn1SccBase_JointTransformVector* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_Base_JointTransform --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_Base_JointTransform_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointTransform arr[200];
+} asn1SccBase_NamedVector_Base_JointTransform_elements;
+
+typedef struct {
+    asn1SccBase_NamedVector_Base_JointTransform_names names;
+    asn1SccBase_NamedVector_Base_JointTransform_elements elements;
+
+} asn1SccBase_NamedVector_Base_JointTransform;
+
+flag asn1SccBase_NamedVector_Base_JointTransform_names_Equal(const asn1SccBase_NamedVector_Base_JointTransform_names* pVal1, const asn1SccBase_NamedVector_Base_JointTransform_names* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointTransform_elements_Equal(const asn1SccBase_NamedVector_Base_JointTransform_elements* pVal1, const asn1SccBase_NamedVector_Base_JointTransform_elements* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointTransform_Equal(const asn1SccBase_NamedVector_Base_JointTransform* pVal1, const asn1SccBase_NamedVector_Base_JointTransform* pVal2);
+
+void asn1SccBase_NamedVector_Base_JointTransform_names_Initialize(asn1SccBase_NamedVector_Base_JointTransform_names* pVal);
+void asn1SccBase_NamedVector_Base_JointTransform_elements_Initialize(asn1SccBase_NamedVector_Base_JointTransform_elements* pVal);
+void asn1SccBase_NamedVector_Base_JointTransform_Initialize(asn1SccBase_NamedVector_Base_JointTransform* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM		4897  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4908  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_SOURCEFRAME		4915  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_TARGETFRAME		4926  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4937  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA		4948  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4975  /**/
+flag asn1SccBase_NamedVector_Base_JointTransform_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointTransform* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		4982  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4909  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		4904  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4976  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		4971  /**/
+#define asn1SccBase_NamedVector_Base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       44302 
+#define asn1SccBase_NamedVector_Base_JointTransform_REQUIRED_BITS_FOR_ENCODING        354416
+
+flag asn1SccBase_NamedVector_Base_JointTransform_Encode(const asn1SccBase_NamedVector_Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		4983  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4910  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		4905  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4977  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		4972  /**/
+flag asn1SccBase_NamedVector_Base_JointTransform_Decode(asn1SccBase_NamedVector_Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointsTrajectory --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_JointsTrajectory_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointTrajectory arr[200];
+} asn1SccBase_JointsTrajectory_elements;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_Time arr[200];
+} asn1SccBase_JointsTrajectory_times_val;
+
+typedef struct {
+    asn1SccBase_JointsTrajectory_names names;
+    asn1SccBase_JointsTrajectory_elements elements;
+    asn1SccBase_JointsTrajectory_times_val times_val;
+
+} asn1SccBase_JointsTrajectory;
+
+flag asn1SccBase_JointsTrajectory_names_Equal(const asn1SccBase_JointsTrajectory_names* pVal1, const asn1SccBase_JointsTrajectory_names* pVal2);
+
+flag asn1SccBase_JointsTrajectory_elements_Equal(const asn1SccBase_JointsTrajectory_elements* pVal1, const asn1SccBase_JointsTrajectory_elements* pVal2);
+
+flag asn1SccBase_JointsTrajectory_times_val_Equal(const asn1SccBase_JointsTrajectory_times_val* pVal1, const asn1SccBase_JointsTrajectory_times_val* pVal2);
+
+flag asn1SccBase_JointsTrajectory_Equal(const asn1SccBase_JointsTrajectory* pVal1, const asn1SccBase_JointsTrajectory* pVal2);
+
+void asn1SccBase_JointsTrajectory_names_Initialize(asn1SccBase_JointsTrajectory_names* pVal);
+void asn1SccBase_JointsTrajectory_elements_Initialize(asn1SccBase_JointsTrajectory_elements* pVal);
+void asn1SccBase_JointsTrajectory_times_val_Initialize(asn1SccBase_JointsTrajectory_times_val* pVal);
+void asn1SccBase_JointsTrajectory_Initialize(asn1SccBase_JointsTrajectory* pVal);
+
+#define ERR_BASE_JOINTSTRAJECTORY_NAMES_ELM		2640  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_NAMES		2651  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_POSITION		2658  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_SPEED		2669  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_EFFORT		2680  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_RAW		2691  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_ACCELERATION		2702  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM		2723  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS		2734  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_MICROSECONDS		2741  /**/
+#define ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL		2762  /**/
+flag asn1SccBase_JointsTrajectory_IsConstraintValid(const asn1SccBase_JointsTrajectory* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY		2769  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES		2652  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		2647  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS		2735  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		2730  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		2763  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		2758  /**/
+#define asn1SccBase_JointsTrajectory_REQUIRED_BYTES_FOR_ENCODING       2613953 
+#define asn1SccBase_JointsTrajectory_REQUIRED_BITS_FOR_ENCODING        20911624
+
+flag asn1SccBase_JointsTrajectory_Encode(const asn1SccBase_JointsTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY		2770  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES		2653  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		2648  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS		2736  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		2731  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		2764  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		2759  /**/
+flag asn1SccBase_JointsTrajectory_Decode(asn1SccBase_JointsTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_Base_JointLimitRange --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_Base_JointLimitRange_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointLimitRange arr[200];
+} asn1SccBase_NamedVector_Base_JointLimitRange_elements;
+
+typedef struct {
+    asn1SccBase_NamedVector_Base_JointLimitRange_names names;
+    asn1SccBase_NamedVector_Base_JointLimitRange_elements elements;
+
+} asn1SccBase_NamedVector_Base_JointLimitRange;
+
+flag asn1SccBase_NamedVector_Base_JointLimitRange_names_Equal(const asn1SccBase_NamedVector_Base_JointLimitRange_names* pVal1, const asn1SccBase_NamedVector_Base_JointLimitRange_names* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointLimitRange_elements_Equal(const asn1SccBase_NamedVector_Base_JointLimitRange_elements* pVal1, const asn1SccBase_NamedVector_Base_JointLimitRange_elements* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointLimitRange_Equal(const asn1SccBase_NamedVector_Base_JointLimitRange* pVal1, const asn1SccBase_NamedVector_Base_JointLimitRange* pVal2);
+
+void asn1SccBase_NamedVector_Base_JointLimitRange_names_Initialize(asn1SccBase_NamedVector_Base_JointLimitRange_names* pVal);
+void asn1SccBase_NamedVector_Base_JointLimitRange_elements_Initialize(asn1SccBase_NamedVector_Base_JointLimitRange_elements* pVal);
+void asn1SccBase_NamedVector_Base_JointLimitRange_Initialize(asn1SccBase_NamedVector_Base_JointLimitRange* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM		2775  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		2786  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_POSITION		2793  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_SPEED		2804  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_EFFORT		2815  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_RAW		2826  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_ACCELERATION		2837  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_POSITION		2858  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_SPEED		2869  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_EFFORT		2880  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_RAW		2891  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_ACCELERATION		2902  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		2933  /**/
+flag asn1SccBase_NamedVector_Base_JointLimitRange_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointLimitRange* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		2940  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		2787  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		2782  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		2934  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		2929  /**/
+#define asn1SccBase_NamedVector_Base_JointLimitRange_REQUIRED_BYTES_FOR_ENCODING       38152 
+#define asn1SccBase_NamedVector_Base_JointLimitRange_REQUIRED_BITS_FOR_ENCODING        305216
+
+flag asn1SccBase_NamedVector_Base_JointLimitRange_Encode(const asn1SccBase_NamedVector_Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		2941  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		2788  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		2783  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		2935  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		2930  /**/
+flag asn1SccBase_NamedVector_Base_JointLimitRange_Decode(asn1SccBase_NamedVector_Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_Base_JointState --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_Base_JointState_names;
+
+typedef struct {
+    asn1SccBase_NamedVector_Base_JointState_names names;
+    asn1SccBase_JointTrajectory elements;
+
+} asn1SccBase_NamedVector_Base_JointState;
+
+flag asn1SccBase_NamedVector_Base_JointState_names_Equal(const asn1SccBase_NamedVector_Base_JointState_names* pVal1, const asn1SccBase_NamedVector_Base_JointState_names* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointState_Equal(const asn1SccBase_NamedVector_Base_JointState* pVal1, const asn1SccBase_NamedVector_Base_JointState* pVal2);
+
+void asn1SccBase_NamedVector_Base_JointState_names_Initialize(asn1SccBase_NamedVector_Base_JointState_names* pVal);
+void asn1SccBase_NamedVector_Base_JointState_Initialize(asn1SccBase_NamedVector_Base_JointState* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM		2946  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		2957  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_POSITION		2964  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_SPEED		2975  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_EFFORT		2986  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_RAW		2997  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_ACCELERATION		3008  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS		3029  /**/
+flag asn1SccBase_NamedVector_Base_JointState_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointState* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		3040  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		2958  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		2953  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		3036  /**/
+#define asn1SccBase_NamedVector_Base_JointState_REQUIRED_BYTES_FOR_ENCODING       25152 
+#define asn1SccBase_NamedVector_Base_JointState_REQUIRED_BITS_FOR_ENCODING        201216
+
+flag asn1SccBase_NamedVector_Base_JointState_Encode(const asn1SccBase_NamedVector_Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		3041  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		2959  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		2954  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		3037  /**/
+flag asn1SccBase_NamedVector_Base_JointState_Decode(asn1SccBase_NamedVector_Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_Base_Wrench --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_Base_Wrench_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_Wrench arr[200];
+} asn1SccBase_NamedVector_Base_Wrench_elements;
+
+typedef struct {
+    asn1SccBase_NamedVector_Base_Wrench_names names;
+    asn1SccBase_NamedVector_Base_Wrench_elements elements;
+
+} asn1SccBase_NamedVector_Base_Wrench;
+
+flag asn1SccBase_NamedVector_Base_Wrench_names_Equal(const asn1SccBase_NamedVector_Base_Wrench_names* pVal1, const asn1SccBase_NamedVector_Base_Wrench_names* pVal2);
+
+flag asn1SccBase_NamedVector_Base_Wrench_elements_Equal(const asn1SccBase_NamedVector_Base_Wrench_elements* pVal1, const asn1SccBase_NamedVector_Base_Wrench_elements* pVal2);
+
+flag asn1SccBase_NamedVector_Base_Wrench_Equal(const asn1SccBase_NamedVector_Base_Wrench* pVal1, const asn1SccBase_NamedVector_Base_Wrench* pVal2);
+
+void asn1SccBase_NamedVector_Base_Wrench_names_Initialize(asn1SccBase_NamedVector_Base_Wrench_names* pVal);
+void asn1SccBase_NamedVector_Base_Wrench_elements_Initialize(asn1SccBase_NamedVector_Base_Wrench_elements* pVal);
+void asn1SccBase_NamedVector_Base_Wrench_Initialize(asn1SccBase_NamedVector_Base_Wrench* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM		3046  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		3057  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_FORCE_DATA_ELM		3064  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_FORCE_DATA		3075  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_TORQUE_DATA_ELM		3092  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_TORQUE_DATA		3103  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		3130  /**/
+flag asn1SccBase_NamedVector_Base_Wrench_IsConstraintValid(const asn1SccBase_NamedVector_Base_Wrench* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH		3137  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		3058  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		3053  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		3131  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		3126  /**/
+#define asn1SccBase_NamedVector_Base_Wrench_REQUIRED_BYTES_FOR_ENCODING       27852 
+#define asn1SccBase_NamedVector_Base_Wrench_REQUIRED_BITS_FOR_ENCODING        222816
+
+flag asn1SccBase_NamedVector_Base_Wrench_Encode(const asn1SccBase_NamedVector_Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH		3138  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		3059  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		3054  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		3132  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		3127  /**/
+flag asn1SccBase_NamedVector_Base_Wrench_Decode(asn1SccBase_NamedVector_Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_Base_JointTrajectory --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_Base_JointTrajectory_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointTrajectory arr[200];
+} asn1SccBase_NamedVector_Base_JointTrajectory_elements;
+
+typedef struct {
+    asn1SccBase_NamedVector_Base_JointTrajectory_names names;
+    asn1SccBase_NamedVector_Base_JointTrajectory_elements elements;
+
+} asn1SccBase_NamedVector_Base_JointTrajectory;
+
+flag asn1SccBase_NamedVector_Base_JointTrajectory_names_Equal(const asn1SccBase_NamedVector_Base_JointTrajectory_names* pVal1, const asn1SccBase_NamedVector_Base_JointTrajectory_names* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointTrajectory_elements_Equal(const asn1SccBase_NamedVector_Base_JointTrajectory_elements* pVal1, const asn1SccBase_NamedVector_Base_JointTrajectory_elements* pVal2);
+
+flag asn1SccBase_NamedVector_Base_JointTrajectory_Equal(const asn1SccBase_NamedVector_Base_JointTrajectory* pVal1, const asn1SccBase_NamedVector_Base_JointTrajectory* pVal2);
+
+void asn1SccBase_NamedVector_Base_JointTrajectory_names_Initialize(asn1SccBase_NamedVector_Base_JointTrajectory_names* pVal);
+void asn1SccBase_NamedVector_Base_JointTrajectory_elements_Initialize(asn1SccBase_NamedVector_Base_JointTrajectory_elements* pVal);
+void asn1SccBase_NamedVector_Base_JointTrajectory_Initialize(asn1SccBase_NamedVector_Base_JointTrajectory* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM		3143  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		3154  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_POSITION		3161  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_SPEED		3172  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_EFFORT		3183  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_RAW		3194  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_ACCELERATION		3205  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM		3226  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		3237  /**/
+flag asn1SccBase_NamedVector_Base_JointTrajectory_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointTrajectory* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		3244  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		3155  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		3150  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		3238  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		3233  /**/
+#define asn1SccBase_NamedVector_Base_JointTrajectory_REQUIRED_BYTES_FOR_ENCODING       2612352 
+#define asn1SccBase_NamedVector_Base_JointTrajectory_REQUIRED_BITS_FOR_ENCODING        20898816
+
+flag asn1SccBase_NamedVector_Base_JointTrajectory_Encode(const asn1SccBase_NamedVector_Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		3245  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		3156  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		3151  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		3239  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		3234  /**/
+flag asn1SccBase_NamedVector_Base_JointTrajectory_Decode(asn1SccBase_NamedVector_Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_commands_Joints --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_commands_Joints_names;
+
+typedef struct {
+    asn1SccBase_commands_Joints_names names;
+    asn1SccBase_JointTrajectory elements;
+    asn1SccBase_Time time;
+
+} asn1SccBase_commands_Joints;
+
+flag asn1SccBase_commands_Joints_names_Equal(const asn1SccBase_commands_Joints_names* pVal1, const asn1SccBase_commands_Joints_names* pVal2);
+
+flag asn1SccBase_commands_Joints_Equal(const asn1SccBase_commands_Joints* pVal1, const asn1SccBase_commands_Joints* pVal2);
+
+void asn1SccBase_commands_Joints_names_Initialize(asn1SccBase_commands_Joints_names* pVal);
+void asn1SccBase_commands_Joints_Initialize(asn1SccBase_commands_Joints* pVal);
+
+#define ERR_BASE_COMMANDS_JOINTS_NAMES_ELM		3532  /**/
+#define ERR_BASE_COMMANDS_JOINTS_NAMES		3543  /**/
+#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_POSITION		3550  /**/
+#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_SPEED		3561  /**/
+#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_EFFORT		3572  /**/
+#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_RAW		3583  /**/
+#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_ACCELERATION		3594  /**/
+#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS		3615  /**/
+#define ERR_BASE_COMMANDS_JOINTS_TIME_MICROSECONDS		3626  /**/
+flag asn1SccBase_commands_Joints_IsConstraintValid(const asn1SccBase_commands_Joints* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS		3647  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES		3544  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		3539  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		3622  /**/
+#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_TIME_2		3643  /**/
+#define asn1SccBase_commands_Joints_REQUIRED_BYTES_FOR_ENCODING       25160 
+#define asn1SccBase_commands_Joints_REQUIRED_BITS_FOR_ENCODING        201280
+
+flag asn1SccBase_commands_Joints_Encode(const asn1SccBase_commands_Joints* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS		3648  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES		3545  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		3540  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		3623  /**/
+#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_TIME_2		3644  /**/
+flag asn1SccBase_commands_Joints_Decode(asn1SccBase_commands_Joints* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_RigidBodyState --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccT_String sourceframe;
+    asn1SccT_String targetframe;
+    asn1SccWrappers_Vector3d position;
+    asn1SccWrappers_Matrix3d cov_position;
+    asn1SccWrappers_Quaterniond orientation;
+    asn1SccWrappers_Matrix3d cov_orientation;
+    asn1SccWrappers_Vector3d velocity;
+    asn1SccWrappers_Matrix3d cov_velocity;
+    asn1SccWrappers_Vector3d angular_velocity;
+    asn1SccWrappers_Matrix3d cov_angular_velocity;
+
+} asn1SccBase_samples_RigidBodyState;
+
+flag asn1SccBase_samples_RigidBodyState_Equal(const asn1SccBase_samples_RigidBodyState* pVal1, const asn1SccBase_samples_RigidBodyState* pVal2);
+
+void asn1SccBase_samples_RigidBodyState_Initialize(asn1SccBase_samples_RigidBodyState* pVal);
+
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_TIME_MICROSECONDS		3868  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME		3889  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME		3900  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_DATA_ELM		3911  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_DATA		3922  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_DATA_ELM		3939  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_DATA		3950  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_IM_ELM		3967  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_IM		3978  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_RE		3985  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_DATA_ELM		4006  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_DATA		4017  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_DATA_ELM		4034  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_DATA		4045  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_DATA_ELM		4062  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_DATA		4073  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_DATA_ELM		4090  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_DATA		4101  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_DATA_ELM		4118  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_DATA		4129  /**/
+flag asn1SccBase_samples_RigidBodyState_IsConstraintValid(const asn1SccBase_samples_RigidBodyState* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE		4146  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		3885  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		3896  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		3907  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		3935  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		3963  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		4002  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		4030  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		4058  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		4086  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		4114  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		4142  /**/
+#define asn1SccBase_samples_RigidBodyState_REQUIRED_BYTES_FOR_ENCODING       770 
+#define asn1SccBase_samples_RigidBodyState_REQUIRED_BITS_FOR_ENCODING        6156
+
+flag asn1SccBase_samples_RigidBodyState_Encode(const asn1SccBase_samples_RigidBodyState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE		4147  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		3886  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		3897  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		3908  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		3936  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		3964  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		4003  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		4031  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		4059  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		4087  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		4115  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		4143  /**/
+flag asn1SccBase_samples_RigidBodyState_Decode(asn1SccBase_samples_RigidBodyState* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Wrenches --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_samples_Wrenches_names;
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_Wrench arr[200];
+} asn1SccBase_samples_Wrenches_elements;
+
+typedef struct {
+    asn1SccBase_samples_Wrenches_names names;
+    asn1SccBase_samples_Wrenches_elements elements;
+    asn1SccBase_Time time;
+
+} asn1SccBase_samples_Wrenches;
+
+flag asn1SccBase_samples_Wrenches_names_Equal(const asn1SccBase_samples_Wrenches_names* pVal1, const asn1SccBase_samples_Wrenches_names* pVal2);
+
+flag asn1SccBase_samples_Wrenches_elements_Equal(const asn1SccBase_samples_Wrenches_elements* pVal1, const asn1SccBase_samples_Wrenches_elements* pVal2);
+
+flag asn1SccBase_samples_Wrenches_Equal(const asn1SccBase_samples_Wrenches* pVal1, const asn1SccBase_samples_Wrenches* pVal2);
+
+void asn1SccBase_samples_Wrenches_names_Initialize(asn1SccBase_samples_Wrenches_names* pVal);
+void asn1SccBase_samples_Wrenches_elements_Initialize(asn1SccBase_samples_Wrenches_elements* pVal);
+void asn1SccBase_samples_Wrenches_Initialize(asn1SccBase_samples_Wrenches* pVal);
+
+#define ERR_BASE_SAMPLES_WRENCHES_NAMES_ELM		4660  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_NAMES		4671  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA_ELM		4678  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA		4689  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA_ELM		4706  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA		4717  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS		4744  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_TIME_MICROSECONDS		4751  /**/
+flag asn1SccBase_samples_Wrenches_IsConstraintValid(const asn1SccBase_samples_Wrenches* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES		4772  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES		4672  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		4667  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS		4745  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		4740  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_TIME_2		4768  /**/
+#define asn1SccBase_samples_Wrenches_REQUIRED_BYTES_FOR_ENCODING       27860 
+#define asn1SccBase_samples_Wrenches_REQUIRED_BITS_FOR_ENCODING        222880
+
+flag asn1SccBase_samples_Wrenches_Encode(const asn1SccBase_samples_Wrenches* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES		4773  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES		4673  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		4668  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS		4746  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		4741  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_TIME_2		4769  /**/
+flag asn1SccBase_samples_Wrenches_Decode(asn1SccBase_samples_Wrenches* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_frame_frame_attrib_t --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_String data;
+    asn1SccT_String name_val;
+
+} asn1SccBase_samples_frame_frame_attrib_t;
+
+flag asn1SccBase_samples_frame_frame_attrib_t_Equal(const asn1SccBase_samples_frame_frame_attrib_t* pVal1, const asn1SccBase_samples_frame_frame_attrib_t* pVal2);
+
+void asn1SccBase_samples_frame_frame_attrib_t_Initialize(asn1SccBase_samples_frame_frame_attrib_t* pVal);
+
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA		4778  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL		4789  /**/
+flag asn1SccBase_samples_frame_frame_attrib_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_attrib_t* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		4800  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		4785  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		4796  /**/
+#define asn1SccBase_samples_frame_frame_attrib_t_REQUIRED_BYTES_FOR_ENCODING       122 
+#define asn1SccBase_samples_frame_frame_attrib_t_REQUIRED_BITS_FOR_ENCODING        972
+
+flag asn1SccBase_samples_frame_frame_attrib_t_Encode(const asn1SccBase_samples_frame_frame_attrib_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		4801  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		4786  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		4797  /**/
+flag asn1SccBase_samples_frame_frame_attrib_t_Decode(asn1SccBase_samples_frame_frame_attrib_t* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointTransform_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccT_String sourceframe;
+    asn1SccT_String targetframe;
+    asn1SccWrappers_Vector3d rotationaxis;
+
+} asn1SccBase_JointTransform_m;
+
+flag asn1SccBase_JointTransform_m_Equal(const asn1SccBase_JointTransform_m* pVal1, const asn1SccBase_JointTransform_m* pVal2);
+
+void asn1SccBase_JointTransform_m_Initialize(asn1SccBase_JointTransform_m* pVal);
+
+#define ERR_BASE_JOINTTRANSFORM_M_SOURCEFRAME		5909  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_TARGETFRAME		5920  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA_ELM		5931  /**/
+#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA		5942  /**/
+flag asn1SccBase_JointTransform_m_IsConstraintValid(const asn1SccBase_JointTransform_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M		5959  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		5916  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		5927  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		5955  /**/
+#define asn1SccBase_JointTransform_m_REQUIRED_BYTES_FOR_ENCODING       161 
+#define asn1SccBase_JointTransform_m_REQUIRED_BITS_FOR_ENCODING        1286
+
+flag asn1SccBase_JointTransform_m_Encode(const asn1SccBase_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M		5960  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		5917  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		5928  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		5956  /**/
+flag asn1SccBase_JointTransform_m_Decode(asn1SccBase_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode);
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccBase_JointTransform_m arr[200];
+} asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform;
+
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Equal(const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal1, const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal2);
+
+void asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal);
+
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_SOURCEFRAME		235  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_TARGETFRAME		246  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_ROTATIONAXIS_DATA_ELM		257  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_ROTATIONAXIS_DATA		268  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		295  /**/
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		296  /**/
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		291  /**/
+#define asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       32151 
+#define asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_REQUIRED_BITS_FOR_ENCODING        257208
+
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		297  /**/
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		292  /**/
+flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_JointTransformVector_m --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_JointTransformVector_m_names;
+
+typedef struct {
+    asn1SccBase_JointTransformVector_m_names names;
+    asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform elements;
+
+} asn1SccBase_JointTransformVector_m;
+
+flag asn1SccBase_JointTransformVector_m_names_Equal(const asn1SccBase_JointTransformVector_m_names* pVal1, const asn1SccBase_JointTransformVector_m_names* pVal2);
+
+flag asn1SccBase_JointTransformVector_m_Equal(const asn1SccBase_JointTransformVector_m* pVal1, const asn1SccBase_JointTransformVector_m* pVal2);
+
+void asn1SccBase_JointTransformVector_m_names_Initialize(asn1SccBase_JointTransformVector_m_names* pVal);
+void asn1SccBase_JointTransformVector_m_Initialize(asn1SccBase_JointTransformVector_m* pVal);
+
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM		7329  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7340  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_SOURCEFRAME		7347  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_TARGETFRAME		7358  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7369  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7380  /**/
+#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS		7407  /**/
+flag asn1SccBase_JointTransformVector_m_IsConstraintValid(const asn1SccBase_JointTransformVector_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M		7418  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7341  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		7336  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		7414  /**/
+#define asn1SccBase_JointTransformVector_m_REQUIRED_BYTES_FOR_ENCODING       44302 
+#define asn1SccBase_JointTransformVector_m_REQUIRED_BITS_FOR_ENCODING        354416
+
+flag asn1SccBase_JointTransformVector_m_Encode(const asn1SccBase_JointTransformVector_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M		7419  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7342  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		7337  /**/
+#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		7415  /**/
+flag asn1SccBase_JointTransformVector_m_Decode(asn1SccBase_JointTransformVector_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_base_JointTransform_m --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_base_JointTransform_m_names;
+
+typedef struct {
+    asn1SccBase_NamedVector_base_JointTransform_m_names names;
+    asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform elements;
+
+} asn1SccBase_NamedVector_base_JointTransform_m;
+
+flag asn1SccBase_NamedVector_base_JointTransform_m_names_Equal(const asn1SccBase_NamedVector_base_JointTransform_m_names* pVal1, const asn1SccBase_NamedVector_base_JointTransform_m_names* pVal2);
+
+flag asn1SccBase_NamedVector_base_JointTransform_m_Equal(const asn1SccBase_NamedVector_base_JointTransform_m* pVal1, const asn1SccBase_NamedVector_base_JointTransform_m* pVal2);
+
+void asn1SccBase_NamedVector_base_JointTransform_m_names_Initialize(asn1SccBase_NamedVector_base_JointTransform_m_names* pVal);
+void asn1SccBase_NamedVector_base_JointTransform_m_Initialize(asn1SccBase_NamedVector_base_JointTransform_m* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM		7424  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7435  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_SOURCEFRAME		7442  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_TARGETFRAME		7453  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7464  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7475  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS		7502  /**/
+flag asn1SccBase_NamedVector_base_JointTransform_m_IsConstraintValid(const asn1SccBase_NamedVector_base_JointTransform_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		7513  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7436  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		7431  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		7509  /**/
+#define asn1SccBase_NamedVector_base_JointTransform_m_REQUIRED_BYTES_FOR_ENCODING       44302 
+#define asn1SccBase_NamedVector_base_JointTransform_m_REQUIRED_BITS_FOR_ENCODING        354416
+
+flag asn1SccBase_NamedVector_base_JointTransform_m_Encode(const asn1SccBase_NamedVector_base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		7514  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7437  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		7432  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		7510  /**/
+flag asn1SccBase_NamedVector_base_JointTransform_m_Decode(asn1SccBase_NamedVector_base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_RigidBodyState_m --------------------------------------------*/
+
+typedef struct {
+    asn1SccBase_Time time;
+    asn1SccT_String sourceframe;
+    asn1SccT_String targetframe;
+    asn1SccWrappers_Vector3d position;
+    asn1SccWrappers_Matrix3d cov_position;
+    asn1SccWrappers_Quaterniond orientation;
+    asn1SccWrappers_Matrix3d cov_orientation;
+    asn1SccWrappers_Vector3d velocity;
+    asn1SccWrappers_Matrix3d cov_velocity;
+    asn1SccWrappers_Vector3d angular_velocity;
+    asn1SccWrappers_Matrix3d cov_angular_velocity;
+
+} asn1SccBase_samples_RigidBodyState_m;
+
+flag asn1SccBase_samples_RigidBodyState_m_Equal(const asn1SccBase_samples_RigidBodyState_m* pVal1, const asn1SccBase_samples_RigidBodyState_m* pVal2);
+
+void asn1SccBase_samples_RigidBodyState_m_Initialize(asn1SccBase_samples_RigidBodyState_m* pVal);
+
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_MICROSECONDS		6962  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME		6983  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME		6994  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA_ELM		7005  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA		7016  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA_ELM		7033  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA		7044  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM_ELM		7061  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM		7072  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_RE		7079  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA_ELM		7100  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA		7111  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA_ELM		7128  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA		7139  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA_ELM		7156  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA		7167  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA_ELM		7184  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA		7195  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA_ELM		7212  /**/
+#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA		7223  /**/
+flag asn1SccBase_samples_RigidBodyState_m_IsConstraintValid(const asn1SccBase_samples_RigidBodyState_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M		7240  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		6979  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		6990  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		7001  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		7029  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		7057  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		7096  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		7124  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		7152  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		7180  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		7208  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		7236  /**/
+#define asn1SccBase_samples_RigidBodyState_m_REQUIRED_BYTES_FOR_ENCODING       770 
+#define asn1SccBase_samples_RigidBodyState_m_REQUIRED_BITS_FOR_ENCODING        6156
+
+flag asn1SccBase_samples_RigidBodyState_m_Encode(const asn1SccBase_samples_RigidBodyState_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M		7241  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		6980  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		6991  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		7002  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		7030  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		7058  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		7097  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		7125  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		7153  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		7181  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		7209  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		7237  /**/
+flag asn1SccBase_samples_RigidBodyState_m_Decode(asn1SccBase_samples_RigidBodyState_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_NamedVector_base_Wrench_m --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_NamedVector_base_Wrench_m_names;
+
+typedef struct {
+    asn1SccBase_NamedVector_base_Wrench_m_names names;
+    asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench elements;
+
+} asn1SccBase_NamedVector_base_Wrench_m;
+
+flag asn1SccBase_NamedVector_base_Wrench_m_names_Equal(const asn1SccBase_NamedVector_base_Wrench_m_names* pVal1, const asn1SccBase_NamedVector_base_Wrench_m_names* pVal2);
+
+flag asn1SccBase_NamedVector_base_Wrench_m_Equal(const asn1SccBase_NamedVector_base_Wrench_m* pVal1, const asn1SccBase_NamedVector_base_Wrench_m* pVal2);
+
+void asn1SccBase_NamedVector_base_Wrench_m_names_Initialize(asn1SccBase_NamedVector_base_Wrench_m_names* pVal);
+void asn1SccBase_NamedVector_base_Wrench_m_Initialize(asn1SccBase_NamedVector_base_Wrench_m* pVal);
+
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM		7519  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7530  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA_ELM		7537  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA		7548  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7565  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA		7576  /**/
+#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS		7603  /**/
+flag asn1SccBase_NamedVector_base_Wrench_m_IsConstraintValid(const asn1SccBase_NamedVector_base_Wrench_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		7614  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7531  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		7526  /**/
+#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		7610  /**/
+#define asn1SccBase_NamedVector_base_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       27852 
+#define asn1SccBase_NamedVector_base_Wrench_m_REQUIRED_BITS_FOR_ENCODING        222816
+
+flag asn1SccBase_NamedVector_base_Wrench_m_Encode(const asn1SccBase_NamedVector_base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		7615  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7532  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		7527  /**/
+#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		7611  /**/
+flag asn1SccBase_NamedVector_base_Wrench_m_Decode(asn1SccBase_NamedVector_base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Wrenches_m --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
+    
+    asn1SccT_String arr[200];
+} asn1SccBase_samples_Wrenches_m_names;
+
+typedef struct {
+    asn1SccBase_samples_Wrenches_m_names names;
+    asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench elements;
+    asn1SccBase_Time time;
+
+} asn1SccBase_samples_Wrenches_m;
+
+flag asn1SccBase_samples_Wrenches_m_names_Equal(const asn1SccBase_samples_Wrenches_m_names* pVal1, const asn1SccBase_samples_Wrenches_m_names* pVal2);
+
+flag asn1SccBase_samples_Wrenches_m_Equal(const asn1SccBase_samples_Wrenches_m* pVal1, const asn1SccBase_samples_Wrenches_m* pVal2);
+
+void asn1SccBase_samples_Wrenches_m_names_Initialize(asn1SccBase_samples_Wrenches_m_names* pVal);
+void asn1SccBase_samples_Wrenches_m_Initialize(asn1SccBase_samples_Wrenches_m* pVal);
+
+#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES_ELM		7717  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES		7728  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA_ELM		7735  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA		7746  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7763  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA		7774  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS		7801  /**/
+#define ERR_BASE_SAMPLES_WRENCHES_M_TIME_MICROSECONDS		7812  /**/
+flag asn1SccBase_samples_Wrenches_m_IsConstraintValid(const asn1SccBase_samples_Wrenches_m* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M		7833  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES		7729  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		7724  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		7808  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_TIME_2		7829  /**/
+#define asn1SccBase_samples_Wrenches_m_REQUIRED_BYTES_FOR_ENCODING       27860 
+#define asn1SccBase_samples_Wrenches_m_REQUIRED_BITS_FOR_ENCODING        222880
+
+flag asn1SccBase_samples_Wrenches_m_Encode(const asn1SccBase_samples_Wrenches_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M		7834  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES		7730  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		7725  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		7809  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_TIME_2		7830  /**/
+flag asn1SccBase_samples_Wrenches_m_Decode(asn1SccBase_samples_Wrenches_m* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef enum {
     asn1Sccbase_jointstate_mode_acceleration = 0,
     asn1Sccbase_jointstate_mode_effort = 1,
@@ -24,18 +3156,17 @@ flag asn1SccBase_JointState_MODE_Equal(const asn1SccBase_JointState_MODE* pVal1,
 
 void asn1SccBase_JointState_MODE_Initialize(asn1SccBase_JointState_MODE* pVal);
 
-#define ERR_BASE_JOINTSTATE_MODE		16  /**/
+#define ERR_BASE_JOINTSTATE_MODE		93  /**/
 flag asn1SccBase_JointState_MODE_IsConstraintValid(const asn1SccBase_JointState_MODE* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE_MODE		17  /**/
+#define ERR_UPER_ENCODE_BASE_JOINTSTATE_MODE		94  /**/
 #define asn1SccBase_JointState_MODE_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_JointState_MODE_REQUIRED_BITS_FOR_ENCODING        3
 
 flag asn1SccBase_JointState_MODE_Encode(const asn1SccBase_JointState_MODE* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_JOINTSTATE_MODE		18  /**/
+#define ERR_UPER_DECODE_BASE_JOINTSTATE_MODE		95  /**/
 flag asn1SccBase_JointState_MODE_Decode(asn1SccBase_JointState_MODE* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_time_resolution_microseconds = 0,
     asn1Sccbase_time_resolution_milliseconds = 1,
@@ -46,18 +3177,17 @@ flag asn1SccBase_Time_Resolution_Equal(const asn1SccBase_Time_Resolution* pVal1,
 
 void asn1SccBase_Time_Resolution_Initialize(asn1SccBase_Time_Resolution* pVal);
 
-#define ERR_BASE_TIME_RESOLUTION		23  /**/
+#define ERR_BASE_TIME_RESOLUTION		100  /**/
 flag asn1SccBase_Time_Resolution_IsConstraintValid(const asn1SccBase_Time_Resolution* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_TIME_RESOLUTION		24  /**/
+#define ERR_UPER_ENCODE_BASE_TIME_RESOLUTION		101  /**/
 #define asn1SccBase_Time_Resolution_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_Time_Resolution_REQUIRED_BITS_FOR_ENCODING        2
 
 flag asn1SccBase_Time_Resolution_Encode(const asn1SccBase_Time_Resolution* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_TIME_RESOLUTION		25  /**/
+#define ERR_UPER_DECODE_BASE_TIME_RESOLUTION		102  /**/
 flag asn1SccBase_Time_Resolution_Decode(asn1SccBase_Time_Resolution* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_next = 0,
     asn1Sccbase_geometry_splinebase_coordinatetype_derivative_to_prior = 1,
@@ -73,18 +3203,17 @@ flag asn1SccBase_geometry_SplineBase_CoordinateType_Equal(const asn1SccBase_geom
 
 void asn1SccBase_geometry_SplineBase_CoordinateType_Initialize(asn1SccBase_geometry_SplineBase_CoordinateType* pVal);
 
-#define ERR_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		30  /**/
+#define ERR_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		107  /**/
 flag asn1SccBase_geometry_SplineBase_CoordinateType_IsConstraintValid(const asn1SccBase_geometry_SplineBase_CoordinateType* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		31  /**/
+#define ERR_UPER_ENCODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		108  /**/
 #define asn1SccBase_geometry_SplineBase_CoordinateType_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_geometry_SplineBase_CoordinateType_REQUIRED_BITS_FOR_ENCODING        3
 
 flag asn1SccBase_geometry_SplineBase_CoordinateType_Encode(const asn1SccBase_geometry_SplineBase_CoordinateType* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		32  /**/
+#define ERR_UPER_DECODE_BASE_GEOMETRY_SPLINEBASE_COORDINATETYPE		109  /**/
 flag asn1SccBase_geometry_SplineBase_CoordinateType_Decode(asn1SccBase_geometry_SplineBase_CoordinateType* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_samples_depthmap_depth_measurement_state_measurement_error = 0,
     asn1Sccbase_samples_depthmap_depth_measurement_state_too_far = 1,
@@ -96,18 +3225,17 @@ flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Equal(const asn1SccBas
 
 void asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Initialize(asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal);
 
-#define ERR_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		37  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		114  /**/
 flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_IsConstraintValid(const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		38  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		115  /**/
 #define asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_REQUIRED_BITS_FOR_ENCODING        2
 
 flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Encode(const asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		39  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DEPTH_MEASUREMENT_STATE		116  /**/
 flag asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE_Decode(asn1SccBase_samples_DepthMap_DEPTH_MEASUREMENT_STATE* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_samples_depthmap_projection_type_planar = 0,
     asn1Sccbase_samples_depthmap_projection_type_polar = 1
@@ -117,18 +3245,17 @@ flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Equal(const asn1SccBase_sample
 
 void asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Initialize(asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal);
 
-#define ERR_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		44  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		121  /**/
 flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_IsConstraintValid(const asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		45  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		122  /**/
 #define asn1SccBase_samples_DepthMap_PROJECTION_TYPE_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_samples_DepthMap_PROJECTION_TYPE_REQUIRED_BITS_FOR_ENCODING        1
 
 flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Encode(const asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		46  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_PROJECTION_TYPE		123  /**/
 flag asn1SccBase_samples_DepthMap_PROJECTION_TYPE_Decode(asn1SccBase_samples_DepthMap_PROJECTION_TYPE* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_samples_depthmap_unit_axis_unit_x = 0,
     asn1Sccbase_samples_depthmap_unit_axis_unit_y = 1,
@@ -139,18 +3266,17 @@ flag asn1SccBase_samples_DepthMap_UNIT_AXIS_Equal(const asn1SccBase_samples_Dept
 
 void asn1SccBase_samples_DepthMap_UNIT_AXIS_Initialize(asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal);
 
-#define ERR_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		51  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		128  /**/
 flag asn1SccBase_samples_DepthMap_UNIT_AXIS_IsConstraintValid(const asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		52  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		129  /**/
 #define asn1SccBase_samples_DepthMap_UNIT_AXIS_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_samples_DepthMap_UNIT_AXIS_REQUIRED_BITS_FOR_ENCODING        2
 
 flag asn1SccBase_samples_DepthMap_UNIT_AXIS_Encode(const asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		53  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_UNIT_AXIS		130  /**/
 flag asn1SccBase_samples_DepthMap_UNIT_AXIS_Decode(asn1SccBase_samples_DepthMap_UNIT_AXIS* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_samples_laser_range_errors_end_laser_range_errors = 0,
     asn1Sccbase_samples_laser_range_errors_max_range_error = 1,
@@ -164,18 +3290,17 @@ flag asn1SccBase_samples_LASER_RANGE_ERRORS_Equal(const asn1SccBase_samples_LASE
 
 void asn1SccBase_samples_LASER_RANGE_ERRORS_Initialize(asn1SccBase_samples_LASER_RANGE_ERRORS* pVal);
 
-#define ERR_BASE_SAMPLES_LASER_RANGE_ERRORS		58  /**/
+#define ERR_BASE_SAMPLES_LASER_RANGE_ERRORS		135  /**/
 flag asn1SccBase_samples_LASER_RANGE_ERRORS_IsConstraintValid(const asn1SccBase_samples_LASER_RANGE_ERRORS* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASER_RANGE_ERRORS		59  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASER_RANGE_ERRORS		136  /**/
 #define asn1SccBase_samples_LASER_RANGE_ERRORS_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_samples_LASER_RANGE_ERRORS_REQUIRED_BITS_FOR_ENCODING        3
 
 flag asn1SccBase_samples_LASER_RANGE_ERRORS_Encode(const asn1SccBase_samples_LASER_RANGE_ERRORS* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASER_RANGE_ERRORS		60  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASER_RANGE_ERRORS		137  /**/
 flag asn1SccBase_samples_LASER_RANGE_ERRORS_Decode(asn1SccBase_samples_LASER_RANGE_ERRORS* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_samples_frame_frame_mode_t_compressed_modes = 0,
     asn1Sccbase_samples_frame_frame_mode_t_mode_bayer = 1,
@@ -199,18 +3324,17 @@ flag asn1SccBase_samples_frame_frame_mode_t_Equal(const asn1SccBase_samples_fram
 
 void asn1SccBase_samples_frame_frame_mode_t_Initialize(asn1SccBase_samples_frame_frame_mode_t* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAME_MODE_T		65  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_MODE_T		142  /**/
 flag asn1SccBase_samples_frame_frame_mode_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_mode_t* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		66  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		143  /**/
 #define asn1SccBase_samples_frame_frame_mode_t_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_samples_frame_frame_mode_t_REQUIRED_BITS_FOR_ENCODING        4
 
 flag asn1SccBase_samples_frame_frame_mode_t_Encode(const asn1SccBase_samples_frame_frame_mode_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		67  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_MODE_T		144  /**/
 flag asn1SccBase_samples_frame_frame_mode_t_Decode(asn1SccBase_samples_frame_frame_mode_t* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccbase_samples_frame_frame_status_t_status_empty = 0,
     asn1Sccbase_samples_frame_frame_status_t_status_invalid = 1,
@@ -221,18 +3345,17 @@ flag asn1SccBase_samples_frame_frame_status_t_Equal(const asn1SccBase_samples_fr
 
 void asn1SccBase_samples_frame_frame_status_t_Initialize(asn1SccBase_samples_frame_frame_status_t* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAME_STATUS_T		72  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_STATUS_T		149  /**/
 flag asn1SccBase_samples_frame_frame_status_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_status_t* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		73  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		150  /**/
 #define asn1SccBase_samples_frame_frame_status_t_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccBase_samples_frame_frame_status_t_REQUIRED_BITS_FOR_ENCODING        2
 
 flag asn1SccBase_samples_frame_frame_status_t_Encode(const asn1SccBase_samples_frame_frame_status_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		74  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_STATUS_T		151  /**/
 flag asn1SccBase_samples_frame_frame_status_t_Decode(asn1SccBase_samples_frame_frame_status_t* pVal, BitStream* pBitStrm, int* pErrCode);
-
 typedef enum {
     asn1Sccwrappers_geometry_splinetype_degenerate = 0,
     asn1Sccwrappers_geometry_splinetype_polynomial_bezier = 1,
@@ -245,2924 +3368,17 @@ flag asn1SccWrappers_geometry_SplineType_Equal(const asn1SccWrappers_geometry_Sp
 
 void asn1SccWrappers_geometry_SplineType_Initialize(asn1SccWrappers_geometry_SplineType* pVal);
 
-#define ERR_WRAPPERS_GEOMETRY_SPLINETYPE		79  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINETYPE		156  /**/
 flag asn1SccWrappers_geometry_SplineType_IsConstraintValid(const asn1SccWrappers_geometry_SplineType* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINETYPE		80  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINETYPE		157  /**/
 #define asn1SccWrappers_geometry_SplineType_REQUIRED_BYTES_FOR_ENCODING       1 
 #define asn1SccWrappers_geometry_SplineType_REQUIRED_BITS_FOR_ENCODING        3
 
 flag asn1SccWrappers_geometry_SplineType_Encode(const asn1SccWrappers_geometry_SplineType* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINETYPE		81  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINETYPE		158  /**/
 flag asn1SccWrappers_geometry_SplineType_Decode(asn1SccWrappers_geometry_SplineType* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef double asn1SccT_Double;
-
-
-flag asn1SccT_Double_Equal(const asn1SccT_Double* pVal1, const asn1SccT_Double* pVal2);
-
-void asn1SccT_Double_Initialize(asn1SccT_Double* pVal);
-
-#define ERR_T_DOUBLE		7955  /**/
-flag asn1SccT_Double_IsConstraintValid(const asn1SccT_Double* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_DOUBLE		7956  /**/
-#define asn1SccT_Double_REQUIRED_BYTES_FOR_ENCODING       13 
-#define asn1SccT_Double_REQUIRED_BITS_FOR_ENCODING        104
-
-flag asn1SccT_Double_Encode(const asn1SccT_Double* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_DOUBLE		7957  /**/
-flag asn1SccT_Double_Decode(asn1SccT_Double* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double rad;
-} asn1SccBase_Angle;
-
-flag asn1SccBase_Angle_Equal(const asn1SccBase_Angle* pVal1, const asn1SccBase_Angle* pVal2);
-
-void asn1SccBase_Angle_Initialize(asn1SccBase_Angle* pVal);
-
-#define ERR_BASE_ANGLE_RAD		855  /**/
-flag asn1SccBase_Angle_IsConstraintValid(const asn1SccBase_Angle* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_ANGLE		866  /**/
-#define ERR_UPER_ENCODE_BASE_ANGLE_RAD_2		862  /**/
-#define asn1SccBase_Angle_REQUIRED_BYTES_FOR_ENCODING       13 
-#define asn1SccBase_Angle_REQUIRED_BITS_FOR_ENCODING        104
-
-flag asn1SccBase_Angle_Encode(const asn1SccBase_Angle* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_ANGLE		867  /**/
-#define ERR_UPER_DECODE_BASE_ANGLE_RAD_2		863  /**/
-flag asn1SccBase_Angle_Decode(asn1SccBase_Angle* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double translation;
-    asn1SccT_Double rotation;
-    asn1SccBase_Angle heading;
-} asn1SccBase_commands_Motion2D;
-
-flag asn1SccBase_commands_Motion2D_Equal(const asn1SccBase_commands_Motion2D* pVal1, const asn1SccBase_commands_Motion2D* pVal2);
-
-void asn1SccBase_commands_Motion2D_Initialize(asn1SccBase_commands_Motion2D* pVal);
-
-#define ERR_BASE_COMMANDS_MOTION2D_TRANSLATION		1520  /**/
-#define ERR_BASE_COMMANDS_MOTION2D_ROTATION		1531  /**/
-#define ERR_BASE_COMMANDS_MOTION2D_HEADING_RAD		1542  /**/
-flag asn1SccBase_commands_Motion2D_IsConstraintValid(const asn1SccBase_commands_Motion2D* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D		1563  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1527  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_ROTATION_2		1538  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_MOTION2D_HEADING_2		1559  /**/
-#define asn1SccBase_commands_Motion2D_REQUIRED_BYTES_FOR_ENCODING       39 
-#define asn1SccBase_commands_Motion2D_REQUIRED_BITS_FOR_ENCODING        312
-
-flag asn1SccBase_commands_Motion2D_Encode(const asn1SccBase_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D		1564  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1528  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_ROTATION_2		1539  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_MOTION2D_HEADING_2		1560  /**/
-flag asn1SccBase_commands_Motion2D_Decode(asn1SccBase_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double distance;
-    asn1SccT_Double angle;
-} asn1SccBase_PoseUpdateThreshold;
-
-flag asn1SccBase_PoseUpdateThreshold_Equal(const asn1SccBase_PoseUpdateThreshold* pVal1, const asn1SccBase_PoseUpdateThreshold* pVal2);
-
-void asn1SccBase_PoseUpdateThreshold_Initialize(asn1SccBase_PoseUpdateThreshold* pVal);
-
-#define ERR_BASE_POSEUPDATETHRESHOLD_DISTANCE		978  /**/
-#define ERR_BASE_POSEUPDATETHRESHOLD_ANGLE		989  /**/
-flag asn1SccBase_PoseUpdateThreshold_IsConstraintValid(const asn1SccBase_PoseUpdateThreshold* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD		1000  /**/
-#define ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		985  /**/
-#define ERR_UPER_ENCODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		996  /**/
-#define asn1SccBase_PoseUpdateThreshold_REQUIRED_BYTES_FOR_ENCODING       26 
-#define asn1SccBase_PoseUpdateThreshold_REQUIRED_BITS_FOR_ENCODING        208
-
-flag asn1SccBase_PoseUpdateThreshold_Encode(const asn1SccBase_PoseUpdateThreshold* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD		1001  /**/
-#define ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_DISTANCE_2		986  /**/
-#define ERR_UPER_DECODE_BASE_POSEUPDATETHRESHOLD_ANGLE_2		997  /**/
-flag asn1SccBase_PoseUpdateThreshold_Decode(asn1SccBase_PoseUpdateThreshold* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double kelvin;
-} asn1SccBase_Temperature;
-
-flag asn1SccBase_Temperature_Equal(const asn1SccBase_Temperature* pVal1, const asn1SccBase_Temperature* pVal2);
-
-void asn1SccBase_Temperature_Initialize(asn1SccBase_Temperature* pVal);
-
-#define ERR_BASE_TEMPERATURE_KELVIN		1023  /**/
-flag asn1SccBase_Temperature_IsConstraintValid(const asn1SccBase_Temperature* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TEMPERATURE		1034  /**/
-#define ERR_UPER_ENCODE_BASE_TEMPERATURE_KELVIN_2		1030  /**/
-#define asn1SccBase_Temperature_REQUIRED_BYTES_FOR_ENCODING       13 
-#define asn1SccBase_Temperature_REQUIRED_BITS_FOR_ENCODING        104
-
-flag asn1SccBase_Temperature_Encode(const asn1SccBase_Temperature* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TEMPERATURE		1035  /**/
-#define ERR_UPER_DECODE_BASE_TEMPERATURE_KELVIN_2		1031  /**/
-flag asn1SccBase_Temperature_Decode(asn1SccBase_Temperature* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double surge;
-    asn1SccT_Double sway;
-    asn1SccT_Double heave;
-    asn1SccT_Double roll;
-    asn1SccT_Double pitch;
-    asn1SccT_Double yaw;
-} asn1SccBase_commands_Speed6D;
-
-flag asn1SccBase_commands_Speed6D_Equal(const asn1SccBase_commands_Speed6D* pVal1, const asn1SccBase_commands_Speed6D* pVal2);
-
-void asn1SccBase_commands_Speed6D_Initialize(asn1SccBase_commands_Speed6D* pVal);
-
-#define ERR_BASE_COMMANDS_SPEED6D_SURGE		1569  /**/
-#define ERR_BASE_COMMANDS_SPEED6D_SWAY		1580  /**/
-#define ERR_BASE_COMMANDS_SPEED6D_HEAVE		1591  /**/
-#define ERR_BASE_COMMANDS_SPEED6D_ROLL		1602  /**/
-#define ERR_BASE_COMMANDS_SPEED6D_PITCH		1613  /**/
-#define ERR_BASE_COMMANDS_SPEED6D_YAW		1624  /**/
-flag asn1SccBase_commands_Speed6D_IsConstraintValid(const asn1SccBase_commands_Speed6D* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D		1635  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SURGE_2		1576  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_SWAY_2		1587  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_HEAVE_2		1598  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_ROLL_2		1609  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_PITCH_2		1620  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_SPEED6D_YAW_2		1631  /**/
-#define asn1SccBase_commands_Speed6D_REQUIRED_BYTES_FOR_ENCODING       78 
-#define asn1SccBase_commands_Speed6D_REQUIRED_BITS_FOR_ENCODING        624
-
-flag asn1SccBase_commands_Speed6D_Encode(const asn1SccBase_commands_Speed6D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D		1636  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SURGE_2		1577  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_SWAY_2		1588  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_HEAVE_2		1599  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_ROLL_2		1610  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_PITCH_2		1621  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_SPEED6D_YAW_2		1632  /**/
-flag asn1SccBase_commands_Speed6D_Decode(asn1SccBase_commands_Speed6D* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[3];
-} asn1SccWrappers_AngleAxisd_axis;
-
-typedef struct {
-    asn1SccT_Double angle;
-    asn1SccWrappers_AngleAxisd_axis axis;
-} asn1SccWrappers_AngleAxisd;
-
-flag asn1SccWrappers_AngleAxisd_axis_Equal(const asn1SccWrappers_AngleAxisd_axis* pVal1, const asn1SccWrappers_AngleAxisd_axis* pVal2);
-
-flag asn1SccWrappers_AngleAxisd_Equal(const asn1SccWrappers_AngleAxisd* pVal1, const asn1SccWrappers_AngleAxisd* pVal2);
-
-void asn1SccWrappers_AngleAxisd_axis_Initialize(asn1SccWrappers_AngleAxisd_axis* pVal);
-void asn1SccWrappers_AngleAxisd_Initialize(asn1SccWrappers_AngleAxisd* pVal);
-
-#define ERR_WRAPPERS_ANGLEAXISD_ANGLE		5500  /**/
-#define ERR_WRAPPERS_ANGLEAXISD_AXIS_ELM		5511  /**/
-#define ERR_WRAPPERS_ANGLEAXISD_AXIS		5522  /**/
-flag asn1SccWrappers_AngleAxisd_IsConstraintValid(const asn1SccWrappers_AngleAxisd* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD		5529  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_ANGLE_2		5507  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS		5523  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		5518  /**/
-#define asn1SccWrappers_AngleAxisd_REQUIRED_BYTES_FOR_ENCODING       53 
-#define asn1SccWrappers_AngleAxisd_REQUIRED_BITS_FOR_ENCODING        418
-
-flag asn1SccWrappers_AngleAxisd_Encode(const asn1SccWrappers_AngleAxisd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD		5530  /**/
-#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_ANGLE_2		5508  /**/
-#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS		5524  /**/
-#define ERR_UPER_DECODE_WRAPPERS_ANGLEAXISD_AXIS_ELM_2		5519  /**/
-flag asn1SccWrappers_AngleAxisd_Decode(asn1SccWrappers_AngleAxisd* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[2];
-} asn1SccWrappers_Vector2d_data;
-
-typedef struct {
-    asn1SccWrappers_Vector2d_data data;
-} asn1SccWrappers_Vector2d;
-
-flag asn1SccWrappers_Vector2d_data_Equal(const asn1SccWrappers_Vector2d_data* pVal1, const asn1SccWrappers_Vector2d_data* pVal2);
-
-flag asn1SccWrappers_Vector2d_Equal(const asn1SccWrappers_Vector2d* pVal1, const asn1SccWrappers_Vector2d* pVal2);
-
-void asn1SccWrappers_Vector2d_data_Initialize(asn1SccWrappers_Vector2d_data* pVal);
-void asn1SccWrappers_Vector2d_Initialize(asn1SccWrappers_Vector2d* pVal);
-
-#define ERR_WRAPPERS_VECTOR2D_DATA_ELM		5535  /**/
-#define ERR_WRAPPERS_VECTOR2D_DATA		5546  /**/
-flag asn1SccWrappers_Vector2d_IsConstraintValid(const asn1SccWrappers_Vector2d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR2D		5553  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA		5547  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR2D_DATA_ELM_2		5542  /**/
-#define asn1SccWrappers_Vector2d_REQUIRED_BYTES_FOR_ENCODING       27 
-#define asn1SccWrappers_Vector2d_REQUIRED_BITS_FOR_ENCODING        209
-
-flag asn1SccWrappers_Vector2d_Encode(const asn1SccWrappers_Vector2d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR2D		5554  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA		5548  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR2D_DATA_ELM_2		5543  /**/
-flag asn1SccWrappers_Vector2d_Decode(asn1SccWrappers_Vector2d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector2d position;
-    asn1SccT_Double orientation;
-} asn1SccBase_Pose2D;
-
-flag asn1SccBase_Pose2D_Equal(const asn1SccBase_Pose2D* pVal1, const asn1SccBase_Pose2D* pVal2);
-
-void asn1SccBase_Pose2D_Initialize(asn1SccBase_Pose2D* pVal);
-
-#define ERR_BASE_POSE2D_POSITION_DATA_ELM		933  /**/
-#define ERR_BASE_POSE2D_POSITION_DATA		944  /**/
-#define ERR_BASE_POSE2D_ORIENTATION		961  /**/
-flag asn1SccBase_Pose2D_IsConstraintValid(const asn1SccBase_Pose2D* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_POSE2D		972  /**/
-#define ERR_UPER_ENCODE_BASE_POSE2D_POSITION_2		957  /**/
-#define ERR_UPER_ENCODE_BASE_POSE2D_ORIENTATION_2		968  /**/
-#define asn1SccBase_Pose2D_REQUIRED_BYTES_FOR_ENCODING       40 
-#define asn1SccBase_Pose2D_REQUIRED_BITS_FOR_ENCODING        313
-
-flag asn1SccBase_Pose2D_Encode(const asn1SccBase_Pose2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_POSE2D		973  /**/
-#define ERR_UPER_DECODE_BASE_POSE2D_POSITION_2		958  /**/
-#define ERR_UPER_DECODE_BASE_POSE2D_ORIENTATION_2		969  /**/
-flag asn1SccBase_Pose2D_Decode(asn1SccBase_Pose2D* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector2d position;
-    asn1SccT_Double orientation;
-} asn1SccBase_Pose2D_m;
-
-flag asn1SccBase_Pose2D_m_Equal(const asn1SccBase_Pose2D_m* pVal1, const asn1SccBase_Pose2D_m* pVal2);
-
-void asn1SccBase_Pose2D_m_Initialize(asn1SccBase_Pose2D_m* pVal);
-
-#define ERR_BASE_POSE2D_M_POSITION_DATA_ELM		5888  /**/
-#define ERR_BASE_POSE2D_M_POSITION_DATA		5899  /**/
-#define ERR_BASE_POSE2D_M_ORIENTATION		5916  /**/
-flag asn1SccBase_Pose2D_m_IsConstraintValid(const asn1SccBase_Pose2D_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_POSE2D_M		5927  /**/
-#define ERR_UPER_ENCODE_BASE_POSE2D_M_POSITION_2		5912  /**/
-#define ERR_UPER_ENCODE_BASE_POSE2D_M_ORIENTATION_2		5923  /**/
-#define asn1SccBase_Pose2D_m_REQUIRED_BYTES_FOR_ENCODING       40 
-#define asn1SccBase_Pose2D_m_REQUIRED_BITS_FOR_ENCODING        313
-
-flag asn1SccBase_Pose2D_m_Encode(const asn1SccBase_Pose2D_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_POSE2D_M		5928  /**/
-#define ERR_UPER_DECODE_BASE_POSE2D_M_POSITION_2		5913  /**/
-#define ERR_UPER_DECODE_BASE_POSE2D_M_ORIENTATION_2		5924  /**/
-flag asn1SccBase_Pose2D_m_Decode(asn1SccBase_Pose2D_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[4];
-} asn1SccWrappers_Matrix2d_data;
-
-typedef struct {
-    asn1SccWrappers_Matrix2d_data data;
-} asn1SccWrappers_Matrix2d;
-
-flag asn1SccWrappers_Matrix2d_data_Equal(const asn1SccWrappers_Matrix2d_data* pVal1, const asn1SccWrappers_Matrix2d_data* pVal2);
-
-flag asn1SccWrappers_Matrix2d_Equal(const asn1SccWrappers_Matrix2d* pVal1, const asn1SccWrappers_Matrix2d* pVal2);
-
-void asn1SccWrappers_Matrix2d_data_Initialize(asn1SccWrappers_Matrix2d_data* pVal);
-void asn1SccWrappers_Matrix2d_Initialize(asn1SccWrappers_Matrix2d* pVal);
-
-#define ERR_WRAPPERS_MATRIX2D_DATA_ELM		5559  /**/
-#define ERR_WRAPPERS_MATRIX2D_DATA		5570  /**/
-flag asn1SccWrappers_Matrix2d_IsConstraintValid(const asn1SccWrappers_Matrix2d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX2D		5577  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA		5571  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX2D_DATA_ELM_2		5566  /**/
-#define asn1SccWrappers_Matrix2d_REQUIRED_BYTES_FOR_ENCODING       53 
-#define asn1SccWrappers_Matrix2d_REQUIRED_BITS_FOR_ENCODING        418
-
-flag asn1SccWrappers_Matrix2d_Encode(const asn1SccWrappers_Matrix2d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX2D		5578  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA		5572  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX2D_DATA_ELM_2		5567  /**/
-flag asn1SccWrappers_Matrix2d_Decode(asn1SccWrappers_Matrix2d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[3];
-} asn1SccWrappers_Vector3d_data;
-
-typedef struct {
-    asn1SccWrappers_Vector3d_data data;
-} asn1SccWrappers_Vector3d;
-
-flag asn1SccWrappers_Vector3d_data_Equal(const asn1SccWrappers_Vector3d_data* pVal1, const asn1SccWrappers_Vector3d_data* pVal2);
-
-flag asn1SccWrappers_Vector3d_Equal(const asn1SccWrappers_Vector3d* pVal1, const asn1SccWrappers_Vector3d* pVal2);
-
-void asn1SccWrappers_Vector3d_data_Initialize(asn1SccWrappers_Vector3d_data* pVal);
-void asn1SccWrappers_Vector3d_Initialize(asn1SccWrappers_Vector3d* pVal);
-
-#define ERR_WRAPPERS_VECTOR3D_DATA_ELM		5583  /**/
-#define ERR_WRAPPERS_VECTOR3D_DATA		5594  /**/
-flag asn1SccWrappers_Vector3d_IsConstraintValid(const asn1SccWrappers_Vector3d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR3D		5601  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA		5595  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR3D_DATA_ELM_2		5590  /**/
-#define asn1SccWrappers_Vector3d_REQUIRED_BYTES_FOR_ENCODING       40 
-#define asn1SccWrappers_Vector3d_REQUIRED_BITS_FOR_ENCODING        314
-
-flag asn1SccWrappers_Vector3d_Encode(const asn1SccWrappers_Vector3d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR3D		5602  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA		5596  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR3D_DATA_ELM_2		5591  /**/
-flag asn1SccWrappers_Vector3d_Decode(asn1SccWrappers_Vector3d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d force;
-    asn1SccWrappers_Vector3d torque;
-} asn1SccBase_Wrench;
-
-flag asn1SccBase_Wrench_Equal(const asn1SccBase_Wrench* pVal1, const asn1SccBase_Wrench* pVal2);
-
-void asn1SccBase_Wrench_Initialize(asn1SccBase_Wrench* pVal);
-
-#define ERR_BASE_WRENCH_FORCE_DATA_ELM		793  /**/
-#define ERR_BASE_WRENCH_FORCE_DATA		804  /**/
-#define ERR_BASE_WRENCH_TORQUE_DATA_ELM		821  /**/
-#define ERR_BASE_WRENCH_TORQUE_DATA		832  /**/
-flag asn1SccBase_Wrench_IsConstraintValid(const asn1SccBase_Wrench* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_WRENCH		849  /**/
-#define ERR_UPER_ENCODE_BASE_WRENCH_FORCE_2		817  /**/
-#define ERR_UPER_ENCODE_BASE_WRENCH_TORQUE_2		845  /**/
-#define asn1SccBase_Wrench_REQUIRED_BYTES_FOR_ENCODING       79 
-#define asn1SccBase_Wrench_REQUIRED_BITS_FOR_ENCODING        628
-
-flag asn1SccBase_Wrench_Encode(const asn1SccBase_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_WRENCH		850  /**/
-#define ERR_UPER_DECODE_BASE_WRENCH_FORCE_2		818  /**/
-#define ERR_UPER_DECODE_BASE_WRENCH_TORQUE_2		846  /**/
-flag asn1SccBase_Wrench_Decode(asn1SccBase_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d position;
-    asn1SccT_Double heading;
-    asn1SccT_Double tol_position;
-    asn1SccT_Double tol_heading;
-} asn1SccBase_Waypoint;
-
-flag asn1SccBase_Waypoint_Equal(const asn1SccBase_Waypoint* pVal1, const asn1SccBase_Waypoint* pVal2);
-
-void asn1SccBase_Waypoint_Initialize(asn1SccBase_Waypoint* pVal);
-
-#define ERR_BASE_WAYPOINT_POSITION_DATA_ELM		1164  /**/
-#define ERR_BASE_WAYPOINT_POSITION_DATA		1175  /**/
-#define ERR_BASE_WAYPOINT_HEADING		1192  /**/
-#define ERR_BASE_WAYPOINT_TOL_POSITION		1203  /**/
-#define ERR_BASE_WAYPOINT_TOL_HEADING		1214  /**/
-flag asn1SccBase_Waypoint_IsConstraintValid(const asn1SccBase_Waypoint* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_WAYPOINT		1225  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_POSITION_2		1188  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_HEADING_2		1199  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_POSITION_2		1210  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_TOL_HEADING_2		1221  /**/
-#define asn1SccBase_Waypoint_REQUIRED_BYTES_FOR_ENCODING       79 
-#define asn1SccBase_Waypoint_REQUIRED_BITS_FOR_ENCODING        626
-
-flag asn1SccBase_Waypoint_Encode(const asn1SccBase_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_WAYPOINT		1226  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_POSITION_2		1189  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_HEADING_2		1200  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_TOL_POSITION_2		1211  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_TOL_HEADING_2		1222  /**/
-flag asn1SccBase_Waypoint_Decode(asn1SccBase_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d position;
-    asn1SccT_Double heading;
-    asn1SccT_Double tol_position;
-    asn1SccT_Double tol_heading;
-} asn1SccBase_Waypoint_m;
-
-flag asn1SccBase_Waypoint_m_Equal(const asn1SccBase_Waypoint_m* pVal1, const asn1SccBase_Waypoint_m* pVal2);
-
-void asn1SccBase_Waypoint_m_Initialize(asn1SccBase_Waypoint_m* pVal);
-
-#define ERR_BASE_WAYPOINT_M_POSITION_DATA_ELM		6197  /**/
-#define ERR_BASE_WAYPOINT_M_POSITION_DATA		6208  /**/
-#define ERR_BASE_WAYPOINT_M_HEADING		6225  /**/
-#define ERR_BASE_WAYPOINT_M_TOL_POSITION		6236  /**/
-#define ERR_BASE_WAYPOINT_M_TOL_HEADING		6247  /**/
-flag asn1SccBase_Waypoint_m_IsConstraintValid(const asn1SccBase_Waypoint_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_M		6258  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_POSITION_2		6221  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_HEADING_2		6232  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_POSITION_2		6243  /**/
-#define ERR_UPER_ENCODE_BASE_WAYPOINT_M_TOL_HEADING_2		6254  /**/
-#define asn1SccBase_Waypoint_m_REQUIRED_BYTES_FOR_ENCODING       79 
-#define asn1SccBase_Waypoint_m_REQUIRED_BITS_FOR_ENCODING        626
-
-flag asn1SccBase_Waypoint_m_Encode(const asn1SccBase_Waypoint_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_WAYPOINT_M		6259  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_M_POSITION_2		6222  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_M_HEADING_2		6233  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_POSITION_2		6244  /**/
-#define ERR_UPER_DECODE_BASE_WAYPOINT_M_TOL_HEADING_2		6255  /**/
-flag asn1SccBase_Waypoint_m_Decode(asn1SccBase_Waypoint_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_Waypoint_m arr[200];
-} asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint;
-
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Equal(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal1, const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal2);
-
-void asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal);
-
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_POSITION_DATA_ELM		225  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_POSITION_DATA		236  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_HEADING		253  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_TOL_POSITION		264  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_TOL_HEADING		275  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		296  /**/
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		297  /**/
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		292  /**/
-#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_REQUIRED_BYTES_FOR_ENCODING       15651 
-#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_REQUIRED_BITS_FOR_ENCODING        125208
-
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT		298  /**/
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WAYPOINT_ELM_2		293  /**/
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_Waypoint* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d force;
-    asn1SccWrappers_Vector3d torque;
-} asn1SccBase_Wrench_m;
-
-flag asn1SccBase_Wrench_m_Equal(const asn1SccBase_Wrench_m* pVal1, const asn1SccBase_Wrench_m* pVal2);
-
-void asn1SccBase_Wrench_m_Initialize(asn1SccBase_Wrench_m* pVal);
-
-#define ERR_BASE_WRENCH_M_FORCE_DATA_ELM		6264  /**/
-#define ERR_BASE_WRENCH_M_FORCE_DATA		6275  /**/
-#define ERR_BASE_WRENCH_M_TORQUE_DATA_ELM		6292  /**/
-#define ERR_BASE_WRENCH_M_TORQUE_DATA		6303  /**/
-flag asn1SccBase_Wrench_m_IsConstraintValid(const asn1SccBase_Wrench_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_WRENCH_M		6320  /**/
-#define ERR_UPER_ENCODE_BASE_WRENCH_M_FORCE_2		6288  /**/
-#define ERR_UPER_ENCODE_BASE_WRENCH_M_TORQUE_2		6316  /**/
-#define asn1SccBase_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       79 
-#define asn1SccBase_Wrench_m_REQUIRED_BITS_FOR_ENCODING        628
-
-flag asn1SccBase_Wrench_m_Encode(const asn1SccBase_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_WRENCH_M		6321  /**/
-#define ERR_UPER_DECODE_BASE_WRENCH_M_FORCE_2		6289  /**/
-#define ERR_UPER_DECODE_BASE_WRENCH_M_TORQUE_2		6317  /**/
-flag asn1SccBase_Wrench_m_Decode(asn1SccBase_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_Wrench_m arr[200];
-} asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench;
-
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Equal(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal1, const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal2);
-
-void asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal);
-
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_FORCE_DATA_ELM		303  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_FORCE_DATA		314  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_TORQUE_DATA_ELM		331  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_TORQUE_DATA		342  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		369  /**/
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		370  /**/
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		365  /**/
-#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_REQUIRED_BYTES_FOR_ENCODING       15701 
-#define asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_REQUIRED_BITS_FOR_ENCODING        125608
-
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH		371  /**/
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_WRENCH_ELM_2		366  /**/
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[9];
-} asn1SccWrappers_Matrix3d_data;
-
-typedef struct {
-    asn1SccWrappers_Matrix3d_data data;
-} asn1SccWrappers_Matrix3d;
-
-flag asn1SccWrappers_Matrix3d_data_Equal(const asn1SccWrappers_Matrix3d_data* pVal1, const asn1SccWrappers_Matrix3d_data* pVal2);
-
-flag asn1SccWrappers_Matrix3d_Equal(const asn1SccWrappers_Matrix3d* pVal1, const asn1SccWrappers_Matrix3d* pVal2);
-
-void asn1SccWrappers_Matrix3d_data_Initialize(asn1SccWrappers_Matrix3d_data* pVal);
-void asn1SccWrappers_Matrix3d_Initialize(asn1SccWrappers_Matrix3d* pVal);
-
-#define ERR_WRAPPERS_MATRIX3D_DATA_ELM		5607  /**/
-#define ERR_WRAPPERS_MATRIX3D_DATA		5618  /**/
-flag asn1SccWrappers_Matrix3d_IsConstraintValid(const asn1SccWrappers_Matrix3d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX3D		5625  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA		5619  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX3D_DATA_ELM_2		5614  /**/
-#define asn1SccWrappers_Matrix3d_REQUIRED_BYTES_FOR_ENCODING       118 
-#define asn1SccWrappers_Matrix3d_REQUIRED_BITS_FOR_ENCODING        940
-
-flag asn1SccWrappers_Matrix3d_Encode(const asn1SccWrappers_Matrix3d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX3D		5626  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA		5620  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX3D_DATA_ELM_2		5615  /**/
-flag asn1SccWrappers_Matrix3d_Decode(asn1SccWrappers_Matrix3d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[4];
-} asn1SccWrappers_Vector4d_data;
-
-typedef struct {
-    asn1SccWrappers_Vector4d_data data;
-} asn1SccWrappers_Vector4d;
-
-flag asn1SccWrappers_Vector4d_data_Equal(const asn1SccWrappers_Vector4d_data* pVal1, const asn1SccWrappers_Vector4d_data* pVal2);
-
-flag asn1SccWrappers_Vector4d_Equal(const asn1SccWrappers_Vector4d* pVal1, const asn1SccWrappers_Vector4d* pVal2);
-
-void asn1SccWrappers_Vector4d_data_Initialize(asn1SccWrappers_Vector4d_data* pVal);
-void asn1SccWrappers_Vector4d_Initialize(asn1SccWrappers_Vector4d* pVal);
-
-#define ERR_WRAPPERS_VECTOR4D_DATA_ELM		5631  /**/
-#define ERR_WRAPPERS_VECTOR4D_DATA		5642  /**/
-flag asn1SccWrappers_Vector4d_IsConstraintValid(const asn1SccWrappers_Vector4d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR4D		5649  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA		5643  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR4D_DATA_ELM_2		5638  /**/
-#define asn1SccWrappers_Vector4d_REQUIRED_BYTES_FOR_ENCODING       53 
-#define asn1SccWrappers_Vector4d_REQUIRED_BITS_FOR_ENCODING        418
-
-flag asn1SccWrappers_Vector4d_Encode(const asn1SccWrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR4D		5650  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA		5644  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR4D_DATA_ELM_2		5639  /**/
-flag asn1SccWrappers_Vector4d_Decode(asn1SccWrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccWrappers_Vector4d arr[200];
-} asn1SccStd_vector_Wrappers_Vector4d;
-
-flag asn1SccStd_vector_Wrappers_Vector4d_Equal(const asn1SccStd_vector_Wrappers_Vector4d* pVal1, const asn1SccStd_vector_Wrappers_Vector4d* pVal2);
-
-void asn1SccStd_vector_Wrappers_Vector4d_Initialize(asn1SccStd_vector_Wrappers_Vector4d* pVal);
-
-#define ERR_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_DATA_ELM		376  /**/
-#define ERR_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_DATA		387  /**/
-#define ERR_STD_VECTOR_WRAPPERS_VECTOR4D		404  /**/
-flag asn1SccStd_vector_Wrappers_Vector4d_IsConstraintValid(const asn1SccStd_vector_Wrappers_Vector4d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D		405  /**/
-#define ERR_UPER_ENCODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		400  /**/
-#define asn1SccStd_vector_Wrappers_Vector4d_REQUIRED_BYTES_FOR_ENCODING       10451 
-#define asn1SccStd_vector_Wrappers_Vector4d_REQUIRED_BITS_FOR_ENCODING        83608
-
-flag asn1SccStd_vector_Wrappers_Vector4d_Encode(const asn1SccStd_vector_Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D		406  /**/
-#define ERR_UPER_DECODE_STD_VECTOR_WRAPPERS_VECTOR4D_ELM_2		401  /**/
-flag asn1SccStd_vector_Wrappers_Vector4d_Decode(asn1SccStd_vector_Wrappers_Vector4d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[16];
-} asn1SccWrappers_Matrix4d_data;
-
-typedef struct {
-    asn1SccWrappers_Matrix4d_data data;
-} asn1SccWrappers_Matrix4d;
-
-flag asn1SccWrappers_Matrix4d_data_Equal(const asn1SccWrappers_Matrix4d_data* pVal1, const asn1SccWrappers_Matrix4d_data* pVal2);
-
-flag asn1SccWrappers_Matrix4d_Equal(const asn1SccWrappers_Matrix4d* pVal1, const asn1SccWrappers_Matrix4d* pVal2);
-
-void asn1SccWrappers_Matrix4d_data_Initialize(asn1SccWrappers_Matrix4d_data* pVal);
-void asn1SccWrappers_Matrix4d_Initialize(asn1SccWrappers_Matrix4d* pVal);
-
-#define ERR_WRAPPERS_MATRIX4D_DATA_ELM		5655  /**/
-#define ERR_WRAPPERS_MATRIX4D_DATA		5666  /**/
-flag asn1SccWrappers_Matrix4d_IsConstraintValid(const asn1SccWrappers_Matrix4d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX4D		5673  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA		5667  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX4D_DATA_ELM_2		5662  /**/
-#define asn1SccWrappers_Matrix4d_REQUIRED_BYTES_FOR_ENCODING       209 
-#define asn1SccWrappers_Matrix4d_REQUIRED_BITS_FOR_ENCODING        1668
-
-flag asn1SccWrappers_Matrix4d_Encode(const asn1SccWrappers_Matrix4d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX4D		5674  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA		5668  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX4D_DATA_ELM_2		5663  /**/
-flag asn1SccWrappers_Matrix4d_Decode(asn1SccWrappers_Matrix4d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[6];
-} asn1SccWrappers_Vector6d_data;
-
-typedef struct {
-    asn1SccWrappers_Vector6d_data data;
-} asn1SccWrappers_Vector6d;
-
-flag asn1SccWrappers_Vector6d_data_Equal(const asn1SccWrappers_Vector6d_data* pVal1, const asn1SccWrappers_Vector6d_data* pVal2);
-
-flag asn1SccWrappers_Vector6d_Equal(const asn1SccWrappers_Vector6d* pVal1, const asn1SccWrappers_Vector6d* pVal2);
-
-void asn1SccWrappers_Vector6d_data_Initialize(asn1SccWrappers_Vector6d_data* pVal);
-void asn1SccWrappers_Vector6d_Initialize(asn1SccWrappers_Vector6d* pVal);
-
-#define ERR_WRAPPERS_VECTOR6D_DATA_ELM		5679  /**/
-#define ERR_WRAPPERS_VECTOR6D_DATA		5690  /**/
-flag asn1SccWrappers_Vector6d_IsConstraintValid(const asn1SccWrappers_Vector6d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR6D		5697  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA		5691  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTOR6D_DATA_ELM_2		5686  /**/
-#define asn1SccWrappers_Vector6d_REQUIRED_BYTES_FOR_ENCODING       79 
-#define asn1SccWrappers_Vector6d_REQUIRED_BITS_FOR_ENCODING        627
-
-flag asn1SccWrappers_Vector6d_Encode(const asn1SccWrappers_Vector6d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR6D		5698  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA		5692  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTOR6D_DATA_ELM_2		5687  /**/
-flag asn1SccWrappers_Vector6d_Decode(asn1SccWrappers_Vector6d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[36];
-} asn1SccWrappers_Matrix6d_data;
-
-typedef struct {
-    asn1SccWrappers_Matrix6d_data data;
-} asn1SccWrappers_Matrix6d;
-
-flag asn1SccWrappers_Matrix6d_data_Equal(const asn1SccWrappers_Matrix6d_data* pVal1, const asn1SccWrappers_Matrix6d_data* pVal2);
-
-flag asn1SccWrappers_Matrix6d_Equal(const asn1SccWrappers_Matrix6d* pVal1, const asn1SccWrappers_Matrix6d* pVal2);
-
-void asn1SccWrappers_Matrix6d_data_Initialize(asn1SccWrappers_Matrix6d_data* pVal);
-void asn1SccWrappers_Matrix6d_Initialize(asn1SccWrappers_Matrix6d* pVal);
-
-#define ERR_WRAPPERS_MATRIX6D_DATA_ELM		5703  /**/
-#define ERR_WRAPPERS_MATRIX6D_DATA		5714  /**/
-flag asn1SccWrappers_Matrix6d_IsConstraintValid(const asn1SccWrappers_Matrix6d* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX6D		5721  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA		5715  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIX6D_DATA_ELM_2		5710  /**/
-#define asn1SccWrappers_Matrix6d_REQUIRED_BYTES_FOR_ENCODING       469 
-#define asn1SccWrappers_Matrix6d_REQUIRED_BITS_FOR_ENCODING        3750
-
-flag asn1SccWrappers_Matrix6d_Encode(const asn1SccWrappers_Matrix6d* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX6D		5722  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA		5716  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIX6D_DATA_ELM_2		5711  /**/
-flag asn1SccWrappers_Matrix6d_Decode(asn1SccWrappers_Matrix6d* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d vel;
-    asn1SccWrappers_Vector3d rot;
-    asn1SccWrappers_Matrix6d cov;
-} asn1SccBase_TwistWithCovariance;
-
-flag asn1SccBase_TwistWithCovariance_Equal(const asn1SccBase_TwistWithCovariance* pVal1, const asn1SccBase_TwistWithCovariance* pVal2);
-
-void asn1SccBase_TwistWithCovariance_Initialize(asn1SccBase_TwistWithCovariance* pVal);
-
-#define ERR_BASE_TWISTWITHCOVARIANCE_VEL_DATA_ELM		703  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_VEL_DATA		714  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_ROT_DATA_ELM		731  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_ROT_DATA		742  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_COV_DATA_ELM		759  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_COV_DATA		770  /**/
-flag asn1SccBase_TwistWithCovariance_IsConstraintValid(const asn1SccBase_TwistWithCovariance* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE		787  /**/
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_VEL_2		727  /**/
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_ROT_2		755  /**/
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_COV_2		783  /**/
-#define asn1SccBase_TwistWithCovariance_REQUIRED_BYTES_FOR_ENCODING       548 
-#define asn1SccBase_TwistWithCovariance_REQUIRED_BITS_FOR_ENCODING        4378
-
-flag asn1SccBase_TwistWithCovariance_Encode(const asn1SccBase_TwistWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE		788  /**/
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_VEL_2		728  /**/
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_ROT_2		756  /**/
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_COV_2		784  /**/
-flag asn1SccBase_TwistWithCovariance_Decode(asn1SccBase_TwistWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d vel;
-    asn1SccWrappers_Vector3d rot;
-    asn1SccWrappers_Matrix6d cov;
-} asn1SccBase_TwistWithCovariance_m;
-
-flag asn1SccBase_TwistWithCovariance_m_Equal(const asn1SccBase_TwistWithCovariance_m* pVal1, const asn1SccBase_TwistWithCovariance_m* pVal2);
-
-void asn1SccBase_TwistWithCovariance_m_Initialize(asn1SccBase_TwistWithCovariance_m* pVal);
-
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA_ELM		6107  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_VEL_DATA		6118  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA_ELM		6135  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_ROT_DATA		6146  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA_ELM		6163  /**/
-#define ERR_BASE_TWISTWITHCOVARIANCE_M_COV_DATA		6174  /**/
-flag asn1SccBase_TwistWithCovariance_m_IsConstraintValid(const asn1SccBase_TwistWithCovariance_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M		6191  /**/
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		6131  /**/
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		6159  /**/
-#define ERR_UPER_ENCODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		6187  /**/
-#define asn1SccBase_TwistWithCovariance_m_REQUIRED_BYTES_FOR_ENCODING       548 
-#define asn1SccBase_TwistWithCovariance_m_REQUIRED_BITS_FOR_ENCODING        4378
-
-flag asn1SccBase_TwistWithCovariance_m_Encode(const asn1SccBase_TwistWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M		6192  /**/
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_VEL_2		6132  /**/
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_ROT_2		6160  /**/
-#define ERR_UPER_DECODE_BASE_TWISTWITHCOVARIANCE_M_COV_2		6188  /**/
-flag asn1SccBase_TwistWithCovariance_m_Decode(asn1SccBase_TwistWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[3];
-} asn1SccWrappers_Quaterniond_im;
-
-typedef struct {
-    asn1SccWrappers_Quaterniond_im im;
-    asn1SccT_Double re;
-} asn1SccWrappers_Quaterniond;
-
-flag asn1SccWrappers_Quaterniond_im_Equal(const asn1SccWrappers_Quaterniond_im* pVal1, const asn1SccWrappers_Quaterniond_im* pVal2);
-
-flag asn1SccWrappers_Quaterniond_Equal(const asn1SccWrappers_Quaterniond* pVal1, const asn1SccWrappers_Quaterniond* pVal2);
-
-void asn1SccWrappers_Quaterniond_im_Initialize(asn1SccWrappers_Quaterniond_im* pVal);
-void asn1SccWrappers_Quaterniond_Initialize(asn1SccWrappers_Quaterniond* pVal);
-
-#define ERR_WRAPPERS_QUATERNIOND_IM_ELM		5773  /**/
-#define ERR_WRAPPERS_QUATERNIOND_IM		5784  /**/
-#define ERR_WRAPPERS_QUATERNIOND_RE		5791  /**/
-flag asn1SccWrappers_Quaterniond_IsConstraintValid(const asn1SccWrappers_Quaterniond* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND		5802  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM		5785  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_IM_ELM_2		5780  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_QUATERNIOND_RE_2		5798  /**/
-#define asn1SccWrappers_Quaterniond_REQUIRED_BYTES_FOR_ENCODING       53 
-#define asn1SccWrappers_Quaterniond_REQUIRED_BITS_FOR_ENCODING        418
-
-flag asn1SccWrappers_Quaterniond_Encode(const asn1SccWrappers_Quaterniond* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND		5803  /**/
-#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM		5786  /**/
-#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_IM_ELM_2		5781  /**/
-#define ERR_UPER_DECODE_WRAPPERS_QUATERNIOND_RE_2		5799  /**/
-flag asn1SccWrappers_Quaterniond_Decode(asn1SccWrappers_Quaterniond* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d position;
-    asn1SccWrappers_Quaterniond orientation;
-} asn1SccBase_Pose;
-
-flag asn1SccBase_Pose_Equal(const asn1SccBase_Pose* pVal1, const asn1SccBase_Pose* pVal2);
-
-void asn1SccBase_Pose_Initialize(asn1SccBase_Pose* pVal);
-
-#define ERR_BASE_POSE_POSITION_DATA_ELM		529  /**/
-#define ERR_BASE_POSE_POSITION_DATA		540  /**/
-#define ERR_BASE_POSE_ORIENTATION_IM_ELM		557  /**/
-#define ERR_BASE_POSE_ORIENTATION_IM		568  /**/
-#define ERR_BASE_POSE_ORIENTATION_RE		575  /**/
-flag asn1SccBase_Pose_IsConstraintValid(const asn1SccBase_Pose* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_POSE		596  /**/
-#define ERR_UPER_ENCODE_BASE_POSE_POSITION_2		553  /**/
-#define ERR_UPER_ENCODE_BASE_POSE_ORIENTATION_2		592  /**/
-#define asn1SccBase_Pose_REQUIRED_BYTES_FOR_ENCODING       92 
-#define asn1SccBase_Pose_REQUIRED_BITS_FOR_ENCODING        732
-
-flag asn1SccBase_Pose_Encode(const asn1SccBase_Pose* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_POSE		597  /**/
-#define ERR_UPER_DECODE_BASE_POSE_POSITION_2		554  /**/
-#define ERR_UPER_DECODE_BASE_POSE_ORIENTATION_2		593  /**/
-flag asn1SccBase_Pose_Decode(asn1SccBase_Pose* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d translation;
-    asn1SccWrappers_Quaterniond orientation;
-    asn1SccWrappers_Matrix6d cov;
-} asn1SccBase_TransformWithCovariance;
-
-flag asn1SccBase_TransformWithCovariance_Equal(const asn1SccBase_TransformWithCovariance* pVal1, const asn1SccBase_TransformWithCovariance* pVal2);
-
-void asn1SccBase_TransformWithCovariance_Initialize(asn1SccBase_TransformWithCovariance* pVal);
-
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_DATA_ELM		602  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_DATA		613  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_IM_ELM		630  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_IM		641  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_RE		648  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_COV_DATA_ELM		669  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_COV_DATA		680  /**/
-flag asn1SccBase_TransformWithCovariance_IsConstraintValid(const asn1SccBase_TransformWithCovariance* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE		697  /**/
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		626  /**/
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		665  /**/
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		693  /**/
-#define asn1SccBase_TransformWithCovariance_REQUIRED_BYTES_FOR_ENCODING       561 
-#define asn1SccBase_TransformWithCovariance_REQUIRED_BITS_FOR_ENCODING        4482
-
-flag asn1SccBase_TransformWithCovariance_Encode(const asn1SccBase_TransformWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE		698  /**/
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_TRANSLATION_2		627  /**/
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_ORIENTATION_2		666  /**/
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_COV_2		694  /**/
-flag asn1SccBase_TransformWithCovariance_Decode(asn1SccBase_TransformWithCovariance* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d position;
-    asn1SccWrappers_Quaterniond orientation;
-} asn1SccBase_Pose_m;
-
-flag asn1SccBase_Pose_m_Equal(const asn1SccBase_Pose_m* pVal1, const asn1SccBase_Pose_m* pVal2);
-
-void asn1SccBase_Pose_m_Initialize(asn1SccBase_Pose_m* pVal);
-
-#define ERR_BASE_POSE_M_POSITION_DATA_ELM		5933  /**/
-#define ERR_BASE_POSE_M_POSITION_DATA		5944  /**/
-#define ERR_BASE_POSE_M_ORIENTATION_IM_ELM		5961  /**/
-#define ERR_BASE_POSE_M_ORIENTATION_IM		5972  /**/
-#define ERR_BASE_POSE_M_ORIENTATION_RE		5979  /**/
-flag asn1SccBase_Pose_m_IsConstraintValid(const asn1SccBase_Pose_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_POSE_M		6000  /**/
-#define ERR_UPER_ENCODE_BASE_POSE_M_POSITION_2		5957  /**/
-#define ERR_UPER_ENCODE_BASE_POSE_M_ORIENTATION_2		5996  /**/
-#define asn1SccBase_Pose_m_REQUIRED_BYTES_FOR_ENCODING       92 
-#define asn1SccBase_Pose_m_REQUIRED_BITS_FOR_ENCODING        732
-
-flag asn1SccBase_Pose_m_Encode(const asn1SccBase_Pose_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_POSE_M		6001  /**/
-#define ERR_UPER_DECODE_BASE_POSE_M_POSITION_2		5958  /**/
-#define ERR_UPER_DECODE_BASE_POSE_M_ORIENTATION_2		5997  /**/
-flag asn1SccBase_Pose_m_Decode(asn1SccBase_Pose_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d translation;
-    asn1SccWrappers_Quaterniond orientation;
-    asn1SccWrappers_Matrix6d cov;
-} asn1SccBase_TransformWithCovariance_m;
-
-flag asn1SccBase_TransformWithCovariance_m_Equal(const asn1SccBase_TransformWithCovariance_m* pVal1, const asn1SccBase_TransformWithCovariance_m* pVal2);
-
-void asn1SccBase_TransformWithCovariance_m_Initialize(asn1SccBase_TransformWithCovariance_m* pVal);
-
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA_ELM		6006  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_DATA		6017  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM_ELM		6034  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_IM		6045  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_RE		6052  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA_ELM		6073  /**/
-#define ERR_BASE_TRANSFORMWITHCOVARIANCE_M_COV_DATA		6084  /**/
-flag asn1SccBase_TransformWithCovariance_m_IsConstraintValid(const asn1SccBase_TransformWithCovariance_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M		6101  /**/
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		6030  /**/
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		6069  /**/
-#define ERR_UPER_ENCODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		6097  /**/
-#define asn1SccBase_TransformWithCovariance_m_REQUIRED_BYTES_FOR_ENCODING       561 
-#define asn1SccBase_TransformWithCovariance_m_REQUIRED_BITS_FOR_ENCODING        4482
-
-flag asn1SccBase_TransformWithCovariance_m_Encode(const asn1SccBase_TransformWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M		6102  /**/
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_TRANSLATION_2		6031  /**/
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_ORIENTATION_2		6070  /**/
-#define ERR_UPER_DECODE_BASE_TRANSFORMWITHCOVARIANCE_M_COV_2		6098  /**/
-flag asn1SccBase_TransformWithCovariance_m_Decode(asn1SccBase_TransformWithCovariance_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Double arr[200];
-} asn1SccWrappers_VectorXd_data;
-
-typedef struct {
-    asn1SccWrappers_VectorXd_data data;
-} asn1SccWrappers_VectorXd;
-
-flag asn1SccWrappers_VectorXd_data_Equal(const asn1SccWrappers_VectorXd_data* pVal1, const asn1SccWrappers_VectorXd_data* pVal2);
-
-flag asn1SccWrappers_VectorXd_Equal(const asn1SccWrappers_VectorXd* pVal1, const asn1SccWrappers_VectorXd* pVal2);
-
-void asn1SccWrappers_VectorXd_data_Initialize(asn1SccWrappers_VectorXd_data* pVal);
-void asn1SccWrappers_VectorXd_Initialize(asn1SccWrappers_VectorXd* pVal);
-
-#define ERR_WRAPPERS_VECTORXD_DATA_ELM		5808  /**/
-#define ERR_WRAPPERS_VECTORXD_DATA		5819  /**/
-flag asn1SccWrappers_VectorXd_IsConstraintValid(const asn1SccWrappers_VectorXd* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_WRAPPERS_VECTORXD		5826  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA		5820  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_VECTORXD_DATA_ELM_2		5815  /**/
-#define asn1SccWrappers_VectorXd_REQUIRED_BYTES_FOR_ENCODING       2601 
-#define asn1SccWrappers_VectorXd_REQUIRED_BITS_FOR_ENCODING        20808
-
-flag asn1SccWrappers_VectorXd_Encode(const asn1SccWrappers_VectorXd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_WRAPPERS_VECTORXD		5827  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA		5821  /**/
-#define ERR_UPER_DECODE_WRAPPERS_VECTORXD_DATA_ELM_2		5816  /**/
-flag asn1SccWrappers_VectorXd_Decode(asn1SccWrappers_VectorXd* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef double asn1SccT_Float;
-
-
-flag asn1SccT_Float_Equal(const asn1SccT_Float* pVal1, const asn1SccT_Float* pVal2);
-
-void asn1SccT_Float_Initialize(asn1SccT_Float* pVal);
-
-#define ERR_T_FLOAT		7962  /**/
-flag asn1SccT_Float_IsConstraintValid(const asn1SccT_Float* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_FLOAT		7963  /**/
-#define asn1SccT_Float_REQUIRED_BYTES_FOR_ENCODING       13 
-#define asn1SccT_Float_REQUIRED_BITS_FOR_ENCODING        104
-
-flag asn1SccT_Float_Encode(const asn1SccT_Float* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_FLOAT		7964  /**/
-flag asn1SccT_Float_Decode(asn1SccT_Float* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double position;
-    asn1SccT_Float speed;
-    asn1SccT_Float effort;
-    asn1SccT_Float raw;
-    asn1SccT_Float acceleration;
-} asn1SccBase_JointState;
-
-flag asn1SccBase_JointState_Equal(const asn1SccBase_JointState* pVal1, const asn1SccBase_JointState* pVal2);
-
-void asn1SccBase_JointState_Initialize(asn1SccBase_JointState* pVal);
-
-#define ERR_BASE_JOINTSTATE_POSITION		872  /**/
-#define ERR_BASE_JOINTSTATE_SPEED		883  /**/
-#define ERR_BASE_JOINTSTATE_EFFORT		894  /**/
-#define ERR_BASE_JOINTSTATE_RAW		905  /**/
-#define ERR_BASE_JOINTSTATE_ACCELERATION		916  /**/
-flag asn1SccBase_JointState_IsConstraintValid(const asn1SccBase_JointState* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE		927  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE_POSITION_2		879  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE_SPEED_2		890  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE_EFFORT_2		901  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE_RAW_2		912  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTATE_ACCELERATION_2		923  /**/
-#define asn1SccBase_JointState_REQUIRED_BYTES_FOR_ENCODING       65 
-#define asn1SccBase_JointState_REQUIRED_BITS_FOR_ENCODING        520
-
-flag asn1SccBase_JointState_Encode(const asn1SccBase_JointState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTSTATE		928  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTATE_POSITION_2		880  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTATE_SPEED_2		891  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTATE_EFFORT_2		902  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTATE_RAW_2		913  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTATE_ACCELERATION_2		924  /**/
-flag asn1SccBase_JointState_Decode(asn1SccBase_JointState* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointState arr[200];
-} asn1SccBase_JointTrajectory;
-
-flag asn1SccBase_JointTrajectory_Equal(const asn1SccBase_JointTrajectory* pVal1, const asn1SccBase_JointTrajectory* pVal2);
-
-void asn1SccBase_JointTrajectory_Initialize(asn1SccBase_JointTrajectory* pVal);
-
-#define ERR_BASE_JOINTTRAJECTORY_ELM_POSITION		86  /**/
-#define ERR_BASE_JOINTTRAJECTORY_ELM_SPEED		97  /**/
-#define ERR_BASE_JOINTTRAJECTORY_ELM_EFFORT		108  /**/
-#define ERR_BASE_JOINTTRAJECTORY_ELM_RAW		119  /**/
-#define ERR_BASE_JOINTTRAJECTORY_ELM_ACCELERATION		130  /**/
-#define ERR_BASE_JOINTTRAJECTORY		151  /**/
-flag asn1SccBase_JointTrajectory_IsConstraintValid(const asn1SccBase_JointTrajectory* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY		152  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRAJECTORY_ELM_2		147  /**/
-#define asn1SccBase_JointTrajectory_REQUIRED_BYTES_FOR_ENCODING       13001 
-#define asn1SccBase_JointTrajectory_REQUIRED_BITS_FOR_ENCODING        104008
-
-flag asn1SccBase_JointTrajectory_Encode(const asn1SccBase_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTTRAJECTORY		153  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRAJECTORY_ELM_2		148  /**/
-flag asn1SccBase_JointTrajectory_Decode(asn1SccBase_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_JointState min;
-    asn1SccBase_JointState max;
-} asn1SccBase_JointLimitRange;
-
-flag asn1SccBase_JointLimitRange_Equal(const asn1SccBase_JointLimitRange* pVal1, const asn1SccBase_JointLimitRange* pVal2);
-
-void asn1SccBase_JointLimitRange_Initialize(asn1SccBase_JointLimitRange* pVal);
-
-#define ERR_BASE_JOINTLIMITRANGE_MIN_POSITION		1231  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MIN_SPEED		1242  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MIN_EFFORT		1253  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MIN_RAW		1264  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MIN_ACCELERATION		1275  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MAX_POSITION		1296  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MAX_SPEED		1307  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MAX_EFFORT		1318  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MAX_RAW		1329  /**/
-#define ERR_BASE_JOINTLIMITRANGE_MAX_ACCELERATION		1340  /**/
-flag asn1SccBase_JointLimitRange_IsConstraintValid(const asn1SccBase_JointLimitRange* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE		1361  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MIN_2		1292  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITRANGE_MAX_2		1357  /**/
-#define asn1SccBase_JointLimitRange_REQUIRED_BYTES_FOR_ENCODING       130 
-#define asn1SccBase_JointLimitRange_REQUIRED_BITS_FOR_ENCODING        1040
-
-flag asn1SccBase_JointLimitRange_Encode(const asn1SccBase_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTLIMITRANGE		1362  /**/
-#define ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MIN_2		1293  /**/
-#define ERR_UPER_DECODE_BASE_JOINTLIMITRANGE_MAX_2		1358  /**/
-flag asn1SccBase_JointLimitRange_Decode(asn1SccBase_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Float pascal;
-} asn1SccBase_Pressure;
-
-flag asn1SccBase_Pressure_Equal(const asn1SccBase_Pressure* pVal1, const asn1SccBase_Pressure* pVal2);
-
-void asn1SccBase_Pressure_Initialize(asn1SccBase_Pressure* pVal);
-
-#define ERR_BASE_PRESSURE_PASCAL		1006  /**/
-flag asn1SccBase_Pressure_IsConstraintValid(const asn1SccBase_Pressure* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_PRESSURE		1017  /**/
-#define ERR_UPER_ENCODE_BASE_PRESSURE_PASCAL_2		1013  /**/
-#define asn1SccBase_Pressure_REQUIRED_BYTES_FOR_ENCODING       13 
-#define asn1SccBase_Pressure_REQUIRED_BITS_FOR_ENCODING        104
-
-flag asn1SccBase_Pressure_Encode(const asn1SccBase_Pressure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_PRESSURE		1018  /**/
-#define ERR_UPER_DECODE_BASE_PRESSURE_PASCAL_2		1014  /**/
-flag asn1SccBase_Pressure_Decode(asn1SccBase_Pressure* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef asn1SccSint asn1SccT_Int16;
-
-
-flag asn1SccT_Int16_Equal(const asn1SccT_Int16* pVal1, const asn1SccT_Int16* pVal2);
-
-void asn1SccT_Int16_Initialize(asn1SccT_Int16* pVal);
-
-#define ERR_T_INT16		7969  /**/
-flag asn1SccT_Int16_IsConstraintValid(const asn1SccT_Int16* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_INT16		7970  /**/
-#define asn1SccT_Int16_REQUIRED_BYTES_FOR_ENCODING       2 
-#define asn1SccT_Int16_REQUIRED_BITS_FOR_ENCODING        16
-
-flag asn1SccT_Int16_Encode(const asn1SccT_Int16* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_INT16		7971  /**/
-flag asn1SccT_Int16_Decode(asn1SccT_Int16* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef asn1SccUint asn1SccT_UInt16;
-
-
-flag asn1SccT_UInt16_Equal(const asn1SccT_UInt16* pVal1, const asn1SccT_UInt16* pVal2);
-
-void asn1SccT_UInt16_Initialize(asn1SccT_UInt16* pVal);
-
-#define ERR_T_UINT16		7976  /**/
-flag asn1SccT_UInt16_IsConstraintValid(const asn1SccT_UInt16* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_UINT16		7977  /**/
-#define asn1SccT_UInt16_REQUIRED_BYTES_FOR_ENCODING       2 
-#define asn1SccT_UInt16_REQUIRED_BITS_FOR_ENCODING        16
-
-flag asn1SccT_UInt16_Encode(const asn1SccT_UInt16* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_UINT16		7978  /**/
-flag asn1SccT_UInt16_Decode(asn1SccT_UInt16* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_UInt16 width;
-    asn1SccT_UInt16 height;
-} asn1SccBase_samples_frame_frame_size_t;
-
-flag asn1SccBase_samples_frame_frame_size_t_Equal(const asn1SccBase_samples_frame_frame_size_t* pVal1, const asn1SccBase_samples_frame_frame_size_t* pVal2);
-
-void asn1SccBase_samples_frame_frame_size_t_Initialize(asn1SccBase_samples_frame_frame_size_t* pVal);
-
-#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH		2308  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT		2319  /**/
-flag asn1SccBase_samples_frame_frame_size_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_size_t* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		2330  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		2315  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		2326  /**/
-#define asn1SccBase_samples_frame_frame_size_t_REQUIRED_BYTES_FOR_ENCODING       4 
-#define asn1SccBase_samples_frame_frame_size_t_REQUIRED_BITS_FOR_ENCODING        32
-
-flag asn1SccBase_samples_frame_frame_size_t_Encode(const asn1SccBase_samples_frame_frame_size_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T		2331  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_WIDTH_2		2316  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_T_HEIGHT_2		2327  /**/
-flag asn1SccBase_samples_frame_frame_size_t_Decode(asn1SccBase_samples_frame_frame_size_t* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef asn1SccUint asn1SccT_UInt64;
-
-
-flag asn1SccT_UInt64_Equal(const asn1SccT_UInt64* pVal1, const asn1SccT_UInt64* pVal2);
-
-void asn1SccT_UInt64_Initialize(asn1SccT_UInt64* pVal);
-
-#define ERR_T_UINT64		7983  /**/
-flag asn1SccT_UInt64_IsConstraintValid(const asn1SccT_UInt64* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_UINT64		7984  /**/
-#define asn1SccT_UInt64_REQUIRED_BYTES_FOR_ENCODING       8 
-#define asn1SccT_UInt64_REQUIRED_BITS_FOR_ENCODING        63
-
-flag asn1SccT_UInt64_Encode(const asn1SccT_UInt64* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_UINT64		7985  /**/
-flag asn1SccT_UInt64_Decode(asn1SccT_UInt64* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef asn1SccSint asn1SccT_Int64;
-
-
-flag asn1SccT_Int64_Equal(const asn1SccT_Int64* pVal1, const asn1SccT_Int64* pVal2);
-
-void asn1SccT_Int64_Initialize(asn1SccT_Int64* pVal);
-
-#define ERR_T_INT64		7990  /**/
-flag asn1SccT_Int64_IsConstraintValid(const asn1SccT_Int64* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_INT64		7991  /**/
-#define asn1SccT_Int64_REQUIRED_BYTES_FOR_ENCODING       8 
-#define asn1SccT_Int64_REQUIRED_BITS_FOR_ENCODING        64
-
-flag asn1SccT_Int64_Encode(const asn1SccT_Int64* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_INT64		7992  /**/
-flag asn1SccT_Int64_Decode(asn1SccT_Int64* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Int64 microseconds;
-} asn1SccBase_Time;
-
-flag asn1SccBase_Time_Equal(const asn1SccBase_Time* pVal1, const asn1SccBase_Time* pVal2);
-
-void asn1SccBase_Time_Initialize(asn1SccBase_Time* pVal);
-
-#define ERR_BASE_TIME_MICROSECONDS		1040  /**/
-flag asn1SccBase_Time_IsConstraintValid(const asn1SccBase_Time* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TIME		1051  /**/
-#define ERR_UPER_ENCODE_BASE_TIME_MICROSECONDS_2		1047  /**/
-#define asn1SccBase_Time_REQUIRED_BYTES_FOR_ENCODING       8 
-#define asn1SccBase_Time_REQUIRED_BITS_FOR_ENCODING        64
-
-flag asn1SccBase_Time_Encode(const asn1SccBase_Time* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TIME		1052  /**/
-#define ERR_UPER_DECODE_BASE_TIME_MICROSECONDS_2		1048  /**/
-flag asn1SccBase_Time_Decode(asn1SccBase_Time* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double translation;
-    asn1SccT_Double rotation;
-    asn1SccBase_Angle heading;
-    asn1SccBase_Time time;
-} asn1SccBase_TimeStamped_Base_commands_Motion2D;
-
-flag asn1SccBase_TimeStamped_Base_commands_Motion2D_Equal(const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal1, const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal2);
-
-void asn1SccBase_TimeStamped_Base_commands_Motion2D_Initialize(asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal);
-
-#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION		1367  /**/
-#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION		1378  /**/
-#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_RAD		1389  /**/
-#define ERR_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_MICROSECONDS		1410  /**/
-flag asn1SccBase_TimeStamped_Base_commands_Motion2D_IsConstraintValid(const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		1431  /**/
-#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1374  /**/
-#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		1385  /**/
-#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		1406  /**/
-#define ERR_UPER_ENCODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		1427  /**/
-#define asn1SccBase_TimeStamped_Base_commands_Motion2D_REQUIRED_BYTES_FOR_ENCODING       47 
-#define asn1SccBase_TimeStamped_Base_commands_Motion2D_REQUIRED_BITS_FOR_ENCODING        376
-
-flag asn1SccBase_TimeStamped_Base_commands_Motion2D_Encode(const asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D		1432  /**/
-#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TRANSLATION_2		1375  /**/
-#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_ROTATION_2		1386  /**/
-#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_HEADING_2		1407  /**/
-#define ERR_UPER_DECODE_BASE_TIMESTAMPED_BASE_COMMANDS_MOTION2D_TIME_2		1428  /**/
-flag asn1SccBase_TimeStamped_Base_commands_Motion2D_Decode(asn1SccBase_TimeStamped_Base_commands_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccWrappers_Vector3d linear;
-    asn1SccWrappers_Vector3d angular;
-} asn1SccBase_LinearAngular6DCommand;
-
-flag asn1SccBase_LinearAngular6DCommand_Equal(const asn1SccBase_LinearAngular6DCommand* pVal1, const asn1SccBase_LinearAngular6DCommand* pVal2);
-
-void asn1SccBase_LinearAngular6DCommand_Initialize(asn1SccBase_LinearAngular6DCommand* pVal);
-
-#define ERR_BASE_LINEARANGULAR6DCOMMAND_TIME_MICROSECONDS		1437  /**/
-#define ERR_BASE_LINEARANGULAR6DCOMMAND_LINEAR_DATA_ELM		1458  /**/
-#define ERR_BASE_LINEARANGULAR6DCOMMAND_LINEAR_DATA		1469  /**/
-#define ERR_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_DATA_ELM		1486  /**/
-#define ERR_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_DATA		1497  /**/
-flag asn1SccBase_LinearAngular6DCommand_IsConstraintValid(const asn1SccBase_LinearAngular6DCommand* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND		1514  /**/
-#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		1454  /**/
-#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		1482  /**/
-#define ERR_UPER_ENCODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		1510  /**/
-#define asn1SccBase_LinearAngular6DCommand_REQUIRED_BYTES_FOR_ENCODING       87 
-#define asn1SccBase_LinearAngular6DCommand_REQUIRED_BITS_FOR_ENCODING        692
-
-flag asn1SccBase_LinearAngular6DCommand_Encode(const asn1SccBase_LinearAngular6DCommand* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND		1515  /**/
-#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_TIME_2		1455  /**/
-#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_LINEAR_2		1483  /**/
-#define ERR_UPER_DECODE_BASE_LINEARANGULAR6DCOMMAND_ANGULAR_2		1511  /**/
-flag asn1SccBase_LinearAngular6DCommand_Decode(asn1SccBase_LinearAngular6DCommand* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccBase_TransformWithCovariance pose;
-    asn1SccBase_TwistWithCovariance velocity;
-} asn1SccBase_samples_BodyState;
-
-flag asn1SccBase_samples_BodyState_Equal(const asn1SccBase_samples_BodyState* pVal1, const asn1SccBase_samples_BodyState* pVal2);
-
-void asn1SccBase_samples_BodyState_Initialize(asn1SccBase_samples_BodyState* pVal);
-
-#define ERR_BASE_SAMPLES_BODYSTATE_TIME_MICROSECONDS		1641  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_TRANSLATION_DATA_ELM		1662  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_TRANSLATION_DATA		1673  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_ORIENTATION_IM_ELM		1690  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_ORIENTATION_IM		1701  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_ORIENTATION_RE		1708  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_COV_DATA_ELM		1729  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_POSE_COV_DATA		1740  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_VEL_DATA_ELM		1767  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_VEL_DATA		1778  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_ROT_DATA_ELM		1795  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_ROT_DATA		1806  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_COV_DATA_ELM		1823  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_VELOCITY_COV_DATA		1834  /**/
-flag asn1SccBase_samples_BodyState_IsConstraintValid(const asn1SccBase_samples_BodyState* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE		1861  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_TIME_2		1658  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_POSE_2		1763  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		1857  /**/
-#define asn1SccBase_samples_BodyState_REQUIRED_BYTES_FOR_ENCODING       1116 
-#define asn1SccBase_samples_BodyState_REQUIRED_BITS_FOR_ENCODING        8924
-
-flag asn1SccBase_samples_BodyState_Encode(const asn1SccBase_samples_BodyState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE		1862  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_TIME_2		1659  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_POSE_2		1764  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_VELOCITY_2		1858  /**/
-flag asn1SccBase_samples_BodyState_Decode(asn1SccBase_samples_BodyState* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccWrappers_Vector3d acc;
-    asn1SccWrappers_Vector3d gyro;
-    asn1SccWrappers_Vector3d mag;
-} asn1SccBase_samples_IMUSensors;
-
-flag asn1SccBase_samples_IMUSensors_Equal(const asn1SccBase_samples_IMUSensors* pVal1, const asn1SccBase_samples_IMUSensors* pVal2);
-
-void asn1SccBase_samples_IMUSensors_Initialize(asn1SccBase_samples_IMUSensors* pVal);
-
-#define ERR_BASE_SAMPLES_IMUSENSORS_TIME_MICROSECONDS		1867  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_ACC_DATA_ELM		1888  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_ACC_DATA		1899  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_GYRO_DATA_ELM		1916  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_GYRO_DATA		1927  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_MAG_DATA_ELM		1944  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_MAG_DATA		1955  /**/
-flag asn1SccBase_samples_IMUSensors_IsConstraintValid(const asn1SccBase_samples_IMUSensors* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS		1972  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_TIME_2		1884  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_ACC_2		1912  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		1940  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_MAG_2		1968  /**/
-#define asn1SccBase_samples_IMUSensors_REQUIRED_BYTES_FOR_ENCODING       126 
-#define asn1SccBase_samples_IMUSensors_REQUIRED_BITS_FOR_ENCODING        1006
-
-flag asn1SccBase_samples_IMUSensors_Encode(const asn1SccBase_samples_IMUSensors* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS		1973  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_TIME_2		1885  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_ACC_2		1913  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_GYRO_2		1941  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_MAG_2		1969  /**/
-flag asn1SccBase_samples_IMUSensors_Decode(asn1SccBase_samples_IMUSensors* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Double translation;
-    asn1SccT_Double rotation;
-    asn1SccBase_Angle heading;
-    asn1SccBase_Time time;
-} asn1SccBase_samples_Motion2D;
-
-flag asn1SccBase_samples_Motion2D_Equal(const asn1SccBase_samples_Motion2D* pVal1, const asn1SccBase_samples_Motion2D* pVal2);
-
-void asn1SccBase_samples_Motion2D_Initialize(asn1SccBase_samples_Motion2D* pVal);
-
-#define ERR_BASE_SAMPLES_MOTION2D_TRANSLATION		1978  /**/
-#define ERR_BASE_SAMPLES_MOTION2D_ROTATION		1989  /**/
-#define ERR_BASE_SAMPLES_MOTION2D_HEADING_RAD		2000  /**/
-#define ERR_BASE_SAMPLES_MOTION2D_TIME_MICROSECONDS		2021  /**/
-flag asn1SccBase_samples_Motion2D_IsConstraintValid(const asn1SccBase_samples_Motion2D* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D		2042  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		1985  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_ROTATION_2		1996  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_HEADING_2		2017  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_MOTION2D_TIME_2		2038  /**/
-#define asn1SccBase_samples_Motion2D_REQUIRED_BYTES_FOR_ENCODING       47 
-#define asn1SccBase_samples_Motion2D_REQUIRED_BITS_FOR_ENCODING        376
-
-flag asn1SccBase_samples_Motion2D_Encode(const asn1SccBase_samples_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D		2043  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TRANSLATION_2		1986  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_ROTATION_2		1997  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_HEADING_2		2018  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_MOTION2D_TIME_2		2039  /**/
-flag asn1SccBase_samples_Motion2D_Decode(asn1SccBase_samples_Motion2D* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_Float pascal;
-    asn1SccBase_Time time;
-} asn1SccBase_samples_Pressure;
-
-flag asn1SccBase_samples_Pressure_Equal(const asn1SccBase_samples_Pressure* pVal1, const asn1SccBase_samples_Pressure* pVal2);
-
-void asn1SccBase_samples_Pressure_Initialize(asn1SccBase_samples_Pressure* pVal);
-
-#define ERR_BASE_SAMPLES_PRESSURE_PASCAL		2048  /**/
-#define ERR_BASE_SAMPLES_PRESSURE_TIME_MICROSECONDS		2059  /**/
-flag asn1SccBase_samples_Pressure_IsConstraintValid(const asn1SccBase_samples_Pressure* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE		2080  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_PASCAL_2		2055  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_PRESSURE_TIME_2		2076  /**/
-#define asn1SccBase_samples_Pressure_REQUIRED_BYTES_FOR_ENCODING       21 
-#define asn1SccBase_samples_Pressure_REQUIRED_BITS_FOR_ENCODING        168
-
-flag asn1SccBase_samples_Pressure_Encode(const asn1SccBase_samples_Pressure* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE		2081  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_PASCAL_2		2056  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_PRESSURE_TIME_2		2077  /**/
-flag asn1SccBase_samples_Pressure_Decode(asn1SccBase_samples_Pressure* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccWrappers_Vector3d acceleration;
-    asn1SccWrappers_Matrix3d cov_acceleration;
-    asn1SccWrappers_Vector3d angular_acceleration;
-    asn1SccWrappers_Matrix3d cov_angular_acceleration;
-} asn1SccBase_samples_RigidBodyAcceleration;
-
-flag asn1SccBase_samples_RigidBodyAcceleration_Equal(const asn1SccBase_samples_RigidBodyAcceleration* pVal1, const asn1SccBase_samples_RigidBodyAcceleration* pVal2);
-
-void asn1SccBase_samples_RigidBodyAcceleration_Initialize(asn1SccBase_samples_RigidBodyAcceleration* pVal);
-
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_MICROSECONDS		2086  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_DATA_ELM		2107  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_DATA		2118  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_DATA_ELM		2135  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_DATA		2146  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_DATA_ELM		2163  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_DATA		2174  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_DATA_ELM		2191  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_DATA		2202  /**/
-flag asn1SccBase_samples_RigidBodyAcceleration_IsConstraintValid(const asn1SccBase_samples_RigidBodyAcceleration* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION		2219  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		2103  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		2131  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		2159  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		2187  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		2215  /**/
-#define asn1SccBase_samples_RigidBodyAcceleration_REQUIRED_BYTES_FOR_ENCODING       322 
-#define asn1SccBase_samples_RigidBodyAcceleration_REQUIRED_BITS_FOR_ENCODING        2572
-
-flag asn1SccBase_samples_RigidBodyAcceleration_Encode(const asn1SccBase_samples_RigidBodyAcceleration* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION		2220  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_TIME_2		2104  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ACCELERATION_2		2132  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ACCELERATION_2		2160  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_ANGULAR_ACCELERATION_2		2188  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_COV_ANGULAR_ACCELERATION_2		2216  /**/
-flag asn1SccBase_samples_RigidBodyAcceleration_Decode(asn1SccBase_samples_RigidBodyAcceleration* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d force;
-    asn1SccWrappers_Vector3d torque;
-    asn1SccBase_Time time;
-} asn1SccBase_samples_Wrench;
-
-flag asn1SccBase_samples_Wrench_Equal(const asn1SccBase_samples_Wrench* pVal1, const asn1SccBase_samples_Wrench* pVal2);
-
-void asn1SccBase_samples_Wrench_Initialize(asn1SccBase_samples_Wrench* pVal);
-
-#define ERR_BASE_SAMPLES_WRENCH_FORCE_DATA_ELM		2225  /**/
-#define ERR_BASE_SAMPLES_WRENCH_FORCE_DATA		2236  /**/
-#define ERR_BASE_SAMPLES_WRENCH_TORQUE_DATA_ELM		2253  /**/
-#define ERR_BASE_SAMPLES_WRENCH_TORQUE_DATA		2264  /**/
-#define ERR_BASE_SAMPLES_WRENCH_TIME_MICROSECONDS		2281  /**/
-flag asn1SccBase_samples_Wrench_IsConstraintValid(const asn1SccBase_samples_Wrench* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH		2302  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_FORCE_2		2249  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TORQUE_2		2277  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_TIME_2		2298  /**/
-#define asn1SccBase_samples_Wrench_REQUIRED_BYTES_FOR_ENCODING       87 
-#define asn1SccBase_samples_Wrench_REQUIRED_BITS_FOR_ENCODING        692
-
-flag asn1SccBase_samples_Wrench_Encode(const asn1SccBase_samples_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH		2303  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_FORCE_2		2250  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TORQUE_2		2278  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_TIME_2		2299  /**/
-flag asn1SccBase_samples_Wrench_Decode(asn1SccBase_samples_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_Float arr[200];
-} asn1SccBase_samples_DistanceImage_data;
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccT_UInt16 width;
-    asn1SccT_UInt16 height;
-    asn1SccT_Float scale_x;
-    asn1SccT_Float scale_y;
-    asn1SccT_Float center_x;
-    asn1SccT_Float center_y;
-    asn1SccBase_samples_DistanceImage_data data;
-} asn1SccBase_samples_DistanceImage;
-
-flag asn1SccBase_samples_DistanceImage_data_Equal(const asn1SccBase_samples_DistanceImage_data* pVal1, const asn1SccBase_samples_DistanceImage_data* pVal2);
-
-flag asn1SccBase_samples_DistanceImage_Equal(const asn1SccBase_samples_DistanceImage* pVal1, const asn1SccBase_samples_DistanceImage* pVal2);
-
-void asn1SccBase_samples_DistanceImage_data_Initialize(asn1SccBase_samples_DistanceImage_data* pVal);
-void asn1SccBase_samples_DistanceImage_Initialize(asn1SccBase_samples_DistanceImage* pVal);
-
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_TIME_MICROSECONDS		3344  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_WIDTH		3365  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT		3376  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X		3387  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y		3398  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X		3409  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y		3420  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM		3431  /**/
-#define ERR_BASE_SAMPLES_DISTANCEIMAGE_DATA		3442  /**/
-flag asn1SccBase_samples_DistanceImage_IsConstraintValid(const asn1SccBase_samples_DistanceImage* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE		3449  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		3361  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		3372  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		3383  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		3394  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		3405  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		3416  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		3427  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		3443  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		3438  /**/
-#define asn1SccBase_samples_DistanceImage_REQUIRED_BYTES_FOR_ENCODING       2665 
-#define asn1SccBase_samples_DistanceImage_REQUIRED_BITS_FOR_ENCODING        21320
-
-flag asn1SccBase_samples_DistanceImage_Encode(const asn1SccBase_samples_DistanceImage* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE		3450  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_TIME_2		3362  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_WIDTH_2		3373  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_HEIGHT_2		3384  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_X_2		3395  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_SCALE_Y_2		3406  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_X_2		3417  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_CENTER_Y_2		3428  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA		3444  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DISTANCEIMAGE_DATA_ELM_2		3439  /**/
-flag asn1SccBase_samples_DistanceImage_Decode(asn1SccBase_samples_DistanceImage* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccWrappers_Vector3d arr[200];
-} asn1SccBase_samples_Pointcloud_points;
-
-typedef struct {    int nCount; 
-    
-    asn1SccWrappers_Vector4d arr[200];
-} asn1SccBase_samples_Pointcloud_colors;
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccBase_samples_Pointcloud_points points;
-    asn1SccBase_samples_Pointcloud_colors colors;
-} asn1SccBase_samples_Pointcloud;
-
-flag asn1SccBase_samples_Pointcloud_points_Equal(const asn1SccBase_samples_Pointcloud_points* pVal1, const asn1SccBase_samples_Pointcloud_points* pVal2);
-
-flag asn1SccBase_samples_Pointcloud_colors_Equal(const asn1SccBase_samples_Pointcloud_colors* pVal1, const asn1SccBase_samples_Pointcloud_colors* pVal2);
-
-flag asn1SccBase_samples_Pointcloud_Equal(const asn1SccBase_samples_Pointcloud* pVal1, const asn1SccBase_samples_Pointcloud* pVal2);
-
-void asn1SccBase_samples_Pointcloud_points_Initialize(asn1SccBase_samples_Pointcloud_points* pVal);
-void asn1SccBase_samples_Pointcloud_colors_Initialize(asn1SccBase_samples_Pointcloud_colors* pVal);
-void asn1SccBase_samples_Pointcloud_Initialize(asn1SccBase_samples_Pointcloud* pVal);
-
-#define ERR_BASE_SAMPLES_POINTCLOUD_TIME_MICROSECONDS		3694  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_DATA_ELM		3715  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_DATA		3726  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_POINTS		3743  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_DATA_ELM		3750  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_DATA		3761  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_COLORS		3778  /**/
-flag asn1SccBase_samples_Pointcloud_IsConstraintValid(const asn1SccBase_samples_Pointcloud* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD		3785  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_TIME_2		3711  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS		3744  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		3739  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS		3779  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		3774  /**/
-#define asn1SccBase_samples_Pointcloud_REQUIRED_BYTES_FOR_ENCODING       18310 
-#define asn1SccBase_samples_Pointcloud_REQUIRED_BITS_FOR_ENCODING        146480
-
-flag asn1SccBase_samples_Pointcloud_Encode(const asn1SccBase_samples_Pointcloud* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD		3786  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_TIME_2		3712  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS		3745  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_POINTS_ELM_2		3740  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS		3780  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_COLORS_ELM_2		3775  /**/
-flag asn1SccBase_samples_Pointcloud_Decode(asn1SccBase_samples_Pointcloud* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    int nCount; 
-    
-    byte arr[200];
-} asn1SccBase_samples_SonarBeam_beam;
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccBase_Angle bearing;
-    asn1SccT_Double sampling_interval;
-    asn1SccT_Float speed_of_sound;
-    asn1SccT_Float beamwidth_horizontal;
-    asn1SccT_Float beamwidth_vertical;
-    asn1SccBase_samples_SonarBeam_beam beam;
-} asn1SccBase_samples_SonarBeam;
-
-flag asn1SccBase_samples_SonarBeam_beam_Equal(const asn1SccBase_samples_SonarBeam_beam* pVal1, const asn1SccBase_samples_SonarBeam_beam* pVal2);
-
-flag asn1SccBase_samples_SonarBeam_Equal(const asn1SccBase_samples_SonarBeam* pVal1, const asn1SccBase_samples_SonarBeam* pVal2);
-
-void asn1SccBase_samples_SonarBeam_beam_Initialize(asn1SccBase_samples_SonarBeam_beam* pVal);
-void asn1SccBase_samples_SonarBeam_Initialize(asn1SccBase_samples_SonarBeam* pVal);
-
-#define ERR_BASE_SAMPLES_SONARBEAM_TIME_MICROSECONDS		4272  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEARING_RAD		4293  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL		4314  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND		4325  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL		4336  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL		4347  /**/
-#define ERR_BASE_SAMPLES_SONARBEAM_BEAM		4358  /**/
-flag asn1SccBase_samples_SonarBeam_IsConstraintValid(const asn1SccBase_samples_SonarBeam* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM		4365  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_TIME_2		4289  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEARING_2		4310  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		4321  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		4332  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		4343  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		4354  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARBEAM_BEAM		4359  /**/
-#define asn1SccBase_samples_SonarBeam_REQUIRED_BYTES_FOR_ENCODING       274 
-#define asn1SccBase_samples_SonarBeam_REQUIRED_BITS_FOR_ENCODING        2192
-
-flag asn1SccBase_samples_SonarBeam_Encode(const asn1SccBase_samples_SonarBeam* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM		4366  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_TIME_2		4290  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEARING_2		4311  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SAMPLING_INTERVAL_2		4322  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_SPEED_OF_SOUND_2		4333  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_HORIZONTAL_2		4344  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAMWIDTH_VERTICAL_2		4355  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARBEAM_BEAM		4360  /**/
-flag asn1SccBase_samples_SonarBeam_Decode(asn1SccBase_samples_SonarBeam* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccWrappers_Vector3d linear;
-    asn1SccWrappers_Vector3d angular;
-} asn1SccBase_commands_LinearAngular6DCommand_m;
-
-flag asn1SccBase_commands_LinearAngular6DCommand_m_Equal(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal1, const asn1SccBase_commands_LinearAngular6DCommand_m* pVal2);
-
-void asn1SccBase_commands_LinearAngular6DCommand_m_Initialize(asn1SccBase_commands_LinearAngular6DCommand_m* pVal);
-
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_MICROSECONDS		6326  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA_ELM		6347  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_DATA		6358  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA_ELM		6375  /**/
-#define ERR_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_DATA		6386  /**/
-flag asn1SccBase_commands_LinearAngular6DCommand_m_IsConstraintValid(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		6403  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		6343  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		6371  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		6399  /**/
-#define asn1SccBase_commands_LinearAngular6DCommand_m_REQUIRED_BYTES_FOR_ENCODING       87 
-#define asn1SccBase_commands_LinearAngular6DCommand_m_REQUIRED_BITS_FOR_ENCODING        692
-
-flag asn1SccBase_commands_LinearAngular6DCommand_m_Encode(const asn1SccBase_commands_LinearAngular6DCommand_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M		6404  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_TIME_2		6344  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_LINEAR_2		6372  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_LINEARANGULAR6DCOMMAND_M_ANGULAR_2		6400  /**/
-flag asn1SccBase_commands_LinearAngular6DCommand_m_Decode(asn1SccBase_commands_LinearAngular6DCommand_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccBase_TransformWithCovariance_m pose;
-    asn1SccBase_TwistWithCovariance_m velocity;
-} asn1SccBase_samples_BodyState_m;
-
-flag asn1SccBase_samples_BodyState_m_Equal(const asn1SccBase_samples_BodyState_m* pVal1, const asn1SccBase_samples_BodyState_m* pVal2);
-
-void asn1SccBase_samples_BodyState_m_Initialize(asn1SccBase_samples_BodyState_m* pVal);
-
-#define ERR_BASE_SAMPLES_BODYSTATE_M_TIME_MICROSECONDS		6409  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA_ELM		6430  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_TRANSLATION_DATA		6441  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM_ELM		6458  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_IM		6469  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_ORIENTATION_RE		6476  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA_ELM		6497  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_POSE_COV_DATA		6508  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA_ELM		6535  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_VEL_DATA		6546  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA_ELM		6563  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_ROT_DATA		6574  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA_ELM		6591  /**/
-#define ERR_BASE_SAMPLES_BODYSTATE_M_VELOCITY_COV_DATA		6602  /**/
-flag asn1SccBase_samples_BodyState_m_IsConstraintValid(const asn1SccBase_samples_BodyState_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M		6629  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		6426  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		6531  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		6625  /**/
-#define asn1SccBase_samples_BodyState_m_REQUIRED_BYTES_FOR_ENCODING       1116 
-#define asn1SccBase_samples_BodyState_m_REQUIRED_BITS_FOR_ENCODING        8924
-
-flag asn1SccBase_samples_BodyState_m_Encode(const asn1SccBase_samples_BodyState_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M		6630  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_TIME_2		6427  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_POSE_2		6532  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_BODYSTATE_M_VELOCITY_2		6626  /**/
-flag asn1SccBase_samples_BodyState_m_Decode(asn1SccBase_samples_BodyState_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccWrappers_Vector3d acc;
-    asn1SccWrappers_Vector3d gyro;
-    asn1SccWrappers_Vector3d mag;
-} asn1SccBase_samples_IMUSensors_m;
-
-flag asn1SccBase_samples_IMUSensors_m_Equal(const asn1SccBase_samples_IMUSensors_m* pVal1, const asn1SccBase_samples_IMUSensors_m* pVal2);
-
-void asn1SccBase_samples_IMUSensors_m_Initialize(asn1SccBase_samples_IMUSensors_m* pVal);
-
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_TIME_MICROSECONDS		6635  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA_ELM		6656  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_ACC_DATA		6667  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA_ELM		6684  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_GYRO_DATA		6695  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA_ELM		6712  /**/
-#define ERR_BASE_SAMPLES_IMUSENSORS_M_MAG_DATA		6723  /**/
-flag asn1SccBase_samples_IMUSensors_m_IsConstraintValid(const asn1SccBase_samples_IMUSensors_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M		6740  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		6652  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		6680  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		6708  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		6736  /**/
-#define asn1SccBase_samples_IMUSensors_m_REQUIRED_BYTES_FOR_ENCODING       126 
-#define asn1SccBase_samples_IMUSensors_m_REQUIRED_BITS_FOR_ENCODING        1006
-
-flag asn1SccBase_samples_IMUSensors_m_Encode(const asn1SccBase_samples_IMUSensors_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M		6741  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_TIME_2		6653  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_ACC_2		6681  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_GYRO_2		6709  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_IMUSENSORS_M_MAG_2		6737  /**/
-flag asn1SccBase_samples_IMUSensors_m_Decode(asn1SccBase_samples_IMUSensors_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccWrappers_Vector3d acceleration;
-    asn1SccWrappers_Matrix3d cov_acceleration;
-    asn1SccWrappers_Vector3d angular_acceleration;
-    asn1SccWrappers_Matrix3d cov_angular_acceleration;
-} asn1SccBase_samples_RigidBodyAcceleration_m;
-
-flag asn1SccBase_samples_RigidBodyAcceleration_m_Equal(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal1, const asn1SccBase_samples_RigidBodyAcceleration_m* pVal2);
-
-void asn1SccBase_samples_RigidBodyAcceleration_m_Initialize(asn1SccBase_samples_RigidBodyAcceleration_m* pVal);
-
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_MICROSECONDS		6746  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA_ELM		6767  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_DATA		6778  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA_ELM		6795  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_DATA		6806  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA_ELM		6823  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_DATA		6834  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA_ELM		6851  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_DATA		6862  /**/
-flag asn1SccBase_samples_RigidBodyAcceleration_m_IsConstraintValid(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		6879  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		6763  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		6791  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		6819  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		6847  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		6875  /**/
-#define asn1SccBase_samples_RigidBodyAcceleration_m_REQUIRED_BYTES_FOR_ENCODING       322 
-#define asn1SccBase_samples_RigidBodyAcceleration_m_REQUIRED_BITS_FOR_ENCODING        2572
-
-flag asn1SccBase_samples_RigidBodyAcceleration_m_Encode(const asn1SccBase_samples_RigidBodyAcceleration_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M		6880  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_TIME_2		6764  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ACCELERATION_2		6792  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ACCELERATION_2		6820  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_ANGULAR_ACCELERATION_2		6848  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYACCELERATION_M_COV_ANGULAR_ACCELERATION_2		6876  /**/
-flag asn1SccBase_samples_RigidBodyAcceleration_m_Decode(asn1SccBase_samples_RigidBodyAcceleration_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccWrappers_Vector3d force;
-    asn1SccWrappers_Vector3d torque;
-    asn1SccBase_Time time;
-} asn1SccBase_samples_Wrench_m;
-
-flag asn1SccBase_samples_Wrench_m_Equal(const asn1SccBase_samples_Wrench_m* pVal1, const asn1SccBase_samples_Wrench_m* pVal2);
-
-void asn1SccBase_samples_Wrench_m_Initialize(asn1SccBase_samples_Wrench_m* pVal);
-
-#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA_ELM		7169  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_FORCE_DATA		7180  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA_ELM		7197  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_TORQUE_DATA		7208  /**/
-#define ERR_BASE_SAMPLES_WRENCH_M_TIME_MICROSECONDS		7225  /**/
-flag asn1SccBase_samples_Wrench_m_IsConstraintValid(const asn1SccBase_samples_Wrench_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M		7246  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_FORCE_2		7193  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		7221  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCH_M_TIME_2		7242  /**/
-#define asn1SccBase_samples_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       87 
-#define asn1SccBase_samples_Wrench_m_REQUIRED_BITS_FOR_ENCODING        692
-
-flag asn1SccBase_samples_Wrench_m_Encode(const asn1SccBase_samples_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M		7247  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_FORCE_2		7194  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TORQUE_2		7222  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCH_M_TIME_2		7243  /**/
-flag asn1SccBase_samples_Wrench_m_Decode(asn1SccBase_samples_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccWrappers_Vector3d arr[200];
-} asn1SccBase_samples_Pointcloud_m_points;
-
-typedef struct {    int nCount; 
-    
-    asn1SccWrappers_Vector4d arr[200];
-} asn1SccBase_samples_Pointcloud_m_colors;
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccBase_samples_Pointcloud_m_points points;
-    asn1SccBase_samples_Pointcloud_m_colors colors;
-} asn1SccBase_samples_Pointcloud_m;
-
-flag asn1SccBase_samples_Pointcloud_m_points_Equal(const asn1SccBase_samples_Pointcloud_m_points* pVal1, const asn1SccBase_samples_Pointcloud_m_points* pVal2);
-
-flag asn1SccBase_samples_Pointcloud_m_colors_Equal(const asn1SccBase_samples_Pointcloud_m_colors* pVal1, const asn1SccBase_samples_Pointcloud_m_colors* pVal2);
-
-flag asn1SccBase_samples_Pointcloud_m_Equal(const asn1SccBase_samples_Pointcloud_m* pVal1, const asn1SccBase_samples_Pointcloud_m* pVal2);
-
-void asn1SccBase_samples_Pointcloud_m_points_Initialize(asn1SccBase_samples_Pointcloud_m_points* pVal);
-void asn1SccBase_samples_Pointcloud_m_colors_Initialize(asn1SccBase_samples_Pointcloud_m_colors* pVal);
-void asn1SccBase_samples_Pointcloud_m_Initialize(asn1SccBase_samples_Pointcloud_m* pVal);
-
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_TIME_MICROSECONDS		7543  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA_ELM		7564  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_DATA		7575  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_POINTS		7592  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA_ELM		7599  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_DATA		7610  /**/
-#define ERR_BASE_SAMPLES_POINTCLOUD_M_COLORS		7627  /**/
-flag asn1SccBase_samples_Pointcloud_m_IsConstraintValid(const asn1SccBase_samples_Pointcloud_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M		7634  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		7560  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		7593  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		7588  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		7628  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		7623  /**/
-#define asn1SccBase_samples_Pointcloud_m_REQUIRED_BYTES_FOR_ENCODING       18310 
-#define asn1SccBase_samples_Pointcloud_m_REQUIRED_BITS_FOR_ENCODING        146480
-
-flag asn1SccBase_samples_Pointcloud_m_Encode(const asn1SccBase_samples_Pointcloud_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M		7635  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_TIME_2		7561  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS		7594  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_POINTS_ELM_2		7589  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS		7629  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_POINTCLOUD_M_COLORS_ELM_2		7624  /**/
-flag asn1SccBase_samples_Pointcloud_m_Decode(asn1SccBase_samples_Pointcloud_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    int nCount; 
-    
-    byte arr[200];
-} asn1SccT_String;
-
-flag asn1SccT_String_Equal(const asn1SccT_String* pVal1, const asn1SccT_String* pVal2);
-
-void asn1SccT_String_Initialize(asn1SccT_String* pVal);
-
-#define ERR_T_STRING		7997  /**/
-flag asn1SccT_String_IsConstraintValid(const asn1SccT_String* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_STRING		7998  /**/
-#define asn1SccT_String_REQUIRED_BYTES_FOR_ENCODING       201 
-#define asn1SccT_String_REQUIRED_BITS_FOR_ENCODING        1608
-
-flag asn1SccT_String_Encode(const asn1SccT_String* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_STRING		7999  /**/
-flag asn1SccT_String_Decode(asn1SccT_String* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_JointLimits_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointLimitRange arr[200];
-} asn1SccBase_JointLimits_elements;
-
-typedef struct {
-    asn1SccBase_JointLimits_names names;
-    asn1SccBase_JointLimits_elements elements;
-} asn1SccBase_JointLimits;
-
-flag asn1SccBase_JointLimits_names_Equal(const asn1SccBase_JointLimits_names* pVal1, const asn1SccBase_JointLimits_names* pVal2);
-
-flag asn1SccBase_JointLimits_elements_Equal(const asn1SccBase_JointLimits_elements* pVal1, const asn1SccBase_JointLimits_elements* pVal2);
-
-flag asn1SccBase_JointLimits_Equal(const asn1SccBase_JointLimits* pVal1, const asn1SccBase_JointLimits* pVal2);
-
-void asn1SccBase_JointLimits_names_Initialize(asn1SccBase_JointLimits_names* pVal);
-void asn1SccBase_JointLimits_elements_Initialize(asn1SccBase_JointLimits_elements* pVal);
-void asn1SccBase_JointLimits_Initialize(asn1SccBase_JointLimits* pVal);
-
-#define ERR_BASE_JOINTLIMITS_NAMES_ELM		2336  /**/
-#define ERR_BASE_JOINTLIMITS_NAMES		2347  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_POSITION		2354  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_SPEED		2365  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_EFFORT		2376  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_RAW		2387  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MIN_ACCELERATION		2398  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_POSITION		2419  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_SPEED		2430  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_EFFORT		2441  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_RAW		2452  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS_ELM_MAX_ACCELERATION		2463  /**/
-#define ERR_BASE_JOINTLIMITS_ELEMENTS		2494  /**/
-flag asn1SccBase_JointLimits_IsConstraintValid(const asn1SccBase_JointLimits* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITS		2501  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES		2348  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_NAMES_ELM_2		2343  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS		2495  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		2490  /**/
-#define asn1SccBase_JointLimits_REQUIRED_BYTES_FOR_ENCODING       66202 
-#define asn1SccBase_JointLimits_REQUIRED_BITS_FOR_ENCODING        529616
-
-flag asn1SccBase_JointLimits_Encode(const asn1SccBase_JointLimits* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTLIMITS		2502  /**/
-#define ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES		2349  /**/
-#define ERR_UPER_DECODE_BASE_JOINTLIMITS_NAMES_ELM_2		2344  /**/
-#define ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS		2496  /**/
-#define ERR_UPER_DECODE_BASE_JOINTLIMITS_ELEMENTS_ELM_2		2491  /**/
-flag asn1SccBase_JointLimits_Decode(asn1SccBase_JointLimits* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_String sourceframe;
-    asn1SccT_String targetframe;
-    asn1SccWrappers_Vector3d rotationaxis;
-} asn1SccBase_JointTransform;
-
-flag asn1SccBase_JointTransform_Equal(const asn1SccBase_JointTransform* pVal1, const asn1SccBase_JointTransform* pVal2);
-
-void asn1SccBase_JointTransform_Initialize(asn1SccBase_JointTransform* pVal);
-
-#define ERR_BASE_JOINTTRANSFORM_SOURCEFRAME		2507  /**/
-#define ERR_BASE_JOINTTRANSFORM_TARGETFRAME		2518  /**/
-#define ERR_BASE_JOINTTRANSFORM_ROTATIONAXIS_DATA_ELM		2529  /**/
-#define ERR_BASE_JOINTTRANSFORM_ROTATIONAXIS_DATA		2540  /**/
-flag asn1SccBase_JointTransform_IsConstraintValid(const asn1SccBase_JointTransform* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM		2557  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		2514  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		2525  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		2553  /**/
-#define asn1SccBase_JointTransform_REQUIRED_BYTES_FOR_ENCODING       442 
-#define asn1SccBase_JointTransform_REQUIRED_BITS_FOR_ENCODING        3530
-
-flag asn1SccBase_JointTransform_Encode(const asn1SccBase_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM		2558  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_SOURCEFRAME_2		2515  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_TARGETFRAME_2		2526  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_ROTATIONAXIS_2		2554  /**/
-flag asn1SccBase_JointTransform_Decode(asn1SccBase_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_JointTransformVector_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointTransform arr[200];
-} asn1SccBase_JointTransformVector_elements;
-
-typedef struct {
-    asn1SccBase_JointTransformVector_names names;
-    asn1SccBase_JointTransformVector_elements elements;
-} asn1SccBase_JointTransformVector;
-
-flag asn1SccBase_JointTransformVector_names_Equal(const asn1SccBase_JointTransformVector_names* pVal1, const asn1SccBase_JointTransformVector_names* pVal2);
-
-flag asn1SccBase_JointTransformVector_elements_Equal(const asn1SccBase_JointTransformVector_elements* pVal1, const asn1SccBase_JointTransformVector_elements* pVal2);
-
-flag asn1SccBase_JointTransformVector_Equal(const asn1SccBase_JointTransformVector* pVal1, const asn1SccBase_JointTransformVector* pVal2);
-
-void asn1SccBase_JointTransformVector_names_Initialize(asn1SccBase_JointTransformVector_names* pVal);
-void asn1SccBase_JointTransformVector_elements_Initialize(asn1SccBase_JointTransformVector_elements* pVal);
-void asn1SccBase_JointTransformVector_Initialize(asn1SccBase_JointTransformVector* pVal);
-
-#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM		4729  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_NAMES		4740  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_SOURCEFRAME		4747  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_TARGETFRAME		4758  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4769  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_ROTATIONAXIS_DATA		4780  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4807  /**/
-flag asn1SccBase_JointTransformVector_IsConstraintValid(const asn1SccBase_JointTransformVector* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR		4814  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES		4741  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		4736  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4808  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		4803  /**/
-#define asn1SccBase_JointTransformVector_REQUIRED_BYTES_FOR_ENCODING       128452 
-#define asn1SccBase_JointTransformVector_REQUIRED_BITS_FOR_ENCODING        1027616
-
-flag asn1SccBase_JointTransformVector_Encode(const asn1SccBase_JointTransformVector* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR		4815  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES		4742  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_NAMES_ELM_2		4737  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS		4809  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_ELEMENTS_ELM_2		4804  /**/
-flag asn1SccBase_JointTransformVector_Decode(asn1SccBase_JointTransformVector* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_Base_JointTransform_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointTransform arr[200];
-} asn1SccBase_NamedVector_Base_JointTransform_elements;
-
-typedef struct {
-    asn1SccBase_NamedVector_Base_JointTransform_names names;
-    asn1SccBase_NamedVector_Base_JointTransform_elements elements;
-} asn1SccBase_NamedVector_Base_JointTransform;
-
-flag asn1SccBase_NamedVector_Base_JointTransform_names_Equal(const asn1SccBase_NamedVector_Base_JointTransform_names* pVal1, const asn1SccBase_NamedVector_Base_JointTransform_names* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointTransform_elements_Equal(const asn1SccBase_NamedVector_Base_JointTransform_elements* pVal1, const asn1SccBase_NamedVector_Base_JointTransform_elements* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointTransform_Equal(const asn1SccBase_NamedVector_Base_JointTransform* pVal1, const asn1SccBase_NamedVector_Base_JointTransform* pVal2);
-
-void asn1SccBase_NamedVector_Base_JointTransform_names_Initialize(asn1SccBase_NamedVector_Base_JointTransform_names* pVal);
-void asn1SccBase_NamedVector_Base_JointTransform_elements_Initialize(asn1SccBase_NamedVector_Base_JointTransform_elements* pVal);
-void asn1SccBase_NamedVector_Base_JointTransform_Initialize(asn1SccBase_NamedVector_Base_JointTransform* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM		4820  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4831  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_SOURCEFRAME		4838  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_TARGETFRAME		4849  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		4860  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_ROTATIONAXIS_DATA		4871  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4898  /**/
-flag asn1SccBase_NamedVector_Base_JointTransform_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointTransform* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		4905  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4832  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		4827  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4899  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		4894  /**/
-#define asn1SccBase_NamedVector_Base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       128452 
-#define asn1SccBase_NamedVector_Base_JointTransform_REQUIRED_BITS_FOR_ENCODING        1027616
-
-flag asn1SccBase_NamedVector_Base_JointTransform_Encode(const asn1SccBase_NamedVector_Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM		4906  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES		4833  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_NAMES_ELM_2		4828  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS		4900  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_ELEMENTS_ELM_2		4895  /**/
-flag asn1SccBase_NamedVector_Base_JointTransform_Decode(asn1SccBase_NamedVector_Base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_JointsTrajectory_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointTrajectory arr[200];
-} asn1SccBase_JointsTrajectory_elements;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_Time arr[200];
-} asn1SccBase_JointsTrajectory_times_val;
-
-typedef struct {
-    asn1SccBase_JointsTrajectory_names names;
-    asn1SccBase_JointsTrajectory_elements elements;
-    asn1SccBase_JointsTrajectory_times_val times_val;
-} asn1SccBase_JointsTrajectory;
-
-flag asn1SccBase_JointsTrajectory_names_Equal(const asn1SccBase_JointsTrajectory_names* pVal1, const asn1SccBase_JointsTrajectory_names* pVal2);
-
-flag asn1SccBase_JointsTrajectory_elements_Equal(const asn1SccBase_JointsTrajectory_elements* pVal1, const asn1SccBase_JointsTrajectory_elements* pVal2);
-
-flag asn1SccBase_JointsTrajectory_times_val_Equal(const asn1SccBase_JointsTrajectory_times_val* pVal1, const asn1SccBase_JointsTrajectory_times_val* pVal2);
-
-flag asn1SccBase_JointsTrajectory_Equal(const asn1SccBase_JointsTrajectory* pVal1, const asn1SccBase_JointsTrajectory* pVal2);
-
-void asn1SccBase_JointsTrajectory_names_Initialize(asn1SccBase_JointsTrajectory_names* pVal);
-void asn1SccBase_JointsTrajectory_elements_Initialize(asn1SccBase_JointsTrajectory_elements* pVal);
-void asn1SccBase_JointsTrajectory_times_val_Initialize(asn1SccBase_JointsTrajectory_times_val* pVal);
-void asn1SccBase_JointsTrajectory_Initialize(asn1SccBase_JointsTrajectory* pVal);
-
-#define ERR_BASE_JOINTSTRAJECTORY_NAMES_ELM		2563  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_NAMES		2574  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_POSITION		2581  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_SPEED		2592  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_EFFORT		2603  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_RAW		2614  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_ELM_ACCELERATION		2625  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM		2646  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_ELEMENTS		2657  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_MICROSECONDS		2664  /**/
-#define ERR_BASE_JOINTSTRAJECTORY_TIMES_VAL		2685  /**/
-flag asn1SccBase_JointsTrajectory_IsConstraintValid(const asn1SccBase_JointsTrajectory* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY		2692  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES		2575  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		2570  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS		2658  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		2653  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		2686  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		2681  /**/
-#define asn1SccBase_JointsTrajectory_REQUIRED_BYTES_FOR_ENCODING       2642003 
-#define asn1SccBase_JointsTrajectory_REQUIRED_BITS_FOR_ENCODING        21136024
-
-flag asn1SccBase_JointsTrajectory_Encode(const asn1SccBase_JointsTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY		2693  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES		2576  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_NAMES_ELM_2		2571  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS		2659  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_ELEMENTS_ELM_2		2654  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL		2687  /**/
-#define ERR_UPER_DECODE_BASE_JOINTSTRAJECTORY_TIMES_VAL_ELM_2		2682  /**/
-flag asn1SccBase_JointsTrajectory_Decode(asn1SccBase_JointsTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_Base_JointLimitRange_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointLimitRange arr[200];
-} asn1SccBase_NamedVector_Base_JointLimitRange_elements;
-
-typedef struct {
-    asn1SccBase_NamedVector_Base_JointLimitRange_names names;
-    asn1SccBase_NamedVector_Base_JointLimitRange_elements elements;
-} asn1SccBase_NamedVector_Base_JointLimitRange;
-
-flag asn1SccBase_NamedVector_Base_JointLimitRange_names_Equal(const asn1SccBase_NamedVector_Base_JointLimitRange_names* pVal1, const asn1SccBase_NamedVector_Base_JointLimitRange_names* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointLimitRange_elements_Equal(const asn1SccBase_NamedVector_Base_JointLimitRange_elements* pVal1, const asn1SccBase_NamedVector_Base_JointLimitRange_elements* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointLimitRange_Equal(const asn1SccBase_NamedVector_Base_JointLimitRange* pVal1, const asn1SccBase_NamedVector_Base_JointLimitRange* pVal2);
-
-void asn1SccBase_NamedVector_Base_JointLimitRange_names_Initialize(asn1SccBase_NamedVector_Base_JointLimitRange_names* pVal);
-void asn1SccBase_NamedVector_Base_JointLimitRange_elements_Initialize(asn1SccBase_NamedVector_Base_JointLimitRange_elements* pVal);
-void asn1SccBase_NamedVector_Base_JointLimitRange_Initialize(asn1SccBase_NamedVector_Base_JointLimitRange* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM		2698  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		2709  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_POSITION		2716  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_SPEED		2727  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_EFFORT		2738  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_RAW		2749  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MIN_ACCELERATION		2760  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_POSITION		2781  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_SPEED		2792  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_EFFORT		2803  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_RAW		2814  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_MAX_ACCELERATION		2825  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		2856  /**/
-flag asn1SccBase_NamedVector_Base_JointLimitRange_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointLimitRange* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		2863  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		2710  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		2705  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		2857  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		2852  /**/
-#define asn1SccBase_NamedVector_Base_JointLimitRange_REQUIRED_BYTES_FOR_ENCODING       66202 
-#define asn1SccBase_NamedVector_Base_JointLimitRange_REQUIRED_BITS_FOR_ENCODING        529616
-
-flag asn1SccBase_NamedVector_Base_JointLimitRange_Encode(const asn1SccBase_NamedVector_Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE		2864  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES		2711  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_NAMES_ELM_2		2706  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS		2858  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTLIMITRANGE_ELEMENTS_ELM_2		2853  /**/
-flag asn1SccBase_NamedVector_Base_JointLimitRange_Decode(asn1SccBase_NamedVector_Base_JointLimitRange* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_Base_JointState_names;
-
-typedef struct {
-    asn1SccBase_NamedVector_Base_JointState_names names;
-    asn1SccBase_JointTrajectory elements;
-} asn1SccBase_NamedVector_Base_JointState;
-
-flag asn1SccBase_NamedVector_Base_JointState_names_Equal(const asn1SccBase_NamedVector_Base_JointState_names* pVal1, const asn1SccBase_NamedVector_Base_JointState_names* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointState_Equal(const asn1SccBase_NamedVector_Base_JointState* pVal1, const asn1SccBase_NamedVector_Base_JointState* pVal2);
-
-void asn1SccBase_NamedVector_Base_JointState_names_Initialize(asn1SccBase_NamedVector_Base_JointState_names* pVal);
-void asn1SccBase_NamedVector_Base_JointState_Initialize(asn1SccBase_NamedVector_Base_JointState* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM		2869  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		2880  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_POSITION		2887  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_SPEED		2898  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_EFFORT		2909  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_RAW		2920  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_ELM_ACCELERATION		2931  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS		2952  /**/
-flag asn1SccBase_NamedVector_Base_JointState_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointState* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		2963  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		2881  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		2876  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		2959  /**/
-#define asn1SccBase_NamedVector_Base_JointState_REQUIRED_BYTES_FOR_ENCODING       53202 
-#define asn1SccBase_NamedVector_Base_JointState_REQUIRED_BITS_FOR_ENCODING        425616
-
-flag asn1SccBase_NamedVector_Base_JointState_Encode(const asn1SccBase_NamedVector_Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE		2964  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES		2882  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_NAMES_ELM_2		2877  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTSTATE_ELEMENTS_2		2960  /**/
-flag asn1SccBase_NamedVector_Base_JointState_Decode(asn1SccBase_NamedVector_Base_JointState* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_Base_Wrench_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_Wrench arr[200];
-} asn1SccBase_NamedVector_Base_Wrench_elements;
-
-typedef struct {
-    asn1SccBase_NamedVector_Base_Wrench_names names;
-    asn1SccBase_NamedVector_Base_Wrench_elements elements;
-} asn1SccBase_NamedVector_Base_Wrench;
-
-flag asn1SccBase_NamedVector_Base_Wrench_names_Equal(const asn1SccBase_NamedVector_Base_Wrench_names* pVal1, const asn1SccBase_NamedVector_Base_Wrench_names* pVal2);
-
-flag asn1SccBase_NamedVector_Base_Wrench_elements_Equal(const asn1SccBase_NamedVector_Base_Wrench_elements* pVal1, const asn1SccBase_NamedVector_Base_Wrench_elements* pVal2);
-
-flag asn1SccBase_NamedVector_Base_Wrench_Equal(const asn1SccBase_NamedVector_Base_Wrench* pVal1, const asn1SccBase_NamedVector_Base_Wrench* pVal2);
-
-void asn1SccBase_NamedVector_Base_Wrench_names_Initialize(asn1SccBase_NamedVector_Base_Wrench_names* pVal);
-void asn1SccBase_NamedVector_Base_Wrench_elements_Initialize(asn1SccBase_NamedVector_Base_Wrench_elements* pVal);
-void asn1SccBase_NamedVector_Base_Wrench_Initialize(asn1SccBase_NamedVector_Base_Wrench* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM		2969  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		2980  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_FORCE_DATA_ELM		2987  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_FORCE_DATA		2998  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_TORQUE_DATA_ELM		3015  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_TORQUE_DATA		3026  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		3053  /**/
-flag asn1SccBase_NamedVector_Base_Wrench_IsConstraintValid(const asn1SccBase_NamedVector_Base_Wrench* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH		3060  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		2981  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		2976  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		3054  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		3049  /**/
-#define asn1SccBase_NamedVector_Base_Wrench_REQUIRED_BYTES_FOR_ENCODING       55902 
-#define asn1SccBase_NamedVector_Base_Wrench_REQUIRED_BITS_FOR_ENCODING        447216
-
-flag asn1SccBase_NamedVector_Base_Wrench_Encode(const asn1SccBase_NamedVector_Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH		3061  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES		2982  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_NAMES_ELM_2		2977  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS		3055  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_ELEMENTS_ELM_2		3050  /**/
-flag asn1SccBase_NamedVector_Base_Wrench_Decode(asn1SccBase_NamedVector_Base_Wrench* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_Base_JointTrajectory_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointTrajectory arr[200];
-} asn1SccBase_NamedVector_Base_JointTrajectory_elements;
-
-typedef struct {
-    asn1SccBase_NamedVector_Base_JointTrajectory_names names;
-    asn1SccBase_NamedVector_Base_JointTrajectory_elements elements;
-} asn1SccBase_NamedVector_Base_JointTrajectory;
-
-flag asn1SccBase_NamedVector_Base_JointTrajectory_names_Equal(const asn1SccBase_NamedVector_Base_JointTrajectory_names* pVal1, const asn1SccBase_NamedVector_Base_JointTrajectory_names* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointTrajectory_elements_Equal(const asn1SccBase_NamedVector_Base_JointTrajectory_elements* pVal1, const asn1SccBase_NamedVector_Base_JointTrajectory_elements* pVal2);
-
-flag asn1SccBase_NamedVector_Base_JointTrajectory_Equal(const asn1SccBase_NamedVector_Base_JointTrajectory* pVal1, const asn1SccBase_NamedVector_Base_JointTrajectory* pVal2);
-
-void asn1SccBase_NamedVector_Base_JointTrajectory_names_Initialize(asn1SccBase_NamedVector_Base_JointTrajectory_names* pVal);
-void asn1SccBase_NamedVector_Base_JointTrajectory_elements_Initialize(asn1SccBase_NamedVector_Base_JointTrajectory_elements* pVal);
-void asn1SccBase_NamedVector_Base_JointTrajectory_Initialize(asn1SccBase_NamedVector_Base_JointTrajectory* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM		3066  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		3077  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_POSITION		3084  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_SPEED		3095  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_EFFORT		3106  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_RAW		3117  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_ELM_ACCELERATION		3128  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM		3149  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		3160  /**/
-flag asn1SccBase_NamedVector_Base_JointTrajectory_IsConstraintValid(const asn1SccBase_NamedVector_Base_JointTrajectory* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		3167  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		3078  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		3073  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		3161  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		3156  /**/
-#define asn1SccBase_NamedVector_Base_JointTrajectory_REQUIRED_BYTES_FOR_ENCODING       2640402 
-#define asn1SccBase_NamedVector_Base_JointTrajectory_REQUIRED_BITS_FOR_ENCODING        21123216
-
-flag asn1SccBase_NamedVector_Base_JointTrajectory_Encode(const asn1SccBase_NamedVector_Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY		3168  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES		3079  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_NAMES_ELM_2		3074  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS		3162  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRAJECTORY_ELEMENTS_ELM_2		3157  /**/
-flag asn1SccBase_NamedVector_Base_JointTrajectory_Decode(asn1SccBase_NamedVector_Base_JointTrajectory* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_commands_Joints_names;
-
-typedef struct {
-    asn1SccBase_commands_Joints_names names;
-    asn1SccBase_JointTrajectory elements;
-    asn1SccBase_Time time;
-} asn1SccBase_commands_Joints;
-
-flag asn1SccBase_commands_Joints_names_Equal(const asn1SccBase_commands_Joints_names* pVal1, const asn1SccBase_commands_Joints_names* pVal2);
-
-flag asn1SccBase_commands_Joints_Equal(const asn1SccBase_commands_Joints* pVal1, const asn1SccBase_commands_Joints* pVal2);
-
-void asn1SccBase_commands_Joints_names_Initialize(asn1SccBase_commands_Joints_names* pVal);
-void asn1SccBase_commands_Joints_Initialize(asn1SccBase_commands_Joints* pVal);
-
-#define ERR_BASE_COMMANDS_JOINTS_NAMES_ELM		3455  /**/
-#define ERR_BASE_COMMANDS_JOINTS_NAMES		3466  /**/
-#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_POSITION		3473  /**/
-#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_SPEED		3484  /**/
-#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_EFFORT		3495  /**/
-#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_RAW		3506  /**/
-#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS_ELM_ACCELERATION		3517  /**/
-#define ERR_BASE_COMMANDS_JOINTS_ELEMENTS		3538  /**/
-#define ERR_BASE_COMMANDS_JOINTS_TIME_MICROSECONDS		3549  /**/
-flag asn1SccBase_commands_Joints_IsConstraintValid(const asn1SccBase_commands_Joints* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS		3570  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES		3467  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		3462  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		3545  /**/
-#define ERR_UPER_ENCODE_BASE_COMMANDS_JOINTS_TIME_2		3566  /**/
-#define asn1SccBase_commands_Joints_REQUIRED_BYTES_FOR_ENCODING       53210 
-#define asn1SccBase_commands_Joints_REQUIRED_BITS_FOR_ENCODING        425680
-
-flag asn1SccBase_commands_Joints_Encode(const asn1SccBase_commands_Joints* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS		3571  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES		3468  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_NAMES_ELM_2		3463  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_ELEMENTS_2		3546  /**/
-#define ERR_UPER_DECODE_BASE_COMMANDS_JOINTS_TIME_2		3567  /**/
-flag asn1SccBase_commands_Joints_Decode(asn1SccBase_commands_Joints* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccT_String sourceframe;
-    asn1SccT_String targetframe;
-    asn1SccWrappers_Vector3d position;
-    asn1SccWrappers_Matrix3d cov_position;
-    asn1SccWrappers_Quaterniond orientation;
-    asn1SccWrappers_Matrix3d cov_orientation;
-    asn1SccWrappers_Vector3d velocity;
-    asn1SccWrappers_Matrix3d cov_velocity;
-    asn1SccWrappers_Vector3d angular_velocity;
-    asn1SccWrappers_Matrix3d cov_angular_velocity;
-} asn1SccBase_samples_RigidBodyState;
-
-flag asn1SccBase_samples_RigidBodyState_Equal(const asn1SccBase_samples_RigidBodyState* pVal1, const asn1SccBase_samples_RigidBodyState* pVal2);
-
-void asn1SccBase_samples_RigidBodyState_Initialize(asn1SccBase_samples_RigidBodyState* pVal);
-
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_TIME_MICROSECONDS		3791  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME		3812  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME		3823  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_DATA_ELM		3834  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_DATA		3845  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_DATA_ELM		3862  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_DATA		3873  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_IM_ELM		3890  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_IM		3901  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_RE		3908  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_DATA_ELM		3929  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_DATA		3940  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_DATA_ELM		3957  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_DATA		3968  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_DATA_ELM		3985  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_DATA		3996  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_DATA_ELM		4013  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_DATA		4024  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_DATA_ELM		4041  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_DATA		4052  /**/
-flag asn1SccBase_samples_RigidBodyState_IsConstraintValid(const asn1SccBase_samples_RigidBodyState* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE		4069  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		3808  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		3819  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		3830  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		3858  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		3886  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		3925  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		3953  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		3981  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		4009  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		4037  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		4065  /**/
-#define asn1SccBase_samples_RigidBodyState_REQUIRED_BYTES_FOR_ENCODING       1050 
-#define asn1SccBase_samples_RigidBodyState_REQUIRED_BITS_FOR_ENCODING        8400
-
-flag asn1SccBase_samples_RigidBodyState_Encode(const asn1SccBase_samples_RigidBodyState* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE		4070  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TIME_2		3809  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_SOURCEFRAME_2		3820  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_TARGETFRAME_2		3831  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_POSITION_2		3859  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_POSITION_2		3887  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ORIENTATION_2		3926  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ORIENTATION_2		3954  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_VELOCITY_2		3982  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_VELOCITY_2		4010  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_ANGULAR_VELOCITY_2		4038  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_COV_ANGULAR_VELOCITY_2		4066  /**/
-flag asn1SccBase_samples_RigidBodyState_Decode(asn1SccBase_samples_RigidBodyState* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_samples_Wrenches_names;
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_Wrench arr[200];
-} asn1SccBase_samples_Wrenches_elements;
-
-typedef struct {
-    asn1SccBase_samples_Wrenches_names names;
-    asn1SccBase_samples_Wrenches_elements elements;
-    asn1SccBase_Time time;
-} asn1SccBase_samples_Wrenches;
-
-flag asn1SccBase_samples_Wrenches_names_Equal(const asn1SccBase_samples_Wrenches_names* pVal1, const asn1SccBase_samples_Wrenches_names* pVal2);
-
-flag asn1SccBase_samples_Wrenches_elements_Equal(const asn1SccBase_samples_Wrenches_elements* pVal1, const asn1SccBase_samples_Wrenches_elements* pVal2);
-
-flag asn1SccBase_samples_Wrenches_Equal(const asn1SccBase_samples_Wrenches* pVal1, const asn1SccBase_samples_Wrenches* pVal2);
-
-void asn1SccBase_samples_Wrenches_names_Initialize(asn1SccBase_samples_Wrenches_names* pVal);
-void asn1SccBase_samples_Wrenches_elements_Initialize(asn1SccBase_samples_Wrenches_elements* pVal);
-void asn1SccBase_samples_Wrenches_Initialize(asn1SccBase_samples_Wrenches* pVal);
-
-#define ERR_BASE_SAMPLES_WRENCHES_NAMES_ELM		4583  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_NAMES		4594  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA_ELM		4601  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_FORCE_DATA		4612  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA_ELM		4629  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_TORQUE_DATA		4640  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_ELEMENTS		4667  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_TIME_MICROSECONDS		4674  /**/
-flag asn1SccBase_samples_Wrenches_IsConstraintValid(const asn1SccBase_samples_Wrenches* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES		4695  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES		4595  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		4590  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS		4668  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		4663  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_TIME_2		4691  /**/
-#define asn1SccBase_samples_Wrenches_REQUIRED_BYTES_FOR_ENCODING       55910 
-#define asn1SccBase_samples_Wrenches_REQUIRED_BITS_FOR_ENCODING        447280
-
-flag asn1SccBase_samples_Wrenches_Encode(const asn1SccBase_samples_Wrenches* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES		4696  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES		4596  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_NAMES_ELM_2		4591  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS		4669  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_ELEMENTS_ELM_2		4664  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_TIME_2		4692  /**/
-flag asn1SccBase_samples_Wrenches_Decode(asn1SccBase_samples_Wrenches* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_String data;
-    asn1SccT_String name_val;
-} asn1SccBase_samples_frame_frame_attrib_t;
-
-flag asn1SccBase_samples_frame_frame_attrib_t_Equal(const asn1SccBase_samples_frame_frame_attrib_t* pVal1, const asn1SccBase_samples_frame_frame_attrib_t* pVal2);
-
-void asn1SccBase_samples_frame_frame_attrib_t_Initialize(asn1SccBase_samples_frame_frame_attrib_t* pVal);
-
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA		4701  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL		4712  /**/
-flag asn1SccBase_samples_frame_frame_attrib_t_IsConstraintValid(const asn1SccBase_samples_frame_frame_attrib_t* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		4723  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		4708  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		4719  /**/
-#define asn1SccBase_samples_frame_frame_attrib_t_REQUIRED_BYTES_FOR_ENCODING       402 
-#define asn1SccBase_samples_frame_frame_attrib_t_REQUIRED_BITS_FOR_ENCODING        3216
-
-flag asn1SccBase_samples_frame_frame_attrib_t_Encode(const asn1SccBase_samples_frame_frame_attrib_t* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T		4724  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_DATA_2		4709  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIB_T_NAME_VAL_2		4720  /**/
-flag asn1SccBase_samples_frame_frame_attrib_t_Decode(asn1SccBase_samples_frame_frame_attrib_t* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_String sourceframe;
-    asn1SccT_String targetframe;
-    asn1SccWrappers_Vector3d rotationaxis;
-} asn1SccBase_JointTransform_m;
-
-flag asn1SccBase_JointTransform_m_Equal(const asn1SccBase_JointTransform_m* pVal1, const asn1SccBase_JointTransform_m* pVal2);
-
-void asn1SccBase_JointTransform_m_Initialize(asn1SccBase_JointTransform_m* pVal);
-
-#define ERR_BASE_JOINTTRANSFORM_M_SOURCEFRAME		5832  /**/
-#define ERR_BASE_JOINTTRANSFORM_M_TARGETFRAME		5843  /**/
-#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA_ELM		5854  /**/
-#define ERR_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_DATA		5865  /**/
-flag asn1SccBase_JointTransform_m_IsConstraintValid(const asn1SccBase_JointTransform_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M		5882  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		5839  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		5850  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		5878  /**/
-#define asn1SccBase_JointTransform_m_REQUIRED_BYTES_FOR_ENCODING       442 
-#define asn1SccBase_JointTransform_m_REQUIRED_BITS_FOR_ENCODING        3530
-
-flag asn1SccBase_JointTransform_m_Encode(const asn1SccBase_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M		5883  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_SOURCEFRAME_2		5840  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_TARGETFRAME_2		5851  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORM_M_ROTATIONAXIS_2		5879  /**/
-flag asn1SccBase_JointTransform_m_Decode(asn1SccBase_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccBase_JointTransform_m arr[200];
-} asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform;
-
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Equal(const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal1, const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal2);
-
-void asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal);
-
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_SOURCEFRAME		158  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_TARGETFRAME		169  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_ROTATIONAXIS_DATA_ELM		180  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_ROTATIONAXIS_DATA		191  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		218  /**/
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		219  /**/
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		214  /**/
-#define asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_REQUIRED_BYTES_FOR_ENCODING       88251 
-#define asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_REQUIRED_BITS_FOR_ENCODING        706008
-
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM		220  /**/
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_JOINTTRANSFORM_ELM_2		215  /**/
-flag asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_JointTransformVector_m_names;
-
-typedef struct {
-    asn1SccBase_JointTransformVector_m_names names;
-    asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform elements;
-} asn1SccBase_JointTransformVector_m;
-
-flag asn1SccBase_JointTransformVector_m_names_Equal(const asn1SccBase_JointTransformVector_m_names* pVal1, const asn1SccBase_JointTransformVector_m_names* pVal2);
-
-flag asn1SccBase_JointTransformVector_m_Equal(const asn1SccBase_JointTransformVector_m* pVal1, const asn1SccBase_JointTransformVector_m* pVal2);
-
-void asn1SccBase_JointTransformVector_m_names_Initialize(asn1SccBase_JointTransformVector_m_names* pVal);
-void asn1SccBase_JointTransformVector_m_Initialize(asn1SccBase_JointTransformVector_m* pVal);
-
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM		7252  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7263  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_SOURCEFRAME		7270  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_TARGETFRAME		7281  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7292  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7303  /**/
-#define ERR_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS		7330  /**/
-flag asn1SccBase_JointTransformVector_m_IsConstraintValid(const asn1SccBase_JointTransformVector_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M		7341  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7264  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		7259  /**/
-#define ERR_UPER_ENCODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		7337  /**/
-#define asn1SccBase_JointTransformVector_m_REQUIRED_BYTES_FOR_ENCODING       128452 
-#define asn1SccBase_JointTransformVector_m_REQUIRED_BITS_FOR_ENCODING        1027616
-
-flag asn1SccBase_JointTransformVector_m_Encode(const asn1SccBase_JointTransformVector_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M		7342  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES		7265  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_NAMES_ELM_2		7260  /**/
-#define ERR_UPER_DECODE_BASE_JOINTTRANSFORMVECTOR_M_ELEMENTS_2		7338  /**/
-flag asn1SccBase_JointTransformVector_m_Decode(asn1SccBase_JointTransformVector_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_base_JointTransform_m_names;
-
-typedef struct {
-    asn1SccBase_NamedVector_base_JointTransform_m_names names;
-    asn1SccStd_orogen_typekits_mtype_std_vector_base_JointTransform elements;
-} asn1SccBase_NamedVector_base_JointTransform_m;
-
-flag asn1SccBase_NamedVector_base_JointTransform_m_names_Equal(const asn1SccBase_NamedVector_base_JointTransform_m_names* pVal1, const asn1SccBase_NamedVector_base_JointTransform_m_names* pVal2);
-
-flag asn1SccBase_NamedVector_base_JointTransform_m_Equal(const asn1SccBase_NamedVector_base_JointTransform_m* pVal1, const asn1SccBase_NamedVector_base_JointTransform_m* pVal2);
-
-void asn1SccBase_NamedVector_base_JointTransform_m_names_Initialize(asn1SccBase_NamedVector_base_JointTransform_m_names* pVal);
-void asn1SccBase_NamedVector_base_JointTransform_m_Initialize(asn1SccBase_NamedVector_base_JointTransform_m* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM		7347  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7358  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_SOURCEFRAME		7365  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_TARGETFRAME		7376  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA_ELM		7387  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_ELM_ROTATIONAXIS_DATA		7398  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS		7425  /**/
-flag asn1SccBase_NamedVector_base_JointTransform_m_IsConstraintValid(const asn1SccBase_NamedVector_base_JointTransform_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		7436  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7359  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		7354  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		7432  /**/
-#define asn1SccBase_NamedVector_base_JointTransform_m_REQUIRED_BYTES_FOR_ENCODING       128452 
-#define asn1SccBase_NamedVector_base_JointTransform_m_REQUIRED_BITS_FOR_ENCODING        1027616
-
-flag asn1SccBase_NamedVector_base_JointTransform_m_Encode(const asn1SccBase_NamedVector_base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M		7437  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES		7360  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_NAMES_ELM_2		7355  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_JOINTTRANSFORM_M_ELEMENTS_2		7433  /**/
-flag asn1SccBase_NamedVector_base_JointTransform_m_Decode(asn1SccBase_NamedVector_base_JointTransform_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccBase_Time time;
-    asn1SccT_String sourceframe;
-    asn1SccT_String targetframe;
-    asn1SccWrappers_Vector3d position;
-    asn1SccWrappers_Matrix3d cov_position;
-    asn1SccWrappers_Quaterniond orientation;
-    asn1SccWrappers_Matrix3d cov_orientation;
-    asn1SccWrappers_Vector3d velocity;
-    asn1SccWrappers_Matrix3d cov_velocity;
-    asn1SccWrappers_Vector3d angular_velocity;
-    asn1SccWrappers_Matrix3d cov_angular_velocity;
-} asn1SccBase_samples_RigidBodyState_m;
-
-flag asn1SccBase_samples_RigidBodyState_m_Equal(const asn1SccBase_samples_RigidBodyState_m* pVal1, const asn1SccBase_samples_RigidBodyState_m* pVal2);
-
-void asn1SccBase_samples_RigidBodyState_m_Initialize(asn1SccBase_samples_RigidBodyState_m* pVal);
-
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_MICROSECONDS		6885  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME		6906  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME		6917  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA_ELM		6928  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_DATA		6939  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA_ELM		6956  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_DATA		6967  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM_ELM		6984  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_IM		6995  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_RE		7002  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA_ELM		7023  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_DATA		7034  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA_ELM		7051  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_DATA		7062  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA_ELM		7079  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_DATA		7090  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA_ELM		7107  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_DATA		7118  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA_ELM		7135  /**/
-#define ERR_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_DATA		7146  /**/
-flag asn1SccBase_samples_RigidBodyState_m_IsConstraintValid(const asn1SccBase_samples_RigidBodyState_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M		7163  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		6902  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		6913  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		6924  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		6952  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		6980  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		7019  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		7047  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		7075  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		7103  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		7131  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		7159  /**/
-#define asn1SccBase_samples_RigidBodyState_m_REQUIRED_BYTES_FOR_ENCODING       1050 
-#define asn1SccBase_samples_RigidBodyState_m_REQUIRED_BITS_FOR_ENCODING        8400
-
-flag asn1SccBase_samples_RigidBodyState_m_Encode(const asn1SccBase_samples_RigidBodyState_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M		7164  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TIME_2		6903  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_SOURCEFRAME_2		6914  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_TARGETFRAME_2		6925  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_POSITION_2		6953  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_POSITION_2		6981  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ORIENTATION_2		7020  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ORIENTATION_2		7048  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_VELOCITY_2		7076  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_VELOCITY_2		7104  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_ANGULAR_VELOCITY_2		7132  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_RIGIDBODYSTATE_M_COV_ANGULAR_VELOCITY_2		7160  /**/
-flag asn1SccBase_samples_RigidBodyState_m_Decode(asn1SccBase_samples_RigidBodyState_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_NamedVector_base_Wrench_m_names;
-
-typedef struct {
-    asn1SccBase_NamedVector_base_Wrench_m_names names;
-    asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench elements;
-} asn1SccBase_NamedVector_base_Wrench_m;
-
-flag asn1SccBase_NamedVector_base_Wrench_m_names_Equal(const asn1SccBase_NamedVector_base_Wrench_m_names* pVal1, const asn1SccBase_NamedVector_base_Wrench_m_names* pVal2);
-
-flag asn1SccBase_NamedVector_base_Wrench_m_Equal(const asn1SccBase_NamedVector_base_Wrench_m* pVal1, const asn1SccBase_NamedVector_base_Wrench_m* pVal2);
-
-void asn1SccBase_NamedVector_base_Wrench_m_names_Initialize(asn1SccBase_NamedVector_base_Wrench_m_names* pVal);
-void asn1SccBase_NamedVector_base_Wrench_m_Initialize(asn1SccBase_NamedVector_base_Wrench_m* pVal);
-
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM		7442  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7453  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA_ELM		7460  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_FORCE_DATA		7471  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7488  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_ELM_TORQUE_DATA		7499  /**/
-#define ERR_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS		7526  /**/
-flag asn1SccBase_NamedVector_base_Wrench_m_IsConstraintValid(const asn1SccBase_NamedVector_base_Wrench_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		7537  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7454  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		7449  /**/
-#define ERR_UPER_ENCODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		7533  /**/
-#define asn1SccBase_NamedVector_base_Wrench_m_REQUIRED_BYTES_FOR_ENCODING       55902 
-#define asn1SccBase_NamedVector_base_Wrench_m_REQUIRED_BITS_FOR_ENCODING        447216
-
-flag asn1SccBase_NamedVector_base_Wrench_m_Encode(const asn1SccBase_NamedVector_base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M		7538  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES		7455  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_NAMES_ELM_2		7450  /**/
-#define ERR_UPER_DECODE_BASE_NAMEDVECTOR_BASE_WRENCH_M_ELEMENTS_2		7534  /**/
-flag asn1SccBase_NamedVector_base_Wrench_m_Decode(asn1SccBase_NamedVector_base_Wrench_m* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {    int nCount; 
-    
-    asn1SccT_String arr[200];
-} asn1SccBase_samples_Wrenches_m_names;
-
-typedef struct {
-    asn1SccBase_samples_Wrenches_m_names names;
-    asn1SccStd_orogen_typekits_mtype_std_vector_base_Wrench elements;
-    asn1SccBase_Time time;
-} asn1SccBase_samples_Wrenches_m;
-
-flag asn1SccBase_samples_Wrenches_m_names_Equal(const asn1SccBase_samples_Wrenches_m_names* pVal1, const asn1SccBase_samples_Wrenches_m_names* pVal2);
-
-flag asn1SccBase_samples_Wrenches_m_Equal(const asn1SccBase_samples_Wrenches_m* pVal1, const asn1SccBase_samples_Wrenches_m* pVal2);
-
-void asn1SccBase_samples_Wrenches_m_names_Initialize(asn1SccBase_samples_Wrenches_m_names* pVal);
-void asn1SccBase_samples_Wrenches_m_Initialize(asn1SccBase_samples_Wrenches_m* pVal);
-
-#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES_ELM		7640  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_NAMES		7651  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA_ELM		7658  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_FORCE_DATA		7669  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA_ELM		7686  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS_ELM_TORQUE_DATA		7697  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_ELEMENTS		7724  /**/
-#define ERR_BASE_SAMPLES_WRENCHES_M_TIME_MICROSECONDS		7735  /**/
-flag asn1SccBase_samples_Wrenches_m_IsConstraintValid(const asn1SccBase_samples_Wrenches_m* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M		7756  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES		7652  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		7647  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		7731  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_WRENCHES_M_TIME_2		7752  /**/
-#define asn1SccBase_samples_Wrenches_m_REQUIRED_BYTES_FOR_ENCODING       55910 
-#define asn1SccBase_samples_Wrenches_m_REQUIRED_BITS_FOR_ENCODING        447280
-
-flag asn1SccBase_samples_Wrenches_m_Encode(const asn1SccBase_samples_Wrenches_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M		7757  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES		7653  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_NAMES_ELM_2		7648  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_ELEMENTS_2		7732  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_WRENCHES_M_TIME_2		7753  /**/
-flag asn1SccBase_samples_Wrenches_m_Decode(asn1SccBase_samples_Wrenches_m* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccSint asn1SccT_Int32;
 
 
@@ -3181,8 +3397,11 @@ flag asn1SccT_Int32_Encode(const asn1SccT_Int32* pVal, BitStream* pBitStrm, int*
 
 #define ERR_UPER_DECODE_T_INT32		8034  /**/
 flag asn1SccT_Int32_Decode(asn1SccT_Int32* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_MatrixXd --------------------------------------------*/
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Double arr[200];
 } asn1SccWrappers_MatrixXd_data;
@@ -3191,6 +3410,7 @@ typedef struct {
     asn1SccT_Int32 rows;
     asn1SccT_Int32 cols;
     asn1SccWrappers_MatrixXd_data data;
+
 } asn1SccWrappers_MatrixXd;
 
 flag asn1SccWrappers_MatrixXd_data_Equal(const asn1SccWrappers_MatrixXd_data* pVal1, const asn1SccWrappers_MatrixXd_data* pVal2);
@@ -3200,35 +3420,40 @@ flag asn1SccWrappers_MatrixXd_Equal(const asn1SccWrappers_MatrixXd* pVal1, const
 void asn1SccWrappers_MatrixXd_data_Initialize(asn1SccWrappers_MatrixXd_data* pVal);
 void asn1SccWrappers_MatrixXd_Initialize(asn1SccWrappers_MatrixXd* pVal);
 
-#define ERR_WRAPPERS_MATRIXXD_ROWS		5727  /**/
-#define ERR_WRAPPERS_MATRIXXD_COLS		5738  /**/
-#define ERR_WRAPPERS_MATRIXXD_DATA_ELM		5749  /**/
-#define ERR_WRAPPERS_MATRIXXD_DATA		5760  /**/
+#define ERR_WRAPPERS_MATRIXXD_ROWS		5804  /**/
+#define ERR_WRAPPERS_MATRIXXD_COLS		5815  /**/
+#define ERR_WRAPPERS_MATRIXXD_DATA_ELM		5826  /**/
+#define ERR_WRAPPERS_MATRIXXD_DATA		5837  /**/
 flag asn1SccWrappers_MatrixXd_IsConstraintValid(const asn1SccWrappers_MatrixXd* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD		5767  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_ROWS_2		5734  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_COLS_2		5745  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA		5761  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA_ELM_2		5756  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD		5844  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_ROWS_2		5811  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_COLS_2		5822  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA		5838  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_MATRIXXD_DATA_ELM_2		5833  /**/
 #define asn1SccWrappers_MatrixXd_REQUIRED_BYTES_FOR_ENCODING       2609 
 #define asn1SccWrappers_MatrixXd_REQUIRED_BITS_FOR_ENCODING        20872
 
 flag asn1SccWrappers_MatrixXd_Encode(const asn1SccWrappers_MatrixXd* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD		5768  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_ROWS_2		5735  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_COLS_2		5746  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA		5762  /**/
-#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA_ELM_2		5757  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD		5845  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_ROWS_2		5812  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_COLS_2		5823  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA		5839  /**/
+#define ERR_UPER_DECODE_WRAPPERS_MATRIXXD_DATA_ELM_2		5834  /**/
 flag asn1SccWrappers_MatrixXd_Decode(asn1SccWrappers_MatrixXd* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccWrappers_geometry_Spline --------------------------------------------*/
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Double arr[200];
 } asn1SccWrappers_geometry_Spline_knots;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Double arr[200];
 } asn1SccWrappers_geometry_Spline_vertices;
@@ -3240,6 +3465,7 @@ typedef struct {
     asn1SccWrappers_geometry_SplineType kind;
     asn1SccWrappers_geometry_Spline_knots knots;
     asn1SccWrappers_geometry_Spline_vertices vertices;
+
 } asn1SccWrappers_geometry_Spline;
 
 flag asn1SccWrappers_geometry_Spline_knots_Equal(const asn1SccWrappers_geometry_Spline_knots* pVal1, const asn1SccWrappers_geometry_Spline_knots* pVal2);
@@ -3252,108 +3478,114 @@ void asn1SccWrappers_geometry_Spline_knots_Initialize(asn1SccWrappers_geometry_S
 void asn1SccWrappers_geometry_Spline_vertices_Initialize(asn1SccWrappers_geometry_Spline_vertices* pVal);
 void asn1SccWrappers_geometry_Spline_Initialize(asn1SccWrappers_geometry_Spline* pVal);
 
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION		7762  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_DIMENSION		7773  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER		7784  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_KIND		7795  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM		7806  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7817  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM		7824  /**/
-#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7835  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION		7839  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_DIMENSION		7850  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER		7861  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_KIND		7872  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM		7883  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7894  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM		7901  /**/
+#define ERR_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7912  /**/
 flag asn1SccWrappers_geometry_Spline_IsConstraintValid(const asn1SccWrappers_geometry_Spline* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE		7842  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		7769  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		7780  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		7791  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		7802  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7818  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		7813  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7836  /**/
-#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		7831  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE		7919  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		7846  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		7857  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		7868  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		7879  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7895  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		7890  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7913  /**/
+#define ERR_UPER_ENCODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		7908  /**/
 #define asn1SccWrappers_geometry_Spline_REQUIRED_BYTES_FOR_ENCODING       5224 
 #define asn1SccWrappers_geometry_Spline_REQUIRED_BITS_FOR_ENCODING        41787
 
 flag asn1SccWrappers_geometry_Spline_Encode(const asn1SccWrappers_geometry_Spline* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE		7843  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		7770  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		7781  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		7792  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		7803  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7819  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		7814  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7837  /**/
-#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		7832  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE		7920  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_GEOMETRIC_RESOLUTION_2		7847  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_DIMENSION_2		7858  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_CURVE_ORDER_2		7869  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KIND_2		7880  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS		7896  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_KNOTS_ELM_2		7891  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES		7914  /**/
+#define ERR_UPER_DECODE_WRAPPERS_GEOMETRY_SPLINE_VERTICES_ELM_2		7909  /**/
 flag asn1SccWrappers_geometry_Spline_Decode(asn1SccWrappers_geometry_Spline* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Trajectory --------------------------------------------*/
 
 typedef struct {
     asn1SccT_Double speed;
     asn1SccWrappers_geometry_Spline spline;
+
 } asn1SccBase_Trajectory;
 
 flag asn1SccBase_Trajectory_Equal(const asn1SccBase_Trajectory* pVal1, const asn1SccBase_Trajectory* pVal2);
 
 void asn1SccBase_Trajectory_Initialize(asn1SccBase_Trajectory* pVal);
 
-#define ERR_BASE_TRAJECTORY_SPEED		1057  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_GEOMETRIC_RESOLUTION		1068  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_DIMENSION		1079  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_CURVE_ORDER		1090  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_KIND		1101  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_KNOTS_ELM		1112  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_KNOTS		1123  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_VERTICES_ELM		1130  /**/
-#define ERR_BASE_TRAJECTORY_SPLINE_VERTICES		1141  /**/
+#define ERR_BASE_TRAJECTORY_SPEED		1134  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_GEOMETRIC_RESOLUTION		1145  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_DIMENSION		1156  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_CURVE_ORDER		1167  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_KIND		1178  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_KNOTS_ELM		1189  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_KNOTS		1200  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_VERTICES_ELM		1207  /**/
+#define ERR_BASE_TRAJECTORY_SPLINE_VERTICES		1218  /**/
 flag asn1SccBase_Trajectory_IsConstraintValid(const asn1SccBase_Trajectory* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_TRAJECTORY		1158  /**/
-#define ERR_UPER_ENCODE_BASE_TRAJECTORY_SPEED_2		1064  /**/
-#define ERR_UPER_ENCODE_BASE_TRAJECTORY_SPLINE_2		1154  /**/
+#define ERR_UPER_ENCODE_BASE_TRAJECTORY		1235  /**/
+#define ERR_UPER_ENCODE_BASE_TRAJECTORY_SPEED_2		1141  /**/
+#define ERR_UPER_ENCODE_BASE_TRAJECTORY_SPLINE_2		1231  /**/
 #define asn1SccBase_Trajectory_REQUIRED_BYTES_FOR_ENCODING       5237 
 #define asn1SccBase_Trajectory_REQUIRED_BITS_FOR_ENCODING        41891
 
 flag asn1SccBase_Trajectory_Encode(const asn1SccBase_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_TRAJECTORY		1159  /**/
-#define ERR_UPER_DECODE_BASE_TRAJECTORY_SPEED_2		1065  /**/
-#define ERR_UPER_DECODE_BASE_TRAJECTORY_SPLINE_2		1155  /**/
+#define ERR_UPER_DECODE_BASE_TRAJECTORY		1236  /**/
+#define ERR_UPER_DECODE_BASE_TRAJECTORY_SPEED_2		1142  /**/
+#define ERR_UPER_DECODE_BASE_TRAJECTORY_SPLINE_2		1232  /**/
 flag asn1SccBase_Trajectory_Decode(asn1SccBase_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_Trajectory_m --------------------------------------------*/
 
 typedef struct {
     asn1SccT_Double speed;
     asn1SccWrappers_geometry_Spline spline;
+
 } asn1SccBase_Trajectory_m;
 
 flag asn1SccBase_Trajectory_m_Equal(const asn1SccBase_Trajectory_m* pVal1, const asn1SccBase_Trajectory_m* pVal2);
 
 void asn1SccBase_Trajectory_m_Initialize(asn1SccBase_Trajectory_m* pVal);
 
-#define ERR_BASE_TRAJECTORY_M_SPEED		7848  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_GEOMETRIC_RESOLUTION		7859  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_DIMENSION		7870  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_CURVE_ORDER		7881  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_KIND		7892  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS_ELM		7903  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS		7914  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES_ELM		7921  /**/
-#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES		7932  /**/
+#define ERR_BASE_TRAJECTORY_M_SPEED		7925  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_GEOMETRIC_RESOLUTION		7936  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_DIMENSION		7947  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_CURVE_ORDER		7958  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_KIND		7969  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS_ELM		7980  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_KNOTS		7991  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES_ELM		7998  /**/
+#define ERR_BASE_TRAJECTORY_M_SPLINE_VERTICES		8009  /**/
 flag asn1SccBase_Trajectory_m_IsConstraintValid(const asn1SccBase_Trajectory_m* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_TRAJECTORY_M		7949  /**/
-#define ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPEED_2		7855  /**/
-#define ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPLINE_2		7945  /**/
+#define ERR_UPER_ENCODE_BASE_TRAJECTORY_M		8026  /**/
+#define ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPEED_2		7932  /**/
+#define ERR_UPER_ENCODE_BASE_TRAJECTORY_M_SPLINE_2		8022  /**/
 #define asn1SccBase_Trajectory_m_REQUIRED_BYTES_FOR_ENCODING       5237 
 #define asn1SccBase_Trajectory_m_REQUIRED_BITS_FOR_ENCODING        41891
 
 flag asn1SccBase_Trajectory_m_Encode(const asn1SccBase_Trajectory_m* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_TRAJECTORY_M		7950  /**/
-#define ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPEED_2		7856  /**/
-#define ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPLINE_2		7946  /**/
+#define ERR_UPER_DECODE_BASE_TRAJECTORY_M		8027  /**/
+#define ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPEED_2		7933  /**/
+#define ERR_UPER_DECODE_BASE_TRAJECTORY_M_SPLINE_2		8023  /**/
 flag asn1SccBase_Trajectory_m_Decode(asn1SccBase_Trajectory_m* pVal, BitStream* pBitStrm, int* pErrCode);
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccBase_Trajectory_m arr[200];
 } asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory;
@@ -3362,27 +3594,27 @@ flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_Equal(const asn
 
 void asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_Initialize(asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory* pVal);
 
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPEED		411  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_GEOMETRIC_RESOLUTION		422  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_DIMENSION		433  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_CURVE_ORDER		444  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KIND		455  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KNOTS_ELM		466  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KNOTS		477  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_VERTICES_ELM		484  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_VERTICES		495  /**/
-#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		522  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPEED		488  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_GEOMETRIC_RESOLUTION		499  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_DIMENSION		510  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_CURVE_ORDER		521  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KIND		532  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KNOTS_ELM		543  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_KNOTS		554  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_VERTICES_ELM		561  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_SPLINE_VERTICES		572  /**/
+#define ERR_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		599  /**/
 flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_IsConstraintValid(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		523  /**/
-#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		518  /**/
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		600  /**/
+#define ERR_UPER_ENCODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		595  /**/
 #define asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_REQUIRED_BYTES_FOR_ENCODING       1047276 
 #define asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_REQUIRED_BITS_FOR_ENCODING        8378208
 
 flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_Encode(const asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		524  /**/
-#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		519  /**/
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY		601  /**/
+#define ERR_UPER_DECODE_STD_OROGEN_TYPEKITS_MTYPE_STD_VECTOR_BASE_TRAJECTORY_ELM_2		596  /**/
 flag asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory_Decode(asn1SccStd_orogen_typekits_mtype_std_vector_base_Trajectory* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccUint asn1SccT_UInt32;
 
@@ -3402,28 +3634,67 @@ flag asn1SccT_UInt32_Encode(const asn1SccT_UInt32* pVal, BitStream* pBitStrm, in
 
 #define ERR_UPER_DECODE_T_UINT32		8041  /**/
 flag asn1SccT_UInt32_Decode(asn1SccT_UInt32* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccT_Time --------------------------------------------*/
 
-typedef struct {    int nCount; 
+typedef struct {
+    asn1SccT_UInt32 secs;
+    asn1SccT_UInt32 nsecs;
+
+} asn1SccT_Time;
+
+flag asn1SccT_Time_Equal(const asn1SccT_Time* pVal1, const asn1SccT_Time* pVal2);
+
+void asn1SccT_Time_Initialize(asn1SccT_Time* pVal);
+
+#define ERR_T_TIME_SECS		50  /**/
+#define ERR_T_TIME_NSECS		61  /**/
+flag asn1SccT_Time_IsConstraintValid(const asn1SccT_Time* pVal, int* pErrCode);
+
+#define ERR_UPER_ENCODE_T_TIME		72  /**/
+#define ERR_UPER_ENCODE_T_TIME_SECS_2		57  /**/
+#define ERR_UPER_ENCODE_T_TIME_NSECS_2		68  /**/
+#define asn1SccT_Time_REQUIRED_BYTES_FOR_ENCODING       8 
+#define asn1SccT_Time_REQUIRED_BITS_FOR_ENCODING        64
+
+flag asn1SccT_Time_Encode(const asn1SccT_Time* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+
+#define ERR_UPER_DECODE_T_TIME		73  /**/
+#define ERR_UPER_DECODE_T_TIME_SECS_2		58  /**/
+#define ERR_UPER_DECODE_T_TIME_NSECS_2		69  /**/
+flag asn1SccT_Time_Decode(asn1SccT_Time* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_DepthMap --------------------------------------------*/
+
+
+typedef struct {
+    int nCount; 
     
     asn1SccBase_Time arr[200];
 } asn1SccBase_samples_DepthMap_timestamps;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Double arr[200];
 } asn1SccBase_samples_DepthMap_vertical_interval;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Double arr[200];
 } asn1SccBase_samples_DepthMap_horizontal_interval;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Float arr[200];
 } asn1SccBase_samples_DepthMap_distances;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Float arr[200];
 } asn1SccBase_samples_DepthMap_remissions;
@@ -3439,6 +3710,7 @@ typedef struct {
     asn1SccT_UInt32 horizontal_size;
     asn1SccBase_samples_DepthMap_distances distances;
     asn1SccBase_samples_DepthMap_remissions remissions;
+
 } asn1SccBase_samples_DepthMap;
 
 flag asn1SccBase_samples_DepthMap_timestamps_Equal(const asn1SccBase_samples_DepthMap_timestamps* pVal1, const asn1SccBase_samples_DepthMap_timestamps* pVal2);
@@ -3460,68 +3732,73 @@ void asn1SccBase_samples_DepthMap_distances_Initialize(asn1SccBase_samples_Depth
 void asn1SccBase_samples_DepthMap_remissions_Initialize(asn1SccBase_samples_DepthMap_remissions* pVal);
 void asn1SccBase_samples_DepthMap_Initialize(asn1SccBase_samples_DepthMap* pVal);
 
-#define ERR_BASE_SAMPLES_DEPTHMAP_TIME_MICROSECONDS		3173  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_MICROSECONDS		3194  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		3215  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION		3222  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION		3233  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM		3244  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		3255  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM		3262  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		3273  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE		3280  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE		3291  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM		3302  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES		3313  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM		3320  /**/
-#define ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS		3331  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_TIME_MICROSECONDS		3250  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_MICROSECONDS		3271  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		3292  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION		3299  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION		3310  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM		3321  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		3332  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM		3339  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		3350  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE		3357  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE		3368  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM		3379  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_DISTANCES		3390  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM		3397  /**/
+#define ERR_BASE_SAMPLES_DEPTHMAP_REMISSIONS		3408  /**/
 flag asn1SccBase_samples_DepthMap_IsConstraintValid(const asn1SccBase_samples_DepthMap* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP		3338  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIME_2		3190  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		3216  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		3211  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		3229  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		3240  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		3256  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		3251  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		3274  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		3269  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		3287  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		3298  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		3314  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		3309  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		3332  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		3327  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP		3415  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIME_2		3267  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		3293  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		3288  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		3306  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		3317  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		3333  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		3328  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		3351  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		3346  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		3364  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		3375  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		3391  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		3386  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		3409  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		3404  /**/
 #define asn1SccBase_samples_DepthMap_REQUIRED_BYTES_FOR_ENCODING       12022 
 #define asn1SccBase_samples_DepthMap_REQUIRED_BITS_FOR_ENCODING        96170
 
 flag asn1SccBase_samples_DepthMap_Encode(const asn1SccBase_samples_DepthMap* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP		3339  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIME_2		3191  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		3217  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		3212  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		3230  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		3241  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		3257  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		3252  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		3275  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		3270  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		3288  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		3299  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		3315  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		3310  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		3333  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		3328  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP		3416  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIME_2		3268  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS		3294  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_TIMESTAMPS_ELM_2		3289  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_PROJECTION_2		3307  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_PROJECTION_2		3318  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL		3334  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_INTERVAL_ELM_2		3329  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL		3352  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_INTERVAL_ELM_2		3347  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_VERTICAL_SIZE_2		3365  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_HORIZONTAL_SIZE_2		3376  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES		3392  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_DISTANCES_ELM_2		3387  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS		3410  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_DEPTHMAP_REMISSIONS_ELM_2		3405  /**/
 flag asn1SccBase_samples_DepthMap_Decode(asn1SccBase_samples_DepthMap* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_LaserScan --------------------------------------------*/
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_UInt32 arr[200];
 } asn1SccBase_samples_LaserScan_ranges;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Float arr[200];
 } asn1SccBase_samples_LaserScan_remission;
@@ -3535,6 +3812,7 @@ typedef struct {
     asn1SccT_UInt32 minrange;
     asn1SccT_UInt32 maxrange;
     asn1SccBase_samples_LaserScan_remission remission;
+
 } asn1SccBase_samples_LaserScan;
 
 flag asn1SccBase_samples_LaserScan_ranges_Equal(const asn1SccBase_samples_LaserScan_ranges* pVal1, const asn1SccBase_samples_LaserScan_ranges* pVal2);
@@ -3547,58 +3825,65 @@ void asn1SccBase_samples_LaserScan_ranges_Initialize(asn1SccBase_samples_LaserSc
 void asn1SccBase_samples_LaserScan_remission_Initialize(asn1SccBase_samples_LaserScan_remission* pVal);
 void asn1SccBase_samples_LaserScan_Initialize(asn1SccBase_samples_LaserScan* pVal);
 
-#define ERR_BASE_SAMPLES_LASERSCAN_TIME_MICROSECONDS		3576  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_START_ANGLE		3597  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION		3608  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_SPEED		3619  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_RANGES_ELM		3630  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_RANGES		3641  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_MINRANGE		3648  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_MAXRANGE		3659  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_REMISSION_ELM		3670  /**/
-#define ERR_BASE_SAMPLES_LASERSCAN_REMISSION		3681  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_TIME_MICROSECONDS		3653  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_START_ANGLE		3674  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION		3685  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_SPEED		3696  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_RANGES_ELM		3707  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_RANGES		3718  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_MINRANGE		3725  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_MAXRANGE		3736  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_REMISSION_ELM		3747  /**/
+#define ERR_BASE_SAMPLES_LASERSCAN_REMISSION		3758  /**/
 flag asn1SccBase_samples_LaserScan_IsConstraintValid(const asn1SccBase_samples_LaserScan* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN		3688  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_TIME_2		3593  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		3604  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		3615  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_SPEED_2		3626  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES		3642  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		3637  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		3655  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		3666  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION		3682  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		3677  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN		3765  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_TIME_2		3670  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		3681  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		3692  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_SPEED_2		3703  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES		3719  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		3714  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		3732  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		3743  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION		3759  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		3754  /**/
 #define asn1SccBase_samples_LaserScan_REQUIRED_BYTES_FOR_ENCODING       3457 
 #define asn1SccBase_samples_LaserScan_REQUIRED_BITS_FOR_ENCODING        27656
 
 flag asn1SccBase_samples_LaserScan_Encode(const asn1SccBase_samples_LaserScan* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN		3689  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_TIME_2		3594  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		3605  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		3616  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_SPEED_2		3627  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES		3643  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		3638  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		3656  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		3667  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION		3683  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		3678  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN		3766  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_TIME_2		3671  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_START_ANGLE_2		3682  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_ANGULAR_RESOLUTION_2		3693  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_SPEED_2		3704  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES		3720  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_RANGES_ELM_2		3715  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MINRANGE_2		3733  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_MAXRANGE_2		3744  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION		3760  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_LASERSCAN_REMISSION_ELM_2		3755  /**/
 flag asn1SccBase_samples_LaserScan_Decode(asn1SccBase_samples_LaserScan* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_Sonar --------------------------------------------*/
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccBase_Time arr[200];
 } asn1SccBase_samples_Sonar_timestamps;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccBase_Angle arr[200];
 } asn1SccBase_samples_Sonar_bearings;
 
-typedef struct {    int nCount; 
+
+typedef struct {
+    int nCount; 
     
     asn1SccT_Float arr[200];
 } asn1SccBase_samples_Sonar_bins;
@@ -3614,6 +3899,7 @@ typedef struct {
     asn1SccT_UInt32 bin_count;
     asn1SccT_UInt32 beam_count;
     asn1SccBase_samples_Sonar_bins bins;
+
 } asn1SccBase_samples_Sonar;
 
 flag asn1SccBase_samples_Sonar_timestamps_Equal(const asn1SccBase_samples_Sonar_timestamps* pVal1, const asn1SccBase_samples_Sonar_timestamps* pVal2);
@@ -3629,63 +3915,66 @@ void asn1SccBase_samples_Sonar_bearings_Initialize(asn1SccBase_samples_Sonar_bea
 void asn1SccBase_samples_Sonar_bins_Initialize(asn1SccBase_samples_Sonar_bins* pVal);
 void asn1SccBase_samples_Sonar_Initialize(asn1SccBase_samples_Sonar* pVal);
 
-#define ERR_BASE_SAMPLES_SONAR_TIME_MICROSECONDS		4075  /**/
-#define ERR_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_MICROSECONDS		4096  /**/
-#define ERR_BASE_SAMPLES_SONAR_TIMESTAMPS		4117  /**/
-#define ERR_BASE_SAMPLES_SONAR_BIN_DURATION_MICROSECONDS		4124  /**/
-#define ERR_BASE_SAMPLES_SONAR_BEAM_WIDTH_RAD		4145  /**/
-#define ERR_BASE_SAMPLES_SONAR_BEAM_HEIGHT_RAD		4166  /**/
-#define ERR_BASE_SAMPLES_SONAR_BEARINGS_ELM_RAD		4187  /**/
-#define ERR_BASE_SAMPLES_SONAR_BEARINGS		4208  /**/
-#define ERR_BASE_SAMPLES_SONAR_SPEED_OF_SOUND		4215  /**/
-#define ERR_BASE_SAMPLES_SONAR_BIN_COUNT		4226  /**/
-#define ERR_BASE_SAMPLES_SONAR_BEAM_COUNT		4237  /**/
-#define ERR_BASE_SAMPLES_SONAR_BINS_ELM		4248  /**/
-#define ERR_BASE_SAMPLES_SONAR_BINS		4259  /**/
+#define ERR_BASE_SAMPLES_SONAR_TIME_MICROSECONDS		4152  /**/
+#define ERR_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_MICROSECONDS		4173  /**/
+#define ERR_BASE_SAMPLES_SONAR_TIMESTAMPS		4194  /**/
+#define ERR_BASE_SAMPLES_SONAR_BIN_DURATION_MICROSECONDS		4201  /**/
+#define ERR_BASE_SAMPLES_SONAR_BEAM_WIDTH_RAD		4222  /**/
+#define ERR_BASE_SAMPLES_SONAR_BEAM_HEIGHT_RAD		4243  /**/
+#define ERR_BASE_SAMPLES_SONAR_BEARINGS_ELM_RAD		4264  /**/
+#define ERR_BASE_SAMPLES_SONAR_BEARINGS		4285  /**/
+#define ERR_BASE_SAMPLES_SONAR_SPEED_OF_SOUND		4292  /**/
+#define ERR_BASE_SAMPLES_SONAR_BIN_COUNT		4303  /**/
+#define ERR_BASE_SAMPLES_SONAR_BEAM_COUNT		4314  /**/
+#define ERR_BASE_SAMPLES_SONAR_BINS_ELM		4325  /**/
+#define ERR_BASE_SAMPLES_SONAR_BINS		4336  /**/
 flag asn1SccBase_samples_Sonar_IsConstraintValid(const asn1SccBase_samples_Sonar* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR		4266  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIME_2		4092  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS		4118  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		4113  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		4141  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		4162  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		4183  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS		4209  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		4204  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		4222  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		4233  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		4244  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS		4260  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS_ELM_2		4255  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR		4343  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIME_2		4169  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS		4195  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		4190  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		4218  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		4239  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		4260  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS		4286  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		4281  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		4299  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		4310  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		4321  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS		4337  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONAR_BINS_ELM_2		4332  /**/
 #define asn1SccBase_samples_Sonar_REQUIRED_BYTES_FOR_ENCODING       6866 
 #define asn1SccBase_samples_Sonar_REQUIRED_BITS_FOR_ENCODING        54928
 
 flag asn1SccBase_samples_Sonar_Encode(const asn1SccBase_samples_Sonar* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR		4267  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIME_2		4093  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS		4119  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		4114  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		4142  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		4163  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		4184  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS		4210  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		4205  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		4223  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		4234  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		4245  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS		4261  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS_ELM_2		4256  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR		4344  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIME_2		4170  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS		4196  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_TIMESTAMPS_ELM_2		4191  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_DURATION_2		4219  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_WIDTH_2		4240  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_HEIGHT_2		4261  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS		4287  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEARINGS_ELM_2		4282  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_SPEED_OF_SOUND_2		4300  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BIN_COUNT_2		4311  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BEAM_COUNT_2		4322  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS		4338  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONAR_BINS_ELM_2		4333  /**/
 flag asn1SccBase_samples_Sonar_Decode(asn1SccBase_samples_Sonar* pVal, BitStream* pBitStrm, int* pErrCode);
-
+/*-- asn1SccBase_samples_frame_Frame --------------------------------------------*/
 typedef struct {
     int nCount; 
     
     byte arr[200];
 } asn1SccBase_samples_frame_Frame_image;
 
-typedef struct {    int nCount; 
+
+
+typedef struct {
+    int nCount; 
     
     asn1SccBase_samples_frame_frame_attrib_t arr[200];
 } asn1SccBase_samples_frame_Frame_attributes;
@@ -3701,6 +3990,7 @@ typedef struct {
     asn1SccT_UInt32 row_size;
     asn1SccBase_samples_frame_frame_mode_t frame_mode;
     asn1SccBase_samples_frame_frame_status_t frame_status;
+
 } asn1SccBase_samples_frame_Frame;
 
 flag asn1SccBase_samples_frame_Frame_image_Equal(const asn1SccBase_samples_frame_Frame_image* pVal1, const asn1SccBase_samples_frame_Frame_image* pVal2);
@@ -3713,135 +4003,111 @@ void asn1SccBase_samples_frame_Frame_image_Initialize(asn1SccBase_samples_frame_
 void asn1SccBase_samples_frame_Frame_attributes_Initialize(asn1SccBase_samples_frame_Frame_attributes* pVal);
 void asn1SccBase_samples_frame_Frame_Initialize(asn1SccBase_samples_frame_Frame* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAME_TIME_MICROSECONDS		4911  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_MICROSECONDS		4932  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE		4953  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_DATA		4960  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_NAME_VAL		4971  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		4992  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_WIDTH		4999  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_HEIGHT		5010  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH		5031  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE		5042  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE		5053  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE		5064  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS		5075  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_TIME_MICROSECONDS		4988  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_MICROSECONDS		5009  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_IMAGE		5030  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_DATA		5037  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_NAME_VAL		5048  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		5069  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_WIDTH		5076  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_HEIGHT		5087  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH		5108  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE		5119  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE		5130  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE		5141  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS		5152  /**/
 flag asn1SccBase_samples_frame_Frame_IsConstraintValid(const asn1SccBase_samples_frame_Frame* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME		5086  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		4928  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		4949  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		4954  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		4993  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		4988  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		5027  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		5038  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		5049  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		5060  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		5071  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		5082  /**/
-#define asn1SccBase_samples_frame_Frame_REQUIRED_BYTES_FOR_ENCODING       80635 
-#define asn1SccBase_samples_frame_Frame_REQUIRED_BITS_FOR_ENCODING        645078
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME		5163  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		5005  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		5026  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		5031  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		5070  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		5065  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		5104  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		5115  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		5126  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		5137  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		5148  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		5159  /**/
+#define asn1SccBase_samples_frame_Frame_REQUIRED_BYTES_FOR_ENCODING       24535 
+#define asn1SccBase_samples_frame_Frame_REQUIRED_BITS_FOR_ENCODING        196278
 
 flag asn1SccBase_samples_frame_Frame_Encode(const asn1SccBase_samples_frame_Frame* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME		5087  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		4929  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		4950  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		4955  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		4994  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		4989  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		5028  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		5039  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		5050  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		5061  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		5072  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		5083  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME		5164  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_TIME_2		5006  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_RECEIVED_TIME_2		5027  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_IMAGE		5032  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES		5071  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ATTRIBUTES_ELM_2		5066  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_SIZE_VAL_2		5105  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_DATA_DEPTH_2		5116  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_PIXEL_SIZE_2		5127  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_ROW_SIZE_2		5138  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_MODE_2		5149  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAME_FRAME_STATUS_2		5160  /**/
 flag asn1SccBase_samples_frame_Frame_Decode(asn1SccBase_samples_frame_Frame* pVal, BitStream* pBitStrm, int* pErrCode);
+/*-- asn1SccBase_samples_frame_FramePair --------------------------------------------*/
 
 typedef struct {
     asn1SccBase_Time time;
     asn1SccBase_samples_frame_Frame first;
     asn1SccBase_samples_frame_Frame second;
     asn1SccT_UInt32 id;
+
 } asn1SccBase_samples_frame_FramePair;
 
 flag asn1SccBase_samples_frame_FramePair_Equal(const asn1SccBase_samples_frame_FramePair* pVal1, const asn1SccBase_samples_frame_FramePair* pVal2);
 
 void asn1SccBase_samples_frame_FramePair_Initialize(asn1SccBase_samples_frame_FramePair* pVal);
 
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_MICROSECONDS		5092  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_TIME_MICROSECONDS		5113  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_RECEIVED_TIME_MICROSECONDS		5134  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE		5155  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_DATA		5162  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_NAME_VAL		5173  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES		5194  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_WIDTH		5201  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_HEIGHT		5212  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_DATA_DEPTH		5233  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_PIXEL_SIZE		5244  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ROW_SIZE		5255  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_MODE		5266  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_STATUS		5277  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_TIME_MICROSECONDS		5298  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_RECEIVED_TIME_MICROSECONDS		5319  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE		5340  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_DATA		5347  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_NAME_VAL		5358  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES		5379  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_WIDTH		5386  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_HEIGHT		5397  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_DATA_DEPTH		5418  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_PIXEL_SIZE		5429  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ROW_SIZE		5440  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_MODE		5451  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_STATUS		5462  /**/
-#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID		5483  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_MICROSECONDS		5169  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_TIME_MICROSECONDS		5190  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_RECEIVED_TIME_MICROSECONDS		5211  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_IMAGE		5232  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_DATA		5239  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES_ELM_NAME_VAL		5250  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ATTRIBUTES		5271  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_WIDTH		5278  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_SIZE_VAL_HEIGHT		5289  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_DATA_DEPTH		5310  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_PIXEL_SIZE		5321  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_ROW_SIZE		5332  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_MODE		5343  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_FRAME_STATUS		5354  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_TIME_MICROSECONDS		5375  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_RECEIVED_TIME_MICROSECONDS		5396  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_IMAGE		5417  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_DATA		5424  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES_ELM_NAME_VAL		5435  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ATTRIBUTES		5456  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_WIDTH		5463  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_SIZE_VAL_HEIGHT		5474  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_DATA_DEPTH		5495  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_PIXEL_SIZE		5506  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_ROW_SIZE		5517  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_MODE		5528  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_FRAME_STATUS		5539  /**/
+#define ERR_BASE_SAMPLES_FRAME_FRAMEPAIR_ID		5560  /**/
 flag asn1SccBase_samples_frame_FramePair_IsConstraintValid(const asn1SccBase_samples_frame_FramePair* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR		5494  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		5109  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		5294  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		5479  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		5490  /**/
-#define asn1SccBase_samples_frame_FramePair_REQUIRED_BYTES_FOR_ENCODING       161282 
-#define asn1SccBase_samples_frame_FramePair_REQUIRED_BITS_FOR_ENCODING        1290252
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR		5571  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		5186  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		5371  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		5556  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		5567  /**/
+#define asn1SccBase_samples_frame_FramePair_REQUIRED_BYTES_FOR_ENCODING       49082 
+#define asn1SccBase_samples_frame_FramePair_REQUIRED_BITS_FOR_ENCODING        392652
 
 flag asn1SccBase_samples_frame_FramePair_Encode(const asn1SccBase_samples_frame_FramePair* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR		5495  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		5110  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		5295  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		5480  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		5491  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR		5572  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_TIME_2		5187  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_FIRST_2		5372  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_SECOND_2		5557  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_FRAME_FRAMEPAIR_ID_2		5568  /**/
 flag asn1SccBase_samples_frame_FramePair_Decode(asn1SccBase_samples_frame_FramePair* pVal, BitStream* pBitStrm, int* pErrCode);
-
-typedef struct {
-    asn1SccT_UInt32 sec;
-    asn1SccT_UInt32 nsec;
-} asn1SccT_Time;
-
-flag asn1SccT_Time_Equal(const asn1SccT_Time* pVal1, const asn1SccT_Time* pVal2);
-
-void asn1SccT_Time_Initialize(asn1SccT_Time* pVal);
-
-#define ERR_T_TIME_SEC		8004  /**/
-#define ERR_T_TIME_NSEC		8015  /**/
-flag asn1SccT_Time_IsConstraintValid(const asn1SccT_Time* pVal, int* pErrCode);
-
-#define ERR_UPER_ENCODE_T_TIME		8026  /**/
-#define ERR_UPER_ENCODE_T_TIME_SEC_2		8011  /**/
-#define ERR_UPER_ENCODE_T_TIME_NSEC_2		8022  /**/
-#define asn1SccT_Time_REQUIRED_BYTES_FOR_ENCODING       8 
-#define asn1SccT_Time_REQUIRED_BITS_FOR_ENCODING        64
-
-flag asn1SccT_Time_Encode(const asn1SccT_Time* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-
-#define ERR_UPER_DECODE_T_TIME		8027  /**/
-#define ERR_UPER_DECODE_T_TIME_SEC_2		8012  /**/
-#define ERR_UPER_DECODE_T_TIME_NSEC_2		8023  /**/
-flag asn1SccT_Time_Decode(asn1SccT_Time* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccT_UInt32 asn1SccDummyBase_T;
 
 
@@ -3860,23 +4126,23 @@ flag asn1SccDummyBase_T_Encode(const asn1SccDummyBase_T* pVal, BitStream* pBitSt
 
 #define ERR_UPER_DECODE_DUMMYBASE_T_2		8075  /**/
 flag asn1SccDummyBase_T_Decode(asn1SccDummyBase_T* pVal, BitStream* pBitStrm, int* pErrCode);
-typedef asn1SccT_UInt32 asn1SccDummy2Base_T;
+typedef asn1SccDummyBase_T asn1SccDummy2Base_T;
 
 
 flag asn1SccDummy2Base_T_Equal(const asn1SccDummy2Base_T* pVal1, const asn1SccDummy2Base_T* pVal2);
 
 void asn1SccDummy2Base_T_Initialize(asn1SccDummy2Base_T* pVal);
 
-#define ERR_DUMMY2BASE_T		1  /**/
+#define ERR_DUMMY2BASE_T		78  /**/
 flag asn1SccDummy2Base_T_IsConstraintValid(const asn1SccDummy2Base_T* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_DUMMY2BASE_T_2_2		12  /**/
+#define ERR_UPER_ENCODE_DUMMY2BASE_T_2_2		89  /**/
 #define asn1SccDummy2Base_T_REQUIRED_BYTES_FOR_ENCODING       4 
 #define asn1SccDummy2Base_T_REQUIRED_BITS_FOR_ENCODING        32
 
 flag asn1SccDummy2Base_T_Encode(const asn1SccDummy2Base_T* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_DUMMY2BASE_T_2_2		13  /**/
+#define ERR_UPER_DECODE_DUMMY2BASE_T_2_2		90  /**/
 flag asn1SccDummy2Base_T_Decode(asn1SccDummy2Base_T* pVal, BitStream* pBitStrm, int* pErrCode);
 typedef asn1SccSint asn1SccT_Int8;
 
@@ -3932,14 +4198,17 @@ flag asn1SccT_Boolean_Encode(const asn1SccT_Boolean* pVal, BitStream* pBitStrm, 
 
 #define ERR_UPER_DECODE_T_BOOLEAN		8062  /**/
 flag asn1SccT_Boolean_Decode(asn1SccT_Boolean* pVal, BitStream* pBitStrm, int* pErrCode);
-
+/*-- asn1SccBase_samples_SonarScan --------------------------------------------*/
 typedef struct {
     int nCount; 
     
     byte arr[200];
 } asn1SccBase_samples_SonarScan_data;
 
-typedef struct {    int nCount; 
+
+
+typedef struct {
+    int nCount; 
     
     asn1SccBase_Time arr[200];
 } asn1SccBase_samples_SonarScan_time_beams;
@@ -3958,6 +4227,7 @@ typedef struct {
     asn1SccBase_Angle beamwidth_vertical;
     asn1SccT_Boolean memory_layout_column;
     asn1SccT_Boolean polar_coordinates;
+
 } asn1SccBase_samples_SonarScan;
 
 flag asn1SccBase_samples_SonarScan_data_Equal(const asn1SccBase_samples_SonarScan_data* pVal1, const asn1SccBase_samples_SonarScan_data* pVal2);
@@ -3970,57 +4240,57 @@ void asn1SccBase_samples_SonarScan_data_Initialize(asn1SccBase_samples_SonarScan
 void asn1SccBase_samples_SonarScan_time_beams_Initialize(asn1SccBase_samples_SonarScan_time_beams* pVal);
 void asn1SccBase_samples_SonarScan_Initialize(asn1SccBase_samples_SonarScan* pVal);
 
-#define ERR_BASE_SAMPLES_SONARSCAN_TIME_MICROSECONDS		4371  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_DATA		4392  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_MICROSECONDS		4399  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4420  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS		4427  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS		4438  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_START_BEARING_RAD		4449  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_RAD		4470  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL		4491  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND		4502  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_RAD		4513  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_RAD		4534  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN		4555  /**/
-#define ERR_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES		4566  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_TIME_MICROSECONDS		4448  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_DATA		4469  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_MICROSECONDS		4476  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4497  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS		4504  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS		4515  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_START_BEARING_RAD		4526  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_RAD		4547  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL		4568  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND		4579  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_RAD		4590  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_RAD		4611  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN		4632  /**/
+#define ERR_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES		4643  /**/
 flag asn1SccBase_samples_SonarScan_IsConstraintValid(const asn1SccBase_samples_SonarScan* pVal, int* pErrCode);
 
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN		4577  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_2		4388  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_DATA		4393  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4421  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		4416  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		4434  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		4445  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		4466  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		4487  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		4498  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		4509  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		4530  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		4551  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		4562  /**/
-#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		4573  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN		4654  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_2		4465  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_DATA		4470  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4498  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		4493  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		4511  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		4522  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		4543  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		4564  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		4575  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		4586  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		4607  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		4628  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		4639  /**/
+#define ERR_UPER_ENCODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		4650  /**/
 #define asn1SccBase_samples_SonarScan_REQUIRED_BYTES_FOR_ENCODING       1893 
 #define asn1SccBase_samples_SonarScan_REQUIRED_BITS_FOR_ENCODING        15138
 
 flag asn1SccBase_samples_SonarScan_Encode(const asn1SccBase_samples_SonarScan* pVal, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN		4578  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_2		4389  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_DATA		4394  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4422  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		4417  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		4435  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		4446  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		4467  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		4488  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		4499  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		4510  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		4531  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		4552  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		4563  /**/
-#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		4574  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN		4655  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_2		4466  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_DATA		4471  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS		4499  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_TIME_BEAMS_ELM_2		4494  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BEAMS_2		4512  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_NUMBER_OF_BINS_2		4523  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_START_BEARING_2		4544  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_ANGULAR_RESOLUTION_2		4565  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SAMPLING_INTERVAL_2		4576  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_SPEED_OF_SOUND_2		4587  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_HORIZONTAL_2		4608  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_BEAMWIDTH_VERTICAL_2		4629  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_MEMORY_LAYOUT_COLUMN_2		4640  /**/
+#define ERR_UPER_DECODE_BASE_SAMPLES_SONARSCAN_POLAR_COORDINATES_2		4651  /**/
 flag asn1SccBase_samples_SonarScan_Decode(asn1SccBase_samples_SonarScan* pVal, BitStream* pBitStrm, int* pErrCode);
 
 extern const asn1SccT_UInt32 numT_String;
