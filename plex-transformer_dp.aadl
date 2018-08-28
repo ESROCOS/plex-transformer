@@ -11,11 +11,11 @@ PUBLIC
 WITH Taste;
 WITH Deployment;
 WITH TASTE_DV_Properties;
-PROCESS x86_partition
-END x86_partition;
+PROCESS gr740_partition
+END gr740_partition;
 
-PROCESS IMPLEMENTATION x86_partition.others
-END x86_partition.others;
+PROCESS IMPLEMENTATION gr740_partition.others
+END gr740_partition.others;
 
 END deploymentview::DV::Node1;
 
@@ -25,7 +25,7 @@ PUBLIC
 WITH interfaceview::IV::Transformer;
 WITH interfaceview::IV::dummyconsumer;
 WITH interfaceview::IV::dummyproducer;
-WITH ocarina_processors_x86;
+WITH ocarina_processors_leon;
 WITH deploymentview::DV::Node1;
 WITH Taste;
 WITH Deployment;
@@ -45,18 +45,18 @@ SUBCOMPONENTS
   IV_dummyproducer : SYSTEM interfaceview::IV::dummyproducer::dummyproducer.others {
     Taste::FunctionName => "dummyproducer";
   };
-  x86_partition : PROCESS deploymentview::DV::Node1::x86_partition.others {
-    Taste::coordinates => "99303 107157 206016 176151";
+  gr740_partition : PROCESS deploymentview::DV::Node1::gr740_partition.others {
+    Taste::coordinates => "106578 114224 210766 178218";
     Deployment::Port_Number => 0;
   };
-  x86_linux : PROCESSOR ocarina_processors_x86::x86.linux {
-    Taste::coordinates => "85964 87445 219355 186007";
+  gr740_rtems51_posix : PROCESSOR ocarina_processors_leon::gr740.rtems51_posix {
+    Taste::coordinates => "93554 95940 223789 187360";
   };
 PROPERTIES
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_Transformer;
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_dummyconsumer;
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_dummyproducer;
-  Actual_Processor_Binding => (reference (x86_linux)) APPLIES TO x86_partition;
+  Taste::APLC_Binding => (reference (gr740_partition)) APPLIES TO IV_Transformer;
+  Taste::APLC_Binding => (reference (gr740_partition)) APPLIES TO IV_dummyconsumer;
+  Taste::APLC_Binding => (reference (gr740_partition)) APPLIES TO IV_dummyproducer;
+  Actual_Processor_Binding => (reference (gr740_rtems51_posix)) APPLIES TO gr740_partition;
 END Node1.others;
 
 SYSTEM deploymentview
@@ -65,7 +65,7 @@ END deploymentview;
 SYSTEM IMPLEMENTATION deploymentview.others
 SUBCOMPONENTS
   Node1 : SYSTEM Node1.others {
-    Taste::coordinates => "69290 59285 236029 200087";
+    Taste::coordinates => "77275 69820 240068 200420";
   };
   interfaceview : SYSTEM interfaceview::IV::interfaceview.others;
 END deploymentview.others;
@@ -74,6 +74,6 @@ PROPERTIES
   Taste::coordinates => "0 0 297000 210000";
   Taste::version => "2.0";
   Taste::interfaceView => "plex-transformer_iv.aadl";
-  Taste::HWLibraries => ("../../tool-inst/share/ocarina/AADLv2/ocarina_components.aadl");
+  Taste::HWLibraries => ("../../../tool-inst/share/ocarina/AADLv2/ocarina_components.aadl");
 END deploymentview::DV;
 
