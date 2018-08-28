@@ -15,5 +15,6 @@ void dummyconsumer_PI_consumeDummy(const asn1SccBase_samples_RigidBodyState *IN_
 {
   //base::Vector3d t;
   //asn1Scc_Vector3d_fromAsn1(t, IN_pose->position);
+  std::cout << "x: " << IN_pose->position.data.arr[0] << " y: " << IN_pose->position.data.arr[1] << " z: " << IN_pose->position.data.arr[2] << "\n";
 }
 
