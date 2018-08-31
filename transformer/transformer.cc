@@ -133,6 +133,9 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   Eigen::Matrix4d toWorld;
   bool gotTransform = TF.getTransform("camera_1","world",toWorld);
 
+  if (!gotTransform)
+	return;
+
   // multiply t1 * t0 to get pose in world frame
 
   Eigen::Matrix4d globalPose = toWorld * inPose;
