@@ -83,6 +83,12 @@ SUBCOMPONENTS
   compilerOption : DATA DataView::Taste_directive {
     Taste::FS_Default_Value => "compiler-option:""-DOROCOS_TARGET=gnulinux""";
   };
+  includeOrocos : DATA DataView::Taste_directive {
+    Taste::FS_Default_Value => "compiler-option:""-I/root/esrocos_workspace/install/include/orocos/""";
+  };
+  includeBoost : DATA DataView::Taste_directive {
+    Taste::FS_Default_Value => "compiler-option:""-I/root/esrocos_workspace/plex/transformer/boost_1_68_0/""";
+  };
 END Transformer.others;
 
 END interfaceview::IV::Transformer;
@@ -168,7 +174,7 @@ FEATURES
   PI_clock : PROVIDES SUBPROGRAM ACCESS interfaceview::IV::dummyproducer::PI_clock.others {
     Taste::coordinates => "45798 64499";
     Taste::RCMoperationKind => cyclic;
-    Taste::RCMperiod => 1000 ms;
+    Taste::RCMperiod => 500 ms;
     Taste::Deadline => 100 ms;
     Taste::InterfaceName => "clock";
   };

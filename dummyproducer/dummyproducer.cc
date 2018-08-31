@@ -41,23 +41,23 @@ void dummyproducer_startup()
 void dummyproducer_PI_clock()
 {
   static int i = 0;
-  //std::cout << "producer: clock tick " << i << std::endl;
-
-  double x = (i % 8) * 0.25 * M_PI;
-  setRot(x);
-
-  //std::cout << "rot matrix:\n" << r << std::endl;
-  base::Quaterniond q(r);
-
-  asn1Scc_Vector3d_toAsn1(robotPose.position, positions[i%8]);
-  asn1Scc_Quaterniond_toAsn1(robotPose.orientation, q);
-  
-  //std::cout << "producer: push robot pose" << std::endl;
-  dummyproducer_RI_robotPose(&robotPose);
-
-  i++;
+  std::cout << "producer: clock tick " << i << std::endl;
 
   if (i % 2 == 0) {
+    double x = ((i/2) % 8) * 0.25 * M_PI;
+    setRot(x);
+
+    //std::cout << "rot matrix:\n" << r << std::endl;
+    base::Quaterniond q(r);
+
+    asn1Scc_Vector3d_toAsn1(robotPose.position, positions[(i/2)%8]);
+    asn1Scc_Quaterniond_toAsn1(robotPose.orientation, q);
+  
+    std::cout << "producer: push robot pose" << std::endl;
+    dummyproducer_RI_robotPose(&robotPose);
+  }
+
+  if ((i-1) % 4 == 0) {
 
     Eigen::Matrix3d r1;
     r1 << 1,0,0,
@@ -76,5 +76,6 @@ void dummyproducer_PI_clock()
     dummyproducer_RI_relativeMarkerPose(&markerPose);  
   }
   
+  i++;
 }
 
