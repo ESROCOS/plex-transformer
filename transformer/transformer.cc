@@ -30,8 +30,20 @@ The following tree is modelled for testing.
 atf TF("world");
 asn1SccBase_samples_RigidBodyState OUT_pose;
 
-
 // EIGEN HELPER METHODS
+double dround(double x) // the functor we want to apply
+{ 
+  int i = (int)(x*10000.0);
+  double r = (double)i / 10000.0;
+  return r;
+}
+
+Eigen::Matrix4d roundElements(Eigen::Matrix4d m){
+  Eigen::Matrix4d n = m;
+  n = m.unaryExpr(&dround);
+  return n;
+}
+
 void to4d(Eigen::Matrix3d r, Eigen::Vector3d t, Eigen::Matrix4d & h){
 	
   h<< r(0,0), r(0,1), r(0,2), t[0],
@@ -88,7 +100,7 @@ void transformer_startup()
     
   //TF.printAdresses();
 
-//    std::cout << "transformer: tf tree setup success" << std::endl;
+  //std::cout << "transformer: tf tree setup success" << std::endl;
 }
 
 void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
@@ -110,13 +122,13 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
   to4d(r,t,pose);
   TF.updateTransform("odom",pose);
 
-//  std::cout << "transformer: updated robot pose" << std::endl;
-//  std::cout << pose << std::endl;
+  //std::cout << "transformer: updated robot pose" << std::endl;
+  //std::cout << roundElements(pose) << std::endl;
 }
 
 void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 {
-//  std::cout << "transformer: got marker pose" << std::endl;
+
   base::Vector3d t;
   base::Quaterniond q;
   Eigen::Matrix4d inPose;
@@ -129,9 +141,23 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   
   to4d(r,t,inPose);
 
+  //std::cout << "got marker pose" << std::endl;
+  //std::cout << roundElements(inPose) << std::endl;
+  
+  atf::Transformation odom, camera_fixture;
+
+  TF.getTransform("odom", odom);
+  TF.getTransform("camera_fixture", camera_fixture);
+
+  //std::cout << "camera_fixture\n" << roundElements(camera_fixture.atob()) <<  std::endl;
+  //std::cout << "odom\n" << roundElements(odom.atob()) << std::endl;
+
   // get current transform t1 from camera to world
   Eigen::Matrix4d toWorld;
   bool gotTransform = TF.getTransform("camera_1","world",toWorld);
+  
+  //std::cout << "manual toWorld (odom * camera_fixture):\n" << roundElements(odom.atob() * camera_fixture.atob()) << std::endl;
+  //std::cout << "calculated toWorld:\n" << roundElements(toWorld) << std::endl;
 
   if (!gotTransform)
 	return;
@@ -152,7 +178,7 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   asn1Scc_Quaterniond_toAsn1(OUT_pose.orientation, q);
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 
-//  std::cout << "transformer: calculated marker pose" << std::endl;
-//  std::cout << globalPose << std::endl;
+  //std::cout << "calculated marker pose (toWorld * inPose)" << std::endl;
+  //std::cout << roundElements(globalPose) << std::endl;
 }
 
