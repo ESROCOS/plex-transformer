@@ -75,6 +75,7 @@ FEATURES
 PROPERTIES
   Source_Language => (CPP);
   Taste::Active_Interfaces => any;
+  Source_Text => ("transformer.zip");
 END Transformer;
 
 SYSTEM IMPLEMENTATION Transformer.others
@@ -83,10 +84,10 @@ SUBCOMPONENTS
     Taste::FS_Default_Value => "compiler-option:""-DOROCOS_TARGET=gnulinux""";
   };
   includeOrocos : DATA DataView::Taste_directive {
-    Taste::FS_Default_Value => "compiler-option:""-I/root/esrocos_workspace/install/include/orocos/""";
+    Taste::FS_Default_Value => "compiler-option:""-I/home/taste/esrocos_workspace/install/include/orocos/""";
   };
   includeBoost : DATA DataView::Taste_directive {
-    Taste::FS_Default_Value => "compiler-option:""-I/root/esrocos_workspace/plex/transformer/boost_1_68_0/""";
+    Taste::FS_Default_Value => "compiler-option:""-I/home/taste/esrocos_workspace/plex/transformer/boost_1_68_0/""";
   };
 END Transformer.others;
 

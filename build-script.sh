@@ -65,8 +65,6 @@ SKELS="./"
 # Check if Dataview references existing files 
 mono $(which taste-extract-asn-from-design.exe) -i "$INTERFACEVIEW" -j /tmp/dv.asn
 
-cd "$SKELS" && rm -f transformer.zip && zip transformer transformer/* && cd $OLDPWD
-
 cd "$SKELS" && rm -f dummyconsumer.zip && zip dummyconsumer dummyconsumer/* && cd $OLDPWD
 
 cd "$SKELS" && rm -f dummyproducer.zip && zip dummyproducer dummyproducer/* && cd $OLDPWD
@@ -111,7 +109,7 @@ cd "$CWD" && assert-builder-ocarina.py \
 	--interfaceView "$INTERFACEVIEW" \
 	--deploymentView "$DEPLOYMENTVIEW" \
 	-o "$OUTPUTDIR" \
-	--subCPP transformer:"$SKELS"/transformer.zip \
+	--subCPP transformer:transformer.zip \
 	--subCPP dummyconsumer:"$SKELS"/dummyconsumer.zip \
 	--subCPP dummyproducer:"$SKELS"/dummyproducer.zip \
 	$ORCHESTRATOR_OPTIONS

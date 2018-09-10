@@ -9,6 +9,25 @@
 
 typedef esrocos::transformer::AcyclicTransformer<3> atf;
 
+void set_nonstandard_mode()
+{
+    uint32_t fsrVal;
+    uint32_t *fsrValPtr = &fsrVal;
+    __asm__(
+	"st %%fsr, [%0]"
+	:
+	: "r" (fsrValPtr)
+	: "memory"
+    );
+    fsrVal |= (1 << 22); // Set NS Bit
+    __asm__(
+        "ld [%0], %%fsr"
+        :
+        : "r" (fsrValPtr)
+	: "memory"
+    );
+}
+
 /*
 The following tree is modelled for testing.
 
@@ -31,25 +50,25 @@ atf TF("world");
 asn1SccBase_samples_RigidBodyState OUT_pose;
 
 // EIGEN HELPER METHODS
-double dround(double x) // the functor we want to apply
-{ 
-  int i = (int)(x*10000.0);
-  double r = (double)i / 10000.0;
-  return r;
-}
-
-Eigen::Matrix4d roundElements(Eigen::Matrix4d m){
-  Eigen::Matrix4d n = m;
-  n = m.unaryExpr(&dround);
-  return n;
-}
+//double dround(double x) // the functor we want to apply
+//{ 
+//  int i = (int)(x*10000.0);
+//  double r = (double)i / 10000.0;
+//  return r;
+//}
+//
+//Eigen::Matrix4d roundElements(Eigen::Matrix4d m){
+//  Eigen::Matrix4d n = m;
+//  n = m.unaryExpr(&dround);
+//  return n;
+//}
 
 void to4d(Eigen::Matrix3d r, Eigen::Vector3d t, Eigen::Matrix4d & h){
 	
   h<< r(0,0), r(0,1), r(0,2), t[0],
       r(1,0), r(1,1), r(1,2), t[1],
       r(2,0), r(2,1), r(2,2), t[2],
-          0,      0,      0,    1;
+          0.,      0.,      0.,    1.;
 }
 
 void split4d(Eigen::Matrix4d h, Eigen::Matrix3d & r, Eigen::Vector3d & t){
@@ -64,20 +83,21 @@ void split4d(Eigen::Matrix4d h, Eigen::Matrix3d & r, Eigen::Vector3d & t){
 
 void transformer_startup()
 {
+  set_nonstandard_mode();
   atf::Transformation odom, camera_fixture;
   atf::Frame world("world"),robot_base("robot_base"), camera_1("camera_1");
   Eigen::Matrix4d identity, fixture_init;
 
   // Matrices
-  identity << 1, 0, 0, 0,
-              0, 1, 0, 0,
-              0, 0, 1, 0,
-	      0, 0, 0, 1;
+  identity << 1., 0., 0., 0.,
+              0., 1., 0., 0.,
+              0., 0., 1., 0.,
+	      0., 0., 0., 1.;
 
-  fixture_init << 1, 0, 0, 0,
-	          0, 1, 0, 0,
-		  0, 0, 1, 1,
-		  0, 0, 0, 1;
+  fixture_init << 1., 0., 0., 0.,
+	          0., 1., 0., 0.,
+		  0., 0., 1., 1.,
+		  0., 0., 0., 1.;
 
   // TRANSFORMATIONS
   odom = atf::Transformation(robot_base,world,"odom");
@@ -105,6 +125,7 @@ void transformer_startup()
 
 void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 {
+  set_nonstandard_mode();
 //  std::cout << "transformer: got robot pose" << std::endl;
   // extract orientation / translation
   // write to matrix4f
@@ -128,6 +149,7 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 
 void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 {
+  set_nonstandard_mode();
 
   base::Vector3d t;
   base::Quaterniond q;
