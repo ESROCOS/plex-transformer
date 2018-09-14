@@ -6,6 +6,9 @@
 #include "base_support/OpaqueConversion.hpp"
 #include <Eigen/Core>
 #include <cstring>
+#include <iostream>
+
+#define DEBUG
 
 typedef esrocos::transformer::AcyclicTransformer<3> atf;
 
@@ -83,6 +86,7 @@ void split4d(Eigen::Matrix4d h, Eigen::Matrix3d & r, Eigen::Vector3d & t){
 void transformer_startup()
 {
   set_nonstandard_mode();
+  std::cout << "[transformer_startup] startup\n";
   atf::Transformation odom, camera_fixture;
   atf::Frame world("world"),robot_base("robot_base"), camera_1("camera_1");
   Eigen::Matrix4d identity, fixture_init;
@@ -134,6 +138,9 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
   // extract orientation / translation
   asn1Scc_Vector3d_fromAsn1(t, IN_pose->position);
   asn1Scc_Quaterniond_fromAsn1(q, IN_pose->orientation);
+#ifdef DEBUG
+  std::cout << "[transformer_PI_robotPose] pos: " << t.transpose() << " orient: " << q.vec().transpose() << std::endl;
+#endif
   // convert quaternion to rotation mat
   Eigen::Matrix3d r = q.normalized().toRotationMatrix();
 
@@ -152,6 +159,9 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   // extract orientation / translation
   asn1Scc_Vector3d_fromAsn1(t, IN_pose->position);
   asn1Scc_Quaterniond_fromAsn1(q, IN_pose->orientation);
+#ifdef DEBUG
+  std::cout << "[transformer_PI_relativeMarkerPose] pos: " << t.transpose() << " orient: " << q.vec().transpose() << std::endl;
+#endif
 
   Eigen::Matrix3d r = q.normalized().toRotationMatrix();
   
@@ -183,6 +193,11 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   // write out pose in world frame
   asn1Scc_Vector3d_toAsn1(OUT_pose.position, _t);
   asn1Scc_Quaterniond_toAsn1(OUT_pose.orientation, q);
+  base::Time ts(base::Time::now());
+  asn1SccBase_Time_toAsn1(OUT_pose.time, ts);
+#ifdef DEBUG
+  std::cout << "[transformer_RI_absoluteMarkerPose] pos: " << _t.transpose() << " orient: " << q.vec().transpose() << std::endl;
+#endif
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 }
 
