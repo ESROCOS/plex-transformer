@@ -6,14 +6,17 @@
 #include "base_support/OpaqueConversion.hpp"
 #include <Eigen/Core>
 #include <cstring>
+#include <ctime>
 #include <iostream>
 
 #define DEBUG
+#define FPU_NON_STANDARD
 
 typedef esrocos::transformer::AcyclicTransformer<3> atf;
 
 void set_nonstandard_mode()
 {
+#ifdef FPU_NON_STANDARD
     uint32_t fsrVal;
     uint32_t *fsrValPtr = &fsrVal;
     __asm__(
@@ -29,6 +32,7 @@ void set_nonstandard_mode()
         : "r" (fsrValPtr)
 	: "memory"
     );
+#endif
 }
 
 /*
@@ -193,11 +197,15 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   // write out pose in world frame
   asn1Scc_Vector3d_toAsn1(OUT_pose.position, _t);
   asn1Scc_Quaterniond_toAsn1(OUT_pose.orientation, q);
-  base::Time ts(base::Time::now());
-  asn1SccBase_Time_toAsn1(OUT_pose.time, ts);
 #ifdef DEBUG
   std::cout << "[transformer_RI_absoluteMarkerPose] pos: " << _t.transpose() << " orient: " << q.vec().transpose() << std::endl;
 #endif
+
+  // set timestamp
+  struct timespec spec;
+  clock_gettime(CLOCK_REALTIME, &spec);
+  OUT_pose.time.microseconds = spec.tv_nsec / 1000 + spec.tv_sec * 1000000;
+
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 }
 
