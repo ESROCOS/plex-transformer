@@ -9,7 +9,7 @@
 #include <ctime>
 #include <iostream>
 
-#define DEBUG
+//#define DEBUG
 #define FPU_NON_STANDARD
 
 typedef esrocos::transformer::AcyclicTransformer<3> atf;
