@@ -5,6 +5,7 @@
 #include "base_support/Base-samples-RigidBodyStateConvert.hpp"
 #include "base_support/OpaqueConversion.hpp"
 #include <Eigen/Core>
+#include <cstdio>
 #include <cstring>
 #include <ctime>
 #include <iostream>
@@ -205,6 +206,9 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
   struct timespec spec;
   clock_gettime(CLOCK_REALTIME, &spec);
   OUT_pose.time.microseconds = spec.tv_nsec / 1000 + spec.tv_sec * 1000000;
+
+  // Copy the id of the marker from incoming source frame to outgoing source frame string
+  OUT_pose.sourceframe.nCount = snprintf((char*)OUT_pose.sourceframe.arr, IN_pose->sourceframe.nCount, "%s", (const char *)IN_pose->sourceframe.arr);
 
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 }
