@@ -155,6 +155,7 @@ void transformer_PI_robotPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 
 void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState *IN_pose)
 {
+  std::cout << "[plex-transformer] source frame of the incoming marker: " << std::string((const char *)IN_pose->sourceframe.arr) << std::endl;
   set_nonstandard_mode();
 
   base::Vector3d t;
@@ -209,7 +210,8 @@ void transformer_PI_relativeMarkerPose(const asn1SccBase_samples_RigidBodyState 
 
   // Copy the id of the marker from incoming source frame to outgoing source frame string
   OUT_pose.sourceframe.nCount = snprintf((char*)OUT_pose.sourceframe.arr, IN_pose->sourceframe.nCount, "%s", (const char *)IN_pose->sourceframe.arr);
-
+      
+  std::cout << "[plex-transformer] source frame of the out marker: " << std::string((const char *)OUT_pose.sourceframe.arr) << std::endl;
   transformer_RI_absoluteMarkerPose(&OUT_pose);
 }
 
